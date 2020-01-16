@@ -8,6 +8,8 @@ const IndexItemContainer = styled.div`
     margin:20px;
     padding:10px;
     background-color: yellow;
+    min-height:200px;
+    min-width:300px;
 `;
 
 const indexItem = (props) => {

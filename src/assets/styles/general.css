@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:400,600,700,800&display=swap');
 
+*{
+	transition:all ease-in 0.5s;
+} 
+
 html{
 	width:100%;
 	height:100%;
@@ -56,10 +60,11 @@ table {
 
 #root{
 	width:100%;
-	height:100%;
+	min-height:100%;
 }
 
 .app{
-	height:100%;
+	min-height:100%;
+	padding: 100px;
 }
 
