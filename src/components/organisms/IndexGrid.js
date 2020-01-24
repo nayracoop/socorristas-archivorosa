@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import IndexItem from '../molecules/IndexItem'
-import texts from '../../assets/texts/texts.json'
+import texts from '../../assets/texts/textsHeaders.json'
 
 
 const IndexGridContainer = styled.div`
-    height: 100%;
+    min-height: 100vh;
+    padding:5%;
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    background-color:black;
 
     @media (min-width: 900px){
        grid-template-columns: 1fr 1fr;
