@@ -1,5 +1,7 @@
 # Socorristas - Archivo Rosa  
 :sparkles: El sitio se encuentra disponible en **https://nayracoop.github.io/socorristas-archivorosa/** :sparkles: 
+:sparkles: This is a work in progress :sparkles: 
+
 ## Instalación
 Clonar repo y correr 
 **`npm install`**
