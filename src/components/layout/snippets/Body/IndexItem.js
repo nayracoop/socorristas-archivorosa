@@ -28,8 +28,8 @@ const Title = styled.h3`
 const indexItem = (props) => {
     return(
         <IndexItemContainer >
-            <Title size="2.2" font="serif" color="white" content={props.titleContent}></Title>
-            <Author size="1" font="sans-serif" color="Lavender" content={props.authorContent}></Author>
+            <Title size="2.2" font="serif" color="white" >{props.titleContent}</Title>
+            <Author size="1" font="sans-serif" color="Lavender">{props.authorContent}</Author>
         </IndexItemContainer>
     );
 }
