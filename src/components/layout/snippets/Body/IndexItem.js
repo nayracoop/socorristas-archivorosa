@@ -1,8 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
-import Title from '../atoms/Title'
-import Author from '../atoms/Author'
 
 const IndexItemContainer = styled.div`
     margin:10px;
@@ -18,7 +16,14 @@ const IndexItemContainer = styled.div`
     cursor:pointer;
     opacity:1;
   }
-`;
+`
+
+const Author = styled.h2`
+
+`
+const Title = styled.h3`
+
+`
 
 const indexItem = (props) => {
     return(

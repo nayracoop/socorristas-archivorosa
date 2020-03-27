@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import IndexItem from '../molecules/IndexItem'
-import texts from '../../assets/texts/textsHeaders.json'
+import IndexItem from '../snippets/Body/IndexItem'
+import texts from '../../../assets/texts/textsHeaders.json'
 
 
 const IndexGridContainer = styled.div`
