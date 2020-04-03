@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:400,600,700,800&display=swap');
 
-*{
-	transition:all ease-in 0.5s;
-} 
-
-html{
-	width:100%;
-	height:100%;
-	font-family:"Open Sans";
-	font-size: 100%;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -30,16 +19,16 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
-	line-height: 1.25;
-	width:100%;
-	height: 100%;
-	background-color: indigo;
+	font: normal 100%/1.5 'Open Sans', sans-serif;
+	background: #f8f8f8;
 }
 
 ol, ul {
