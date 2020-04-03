@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import ChapterTitle from '../molecules/ChapterTitle'
+import ChapterTitle from '../snippets/Header/ChapterTitle'
 
-import texts from '../../assets/texts/textsHeaders.json'
+import texts from '../../../assets/texts/textsHeaders.json'
 
 
 
