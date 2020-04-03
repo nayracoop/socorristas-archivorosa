@@ -1,13 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import ChapterTitle from '../snippets/header/ChapterTitle'
 
-import texts from '../../../assets/texts/textsHeaders.json'
-
-
-
-const ChapterHeaderContainer = styled.div`
+const IndexImageContainer = styled.div`
     height:100vh;
     text-align: center;
     padding:2%;
@@ -32,15 +27,15 @@ const BackgroundContainer = styled.div`
     z-index:-1;
 `;
 
-const ChapterHeader = (props) =>{
+
+
+const indexImage = (props) => {
     return(
-        <div>
-            <ChapterHeaderContainer>
-                <ChapterTitle titleContent= {texts.headers[0].title} authorContent={texts.headers[0].author} dateContent={texts.headers[0].date} ></ChapterTitle>
-            </ChapterHeaderContainer>
+        <IndexImageContainer >
             <BackgroundContainer backgroundImg={props.backgroundImage}></BackgroundContainer>
-        </div>
+         </IndexImageContainer>
     );
 }
 
-export default ChapterHeader
+
+export default indexImage
