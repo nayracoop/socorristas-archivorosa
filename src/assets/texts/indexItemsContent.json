@@ -7,7 +7,11 @@
         "author": "Ruth Zurbriggen",
         "group": "Colectiva Feminista La Revuelta en Neuquén, el 26 de mayo de 2019.",
         "quote":"En el mes de mayo de 2005 acordamos la construcción de la Campaña Nacional por el Derecho al Aborto Legal.",
-        "img" : "01_LaBuenaNoticia"
+        "img" : "01_LaBuenaNoticia",
+        "gridrs" : "1",
+        "gridre" : "2",
+        "gridcs" : "1",
+        "gridce" : "3"
         },
         {
         "title" : "Viento en Venecia",
@@ -15,7 +19,11 @@
         "author": "Belén Grosso",
         "group": "Colectiva Feminista La Revuelta en Neuquén, Invierno de 2017",
         "quote":"El socorrismo es una nueva política de afectos",
-        "img" : "02_VientoDeVenecia"
+        "img" : "02_VientoDeVenecia",
+        "gridrs" : "2",
+        "gridre" : "3",
+        "gridcs" : "1",
+        "gridce" : "2"
         },
         {
         "title" : "Hay abortos.",
@@ -23,7 +31,11 @@
         "author": "Ruth Zurbriggen",
         "group": "Neuquén, Patagonia Argentina. 12 de junio de 2018, vibrando el 13J.",
         "quote":"Hay abortos, están entre nosotras.",
-        "img" : "03_HayAbortos"
+        "img" : "03_HayAbortos",
+        "gridrs" : "2",
+        "gridre" : "3",
+        "gridcs" : "2",
+        "gridce" : "3"
         },
         {
         "title" : "El aborto como lugar para conmover(me)  ",
@@ -31,7 +43,11 @@
         "author": "Ruth Zurbriggen",
         "group": "Colectiva Feminista La Revuelta.",
         "quote":"¿De qué están hechas las mujeres que abortaron acompañadas por activistas feministas socorristas?" ,
-        "img" : "04_ElAbortoComo"
+        "img" : "04_ElAbortoComo",
+        "gridrs" : "3",
+        "gridre" : "4",
+        "gridcs" : "1",
+        "gridce" : "2"
         },
         {
         "title" : "La buena noticia",
@@ -39,7 +55,11 @@
         "author": "Ruth Zurbriggen",
         "group": "Colectiva Feminista La Revuelta en Neuquén, el 26 de mayo de 2019.",
         "quote":"La buena noticia es tenernos. Sentir que nos tenemos. Palpar diariamente los acuerpamientos." ,
-        "img" : "05_LaBuenaNoticia"
+        "img" : "05_LaBuenaNoticia",
+        "gridrs" : "3",
+        "gridre" : "4",
+        "gridcs" : "2",
+        "gridce" : "3"
         },
         {
         "title" : "Lina",
@@ -47,7 +67,11 @@
         "author": "Belén Grosso",
         "group": "Colectiva Feminista La Revuelta.",
         "quote":"Los socorrismos necesariamente nos meten en otras vidas." ,
-        "img" : "06_Lina"
+        "img" : "06_Lina",
+        "gridrs" : "4",
+        "gridre" : "5",
+        "gridcs" : "1",
+        "gridce" : "3"
         },
         {
         "title" : "¡Quiero que salga!",
@@ -55,7 +79,11 @@
         "author": "Ruth Zurbriggen",
         "group": "Colectiva Feminista La Revuelta en Neuquén, Patagonia Argentina",
         "quote":"Ese feminismo del cuerpo a cuerpo sin metáforas en el que andamos.",
-        "img" : "07_QuieroQueSalga" 
+        "img" : "07_QuieroQueSalga",
+        "gridrs" : "5",
+        "gridre" : "6",
+        "gridcs" : "1",
+        "gridce" : "3"
         },
         {
         "title" : "Nilda",
@@ -63,7 +91,11 @@
         "author": "Luz Fernández",
         "group": "Colectiva Feminista La Revuelta.",
         "quote":"Dándole batalla a una de todas las injusticias a las que les tenemos que poner el cuerpo las mujeres. ",
-        "img" : "08_Nilda"
+        "img" : "08_Nilda",
+        "gridrs" : "6",
+        "gridre" : "7",
+        "gridcs" : "1",
+        "gridce" : "3"
         },
         {
         "title" : "Del socorro del socorro",
@@ -71,7 +103,11 @@
         "author": "Belén Grosso",
         "group": "Colectiva Feminista La Revuelta.",
         "quote":"¿Cuánto de esas historias hay en cada socorro? ¿Cuánta historia circular nos circula?",
-        "img" : "09_DelSocorro"
+        "img" : "09_DelSocorro",
+        "gridrs" : "7",
+        "gridre" : "8",
+        "gridcs" : "1",
+        "gridce" : "2"
         },
         {
         "title" : "Urgencia rosa",
@@ -79,7 +115,11 @@
         "author": "Guille Peralta y Vivi Fonseca",
         "group": "Colectiva Feminista La Revuelta en Neuquén, primavera de 2015.",
         "quote":"Apuramos las líneas tratando de encontrar la clave para ganarle esta lucha al patriarcado. " ,
-        "img" : "10_UrgenciaRosa"
+        "img" : "10_UrgenciaRosa",
+        "gridrs" : "7",
+        "gridre" : "8",
+        "gridcs" : "2",
+        "gridce" : "3"
         }, 
         {
         "title" : "Cuando estamos juntas",
@@ -87,7 +127,11 @@
         "author": "Belén Grosso",
         "group": "Colectiva Feminista La Revuelta.",
         "quote":"Un aire de mujeres me recorre. Ellas, juntas abortando. Yo, con ellas." ,
-        "img" : "11_CuandoEstamosJuntas"
+        "img" : "11_CuandoEstamosJuntas",
+        "gridrs" : "8",
+        "gridre" : "9",
+        "gridcs" : "1",
+        "gridce" : "2"
         },      
         {
         "title" : "El palpitar de los abortos[1]",
@@ -95,7 +139,11 @@
         "author": "Ruth Zurbriggen",
         "group": "Colectiva Feminista La Revuelta.",
         "quote":"Acá no se rinde nadie. El aborto se avecina. Los abortos se avecinan. Surgen y resurgen. Como la vida misma.",
-        "img" : "12_ElPalpitar" 
+        "img" : "12_ElPalpitar",
+        "gridrs" : "8",
+        "gridre" : "9",
+        "gridcs" : "2",
+        "gridce" : "3"
         }
     ]
 }

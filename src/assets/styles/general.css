@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,7 +28,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	font: normal 100%/1.5 'Open Sans', sans-serif;
-	background: #f8f8f8;
 }
 
 ol, ul {
@@ -50,5 +49,9 @@ table {
 .app{
 	width:100%;
 	min-height:100vh;
+	padding: 0;
+	margin:0;
+	background-image: url('../imgs/background.png');
+	background-size: 100%;
 }
 

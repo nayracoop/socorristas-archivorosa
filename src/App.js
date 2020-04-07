@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Route, withRouter } from 'react-router-dom';
-import styled, { ThemeProvider } from 'styled-components';
-import ChapterHeader from './components/layout/sections/ChapterHeader';
+import { ThemeProvider } from 'styled-components';
 import IndexGrid from './components/layout/sections/IndexGrid';
 
 const background = require('./assets/imgs/background.png');
+
 const theme = { 
   colors: {
     dark: '#04090d',
@@ -12,8 +12,7 @@ const theme = {
     primary: 'indigo'
   },
   fonts: {
-    display: "'Work Sans', 'sans-serif'",
-    text: "'Open Sans', 'sans-serif'"
+    display: "'Roboto Slab', serif",
   },
   pageWidth: {
     xl: 1200,
@@ -30,8 +29,7 @@ class App extends Component {
       <div className="app">
         <ThemeProvider theme={theme}>
           <Route path="/" exact>
-            <IndexGrid></IndexGrid>
-            <ChapterHeader backgroundImage={background}></ChapterHeader>
+            <IndexGrid ></IndexGrid>
           </Route>
           <Route path="/post">
             Hola :D

@@ -3,28 +3,20 @@ import styled from 'styled-components'
 
 
 const IndexImageContainer = styled.div`
-    height:100vh;
-    text-align: center;
-    padding:2%;
-    display:grid;
-    grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr;
-    background-color:black;
-    opacity:0.7;
-
-    &:hover {
-        cursor:pointer;
-        opacity:.5;
-    }
+    position: absolute;
+    left:-10%;
+    top:-10%;
+    height:120%;
+    width:120%;
 `;
 
 const BackgroundContainer = styled.div`
     width:100%;
-    height:100vh;
-    margin-top:-100vh;
-    background-image:url(${props=> props.backgroundImg});
-    background-size:cover;
-    z-index:-1;
+    height:100%;
+    background-image:url(${props=> props.image});
+    background-size:auto 100%;
+    background-repeat: no-repeat;
+    z-index: -1;
 `;
 
 
@@ -32,7 +24,7 @@ const BackgroundContainer = styled.div`
 const indexImage = (props) => {
     return(
         <IndexImageContainer >
-            <BackgroundContainer backgroundImg={props.backgroundImage}></BackgroundContainer>
+            <BackgroundContainer image={props.image}></BackgroundContainer>
          </IndexImageContainer>
     );
 }

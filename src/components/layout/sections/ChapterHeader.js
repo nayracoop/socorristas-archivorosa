@@ -6,7 +6,6 @@ import ChapterTitle from '../snippets/header/ChapterTitle'
 import texts from '../../../assets/texts/textsHeaders.json'
 
 
-
 const ChapterHeaderContainer = styled.div`
     height:100vh;
     text-align: center;
