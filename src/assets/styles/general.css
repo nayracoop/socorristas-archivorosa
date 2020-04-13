@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -51,5 +51,7 @@ table {
 .app{
 	width:100%;
 	min-height:100vh;
+	padding: 0;
+	margin:0;
 }
 

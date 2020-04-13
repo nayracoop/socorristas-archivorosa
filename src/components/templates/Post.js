@@ -17,16 +17,18 @@ const Content = styled.article`
   }
 `
 
-const Text = (props) => {
+const Post = (props) => {
 
   return (
-    <Wrapper>
-      Hola :D
-      <Content>
-        <ReactMarkdown source={props.content}/>
-      </Content>
-    </Wrapper>
+    <div>
+      <Wrapper>
+        Hola :D
+        <Content>
+          <ReactMarkdown source={props.content}/>
+        </Content>
+      </Wrapper>
+    </div>
   );
 }
 
-export default withTheme(Text);
+export default withTheme(Post);

@@ -3,11 +3,13 @@ import { Route, withRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import ChapterHeader from './components/layout/sections/ChapterHeader';
 import IndexGrid from './components/layout/sections/IndexGrid';
-import Text from './components/templates/Text';
+import Post from './components/templates/Post';
 
-import texts from './assets/texts/textsHeaders.json'
+import texts from './assets/texts/indexItemsContent.json'
+import Home from './components/templates/Home';
 
 const background = require('./assets/imgs/background.png');
+
 const theme = { 
   colors: {
     dark: '#04090d',
@@ -15,8 +17,7 @@ const theme = {
     primary: 'indigo'
   },
   fonts: {
-    display: "'Work Sans', 'sans-serif'",
-    text: "'Open Sans', 'sans-serif'"
+    display: "'Roboto Slab', serif",
   },
   pageWidth: {
     xl: 1200,
@@ -27,6 +28,17 @@ const theme = {
   articleMaxWidth: 680,
 };
 
+const BackgroundContainer = styled.div`
+  width:100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-image: url('${background}');
+  background-size:33%;
+  z-index: -1;
+`
+
 class App extends Component {
 
   render() {
@@ -34,12 +46,12 @@ class App extends Component {
       <div className="app">
         <ThemeProvider theme={theme}>
           <Route path="/" exact>
-            <IndexGrid></IndexGrid>
-            <ChapterHeader backgroundImage={background}></ChapterHeader>
+            <Home></Home>
           </Route>
           <Route path="/post">
-            <Text content={texts.headers[0].text} />
+            <Post content={texts.headers[0].text} />
           </Route>
+          <BackgroundContainer></BackgroundContainer>  
         </ThemeProvider>
       </div>
       );
