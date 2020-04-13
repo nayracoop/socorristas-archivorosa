@@ -3,6 +3,9 @@ import { Route, withRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import ChapterHeader from './components/layout/sections/ChapterHeader';
 import IndexGrid from './components/layout/sections/IndexGrid';
+import Text from './components/templates/Text';
+
+import texts from './assets/texts/textsHeaders.json'
 
 const background = require('./assets/imgs/background.png');
 const theme = { 
@@ -21,6 +24,7 @@ const theme = {
     m: 768,
     s: 576
   },
+  articleMaxWidth: 680,
 };
 
 class App extends Component {
@@ -34,7 +38,7 @@ class App extends Component {
             <ChapterHeader backgroundImage={background}></ChapterHeader>
           </Route>
           <Route path="/post">
-            Hola :D
+            <Text content={texts.headers[0].text} />
           </Route>
         </ThemeProvider>
       </div>
