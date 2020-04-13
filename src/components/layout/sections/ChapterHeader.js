@@ -11,11 +11,6 @@ const ChapterHeaderContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     opacity:0.7;
-
-    &:hover {
-        cursor:pointer;
-        opacity:.5;
-    }
 `;
 
 
@@ -29,7 +24,7 @@ const ChapterHeader = (props) =>{
                     dateContent={props.dateContent} 
                     titleSize={props.titleSize}>
                 </ChapterTitle>
-                <ChapterHeaderImage></ChapterHeaderImage>
+                <ChapterHeaderImage image={props.image}></ChapterHeaderImage>
             </ChapterHeaderContainer>
         </div>
     );

@@ -12,7 +12,7 @@ const IndexItemContainer = styled.div`
 
 const Quote = styled.h1`
   font-family: ${props => props.theme.fonts.display};
-  font-size: 32px;
+  font-size: 48px;
   width: 50%;
   z-index 10;
 `
