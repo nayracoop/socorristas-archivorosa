@@ -2,18 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 
 import ChapterTitle from '../snippets/header/ChapterTitle'
-
-import texts from '../../../assets/texts/textsHeaders.json'
-
+import ChapterHeaderImage from '../snippets/header/ChapterHeaderImage'
 
 const ChapterHeaderContainer = styled.div`
+    position: relative;
     height:100vh;
-    text-align: center;
-    padding:2%;
     display:grid;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    background-color:black;
     opacity:0.7;
 
     &:hover {
@@ -22,22 +18,19 @@ const ChapterHeaderContainer = styled.div`
     }
 `;
 
-const BackgroundContainer = styled.div`
-    width:100%;
-    height:100vh;
-    margin-top:-100vh;
-    background-image:url(${props=> props.backgroundImg});
-    background-size:cover;
-    z-index:-1;
-`;
 
 const ChapterHeader = (props) =>{
     return(
         <div>
             <ChapterHeaderContainer>
-                <ChapterTitle titleContent= {texts.headers[0].title} authorContent={texts.headers[0].author} dateContent={texts.headers[0].date} ></ChapterTitle>
+                <ChapterTitle 
+                    titleContent={props.titleContent} 
+                    authorContent={props.authorContent} 
+                    dateContent={props.dateContent} 
+                    titleSize={props.titleSize}>
+                </ChapterTitle>
+                <ChapterHeaderImage></ChapterHeaderImage>
             </ChapterHeaderContainer>
-            <BackgroundContainer backgroundImg={props.backgroundImage}></BackgroundContainer>
         </div>
     );
 }

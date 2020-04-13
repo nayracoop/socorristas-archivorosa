@@ -4,10 +4,11 @@ import styled from 'styled-components'
 
 const IndexImageContainer = styled.div`
     position: absolute;
-    left:-10%;
-    top:-10%;
-    height:120%;
-    width:120%;
+    left:-15%;
+    top:-15%;
+    height:130%;
+    width:130%;
+    z-index: 9999;
 `;
 
 const BackgroundContainer = styled.div`
@@ -16,7 +17,6 @@ const BackgroundContainer = styled.div`
     background-image:url(${props=> props.image});
     background-size:auto 100%;
     background-repeat: no-repeat;
-    z-index: -1;
 `;
 
 

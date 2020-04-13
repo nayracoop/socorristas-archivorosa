@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Route, withRouter } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import IndexGrid from './components/layout/sections/IndexGrid';
+import styled, { ThemeProvider } from 'styled-components';
+import Home from './components/templates/Home';
 
 const background = require('./assets/imgs/background.png');
 
@@ -22,6 +22,17 @@ const theme = {
   },
 };
 
+const BackgroundContainer = styled.div`
+  width:100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-image: url('${background}');
+  background-size:33%;
+  z-index: -1;
+`
+
 class App extends Component {
 
   render() {
@@ -29,11 +40,12 @@ class App extends Component {
       <div className="app">
         <ThemeProvider theme={theme}>
           <Route path="/" exact>
-            <IndexGrid ></IndexGrid>
+            <Home></Home>
           </Route>
           <Route path="/post">
             Hola :D
           </Route>
+          <BackgroundContainer></BackgroundContainer>  
         </ThemeProvider>
       </div>
       );
