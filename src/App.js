@@ -51,7 +51,8 @@ class App extends Component {
             <Post 
               titleContent={texts.headers[0].title}
               authorContent={texts.headers[0].author}
-              dateContent={texts.headers[0].date}>
+              dateContent={texts.headers[0].date}
+              content= {texts.headers[0].text}>
             </Post>
           </Route>
           <BackgroundContainer></BackgroundContainer>  
