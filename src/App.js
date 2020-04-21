@@ -7,7 +7,7 @@ import Post from './components/templates/Post';
 import texts from './assets/texts/indexItemsContent.json'
 import Home from './components/templates/Home';
 
-const background = require('./assets/imgs/background.png');
+const background = require('./assets/imgs/background.jpg');
 
 const theme = { 
   colors: {
@@ -27,17 +27,6 @@ const theme = {
   articleMaxWidth: 680,
 };
 
-const BackgroundContainer = styled.div`
-  width:100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-image: url('${background}');
-  background-size:33%;
-  z-index: -1;
-`
-
 class App extends Component {
 
   render() {
@@ -55,7 +44,6 @@ class App extends Component {
               content= {texts.headers[0].text}>
             </Post>
           </Route>
-          <BackgroundContainer></BackgroundContainer>  
         </ThemeProvider>
       </div>
       );

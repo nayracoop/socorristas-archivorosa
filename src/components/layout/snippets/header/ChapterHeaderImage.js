@@ -2,9 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeaderImageContainer = styled.div`
-    position: relative;
-    grid-row: 1 / 4;
-    grid-column: 1 / 6;
+   
 `;
 
 const HeaderBackground = styled.div`
@@ -27,7 +25,7 @@ const HeaderImage = styled.div`
     height:100%;
     z-index: 1000;
     background-repeat: no-repeat;
-    background-size: auto 90%;;
+    background-size: auto 90%;
 `
 
 
