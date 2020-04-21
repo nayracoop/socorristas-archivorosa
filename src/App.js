@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Route, withRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
-import ChapterHeader from './components/layout/sections/ChapterHeader';
-import IndexGrid from './components/layout/sections/IndexGrid';
+
 import Post from './components/templates/Post';
 
 import texts from './assets/texts/indexItemsContent.json'
@@ -48,8 +47,12 @@ class App extends Component {
           <Route path="/" exact>
             <Home></Home>
           </Route>
-          <Route path="/post">
-            <Post content={texts.headers[0].text} />
+          <Route path='/post'>
+            <Post 
+              titleContent={texts.headers[0].title}
+              authorContent={texts.headers[0].author}
+              dateContent={texts.headers[0].date}>
+            </Post>
           </Route>
           <BackgroundContainer></BackgroundContainer>  
         </ThemeProvider>

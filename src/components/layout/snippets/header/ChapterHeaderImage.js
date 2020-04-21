@@ -11,7 +11,7 @@ const HeaderBackground = styled.div`
     position: absolute;
     left: 0;
     top: 0;
-    width:50%;
+    width:${props=> props.backgroundWidth};
     height:100%;
     opacity:0.7;
     background-color: pink;

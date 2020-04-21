@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled, { withTheme } from 'styled-components';
+import ChapterHeader from '../layout/sections/ChapterHeader'
+const image = require ('../../assets/imgs/01_LaBuenaNoticia.png')
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,9 +22,16 @@ const Content = styled.article`
 const Post = (props) => {
 
   return (
-    <div>
+    <div>    
+      <ChapterHeader 
+        titleContent={props.titleContent} 
+        authorContent={props.authorContent} 
+        dateContent={props.dateContent} 
+        titleSize={props.titleSize}        
+        image={image}>
+      </ChapterHeader>
+      
       <Wrapper>
-        Hola :D
         <Content>
           <ReactMarkdown source={props.content}/>
         </Content>
