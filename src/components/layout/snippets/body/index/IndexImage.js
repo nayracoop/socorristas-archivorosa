@@ -4,27 +4,26 @@ import styled from 'styled-components'
 
 const IndexImageContainer = styled.div`
     position: absolute;
-    left:-15%;
-    top:-15%;
-    height:130%;
-    width:130%;
+    left:-10;
+    top:-10%;
+    height:120%;
+    width:120%;
     z-index: 9999;
 `;
 
-const BackgroundContainer = styled.div`
-    width:100%;
+const Image = styled.img`
+    position:absolute;
+    left:${props=>props.align === "left" ? "-1%" :"" };
+    right:${props=>props.align === "right" ? "-1%" :"" };
     height:100%;
-    background-image:url(${props=> props.image});
-    background-size:auto 100%;
-    background-repeat: no-repeat;
+    animation: floating 4s ease-in-out alternate infinite;
 `;
-
 
 
 const indexImage = (props) => {
     return(
         <IndexImageContainer >
-            <BackgroundContainer image={props.image}></BackgroundContainer>
+            <Image align={props.align} src={props.image} ></Image>
          </IndexImageContainer>
     );
 }

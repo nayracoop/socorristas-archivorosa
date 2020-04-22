@@ -4,36 +4,28 @@ import styled from 'styled-components'
 const HeaderImageContainer = styled.div`
    
 `;
-
-const HeaderBackground = styled.div`
-    position: absolute;
-    left: 0;
-    top: 0;
-    width:${props=> props.backgroundWidth};
-    height:100%;
-    opacity:0.7;
-    background-color: pink;
-    background-size
-`
-
 const HeaderImage = styled.div`
-    background-image:url(${props=> props.image});
     position: absolute;
     left: 0;
-    top: 0;
-    width:100%;
-    height:100%;
+    top: 5%;
+    width:60%;
     z-index: 1000;
     background-repeat: no-repeat;
     background-size: auto 90%;
 `
 
+const Image = styled.img`
+    width:100%;
+    animation: floating 4s ease-in-out alternate infinite;
+`;
 
 const ChapterHeaderImage = (props) =>{
     return(
         <HeaderImageContainer> 
-            <HeaderImage image={props.image} ></HeaderImage>
-            <HeaderBackground ></HeaderBackground>
+            <HeaderImage>
+                <Image src={props.image} />
+            </HeaderImage>
+            <HeaderImage ></HeaderImage>
         </HeaderImageContainer>
     );
 }

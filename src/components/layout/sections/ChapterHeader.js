@@ -12,26 +12,16 @@ const ChapterHeaderContainer = styled.div`
     grid-template-rows: 1fr 1fr 1fr;
 `;
 
-const ImageItem = styled.div`
-    grid-row: 1 / 4;
-    grid-column: 1 / 6;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-const Image = styled.img`
-    max-width: 90%;
-    max-height: 90%;
-    width: auto;
-    height: auto;
-    animation: floating 3s ease-in-out alternate infinite;
-`;
+const HeaderBackground = styled.div`
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:${props=> props.backgroundWidth ? props.backgroundWidth : "50%"};
+    height:100%;
+    opacity:0.7;
+    background-color: pink;
+    background-size
+`
 
 const ChapterHeader = (props) =>{
     return(
@@ -43,10 +33,8 @@ const ChapterHeader = (props) =>{
                     dateContent={props.dateContent} 
                     titleSize={props.titleSize}>
                 </ChapterTitle>
-                <ImageItem>
-                    <Image width="545" height="1080" src={props.image} />
-                    {/* <ChapterHeaderImage image={props.image}></ChapterHeaderImage> */}
-                </ImageItem>
+                <ChapterHeaderImage image={props.image}></ChapterHeaderImage>
+                <HeaderBackground ></HeaderBackground>
             </ChapterHeaderContainer>
         </div>
     );
