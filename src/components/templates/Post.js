@@ -36,14 +36,15 @@ const Post = (props) => {
     // </div>
     <Wrapper>
       <ChapterHeader 
-        titleContent={props.titleContent} 
-        authorContent={props.authorContent} 
-        dateContent={props.dateContent} 
-        titleSize={props.titleSize}        
+        title={props.data.title} 
+        author={props.data.author}
+        info={props.data.group}
+        date={props.data.date} 
+        titleSize="60"
         image={image}>
       </ChapterHeader>
       <Content>
-        <ReactMarkdown source={props.content}/>
+        <ReactMarkdown source={props.data.text}/>
       </Content>
     </Wrapper>
   );

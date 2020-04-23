@@ -19,33 +19,38 @@ const theme = {
     display: "'Roboto Slab', serif",
   },
   pageWidth: {
+    xxl: 1366,
     xl: 1200,
     l: 992,
     m: 768,
     s: 576
   },
+  maxWidth: 1366,
   articleMaxWidth: 680,
 };
+
+const Container = styled.div`
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: ${theme.maxWidth}px;
+`
 
 class App extends Component {
 
   render() {
     return (
-      <div className="app">
+      <Container ref={this.container} className="App">
         <ThemeProvider theme={theme}>
           <Route path="/" exact>
             <Home></Home>
           </Route>
           <Route path='/post'>
-            <Post 
-              titleContent={texts.headers[0].title}
-              authorContent={texts.headers[0].author}
-              dateContent={texts.headers[0].date}
-              content= {texts.headers[0].text}>
-            </Post>
+            <Post data={texts.headers[0]}></Post>
           </Route>
         </ThemeProvider>
-      </div>
+      </Container>
       );
   }
 }
