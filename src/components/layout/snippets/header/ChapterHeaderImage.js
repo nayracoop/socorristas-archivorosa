@@ -1,33 +1,22 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const HeaderImageContainer = styled.div`
-   
-`;
-
-const HeaderImage = styled.div`
-    // position: absolute;
-    // left: 0;
-    // top: 5%;
-    // width:60%;
-    z-index: 1000;
-    background-repeat: no-repeat;
-    background-size: auto 90%;
-`
+import styled, { withTheme } from 'styled-components'
 
 const Image = styled.img`
     width:100%;
+    max-height: 870px;
+    width: auto;
+    position: absolute;
+    right: 5px;
     animation: floating 4s ease-in-out alternate infinite;
 `;
 
 const ChapterHeaderImage = (props) =>{
+    console.log(props.theme)
     return(
-        <HeaderImageContainer> 
-            <HeaderImage>
-                <Image src={props.image} />
-            </HeaderImage>
-        </HeaderImageContainer>
+        <div>
+            <Image src={props.image} />
+        </div>
     );
 }
 
-export default ChapterHeaderImage
+export default withTheme(ChapterHeaderImage)

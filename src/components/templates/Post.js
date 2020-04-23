@@ -35,12 +35,12 @@ const Post = (props) => {
       
     // </div>
     <Wrapper>
-      <ChapterHeader 
+      <ChapterHeader theme={ {...props.theme, content: { align: 'left', margin: 0 }, background: { size: '480px', align: 'right' } } }
         title={props.data.title} 
         author={props.data.author}
         info={props.data.group}
         date={props.data.date} 
-        titleSize="60"
+        titleSize="48"
         image={image}>
       </ChapterHeader>
       <Content>

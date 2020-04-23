@@ -13,7 +13,7 @@ const theme = {
   colors: {
     dark: '#04090d',
     light: '#f8f8f8',
-    primary: 'indigo'
+    primary: '#bd8cbf' //'indigo',
   },
   fonts: {
     display: "'Roboto Slab', serif",
@@ -47,7 +47,7 @@ class App extends Component {
             <Home></Home>
           </Route>
           <Route path='/post'>
-            <Post data={texts.headers[0]}></Post>
+            <Post data={texts.headers[3]}></Post>
           </Route>
         </ThemeProvider>
       </Container>

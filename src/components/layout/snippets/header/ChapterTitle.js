@@ -20,8 +20,8 @@ const Title = styled.h1`
 `
 
 const Author = styled.h2`
-    font-size: 1.5em;
-    margin: 1em 0 3em;
+    font-size: 2em;
+    margin: 0.5em 0 2em;
 `
 const Date = styled.p`
 

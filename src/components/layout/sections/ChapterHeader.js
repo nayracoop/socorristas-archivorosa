@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 
 import ChapterTitle from '../snippets/header/ChapterTitle'
 import ChapterHeaderImage from '../snippets/header/ChapterHeaderImage'
@@ -16,28 +16,29 @@ const ChapterHeaderContainer = styled.header`
 `
 
 const Text = styled.div`
-flex: 1;
-align-self: center;
+    flex: 1;
+    align-self: center;
 `
 
 const Image = styled.div`
-flex: 1;
-height: 100%;
+    flex: 1;
+    height: 100%;
 `
 
 const HeaderBackground = styled.div`
     position: absolute;
-    left: ${props => props.backgroundAlign === 'right' ? 'auto' : 0};
-    right: ${props => props.backgroundAlign === 'right' ? 0 : 'auto'};
+    left: ${props => props.theme.align === 'right' ? 'auto' : 0};
+    right: ${props => props.theme.align === 'right' ? 0 : 'auto'};
     top: 0;
     bottom: 0;
-    width: ${props => props.backgroundWidth ? props.backgroundWidth : "50%"};
-    opacity:0.7;
-    background-color: pink;
+    width: ${props => props.theme.size ? props.theme.size : "50%"};
+    opacity:0.3;
+    background-color: #bd8cbf;
     z-index: -1;
 `
 
 const ChapterHeader = (props) =>{
+    console.log(props.theme)
     return(
         <ChapterHeaderContainer>
                 <Text>
@@ -51,10 +52,10 @@ const ChapterHeader = (props) =>{
             </Text>
             <Image>
                 <ChapterHeaderImage image={props.image}></ChapterHeaderImage>
-                <HeaderBackground />
+                <HeaderBackground theme={props.theme.background} />
             </Image>
         </ChapterHeaderContainer>
     );
 }
 
-export default ChapterHeader
+export default withTheme(ChapterHeader)
