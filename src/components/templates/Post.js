@@ -37,14 +37,14 @@ const Post = (props) => {
     <Wrapper>
       <ChapterHeader theme={ {...props.theme, content: { align: 'left', margin: 0 }, background: { size: '480px', align: 'right' } } }
         title={props.data.title} 
-        author={props.data.author}
-        info={props.data.group}
+        author={props.data.meta.author}
+        info={props.data.meta.group}
         date={props.data.date} 
         titleSize="48"
         image={image}>
       </ChapterHeader>
       <Content>
-        <ReactMarkdown source={props.data.text}/>
+        <ReactMarkdown source={props.data.content}/>
       </Content>
     </Wrapper>
   );

@@ -4,7 +4,7 @@ import styled, { ThemeProvider } from 'styled-components';
 
 import Post from './components/templates/Post';
 
-import texts from './assets/texts/indexItemsContent.json'
+import content from './assets/texts/posts.json'
 import Home from './components/templates/Home';
 
 const background = require('./assets/imgs/background.jpg');
@@ -47,9 +47,9 @@ class App extends Component {
             <Home />
           </Route>
           <Switch>
-          {texts.headers.map(text => {
-            return <Route path={'/' + text.slug}>
-              <Post data={text}></Post>
+          {content.posts.map(post => {
+            return <Route path={'/' + post.meta.slug}>
+              <Post data={post}></Post>
             </Route>
           })}
           </Switch>
