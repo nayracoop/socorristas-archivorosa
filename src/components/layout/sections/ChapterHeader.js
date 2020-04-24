@@ -12,7 +12,7 @@ const ChapterHeaderContainer = styled.header`
     // grid-template-rows: 1fr 1fr 1fr;
     display: flex;
     flex-flow: row wrap;
-    margin: 1em 0;
+    margin: 0 0 6em;
 `
 
 const Text = styled.div`

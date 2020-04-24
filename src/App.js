@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
 import Post from './components/templates/Post';
@@ -44,14 +44,18 @@ class App extends Component {
       <Container ref={this.container} className="App">
         <ThemeProvider theme={theme}>
           <Route path="/" exact>
-            <Home></Home>
+            <Home />
           </Route>
-          <Route path='/post'>
-            <Post data={texts.headers[3]}></Post>
-          </Route>
+          <Switch>
+          {texts.headers.map(text => {
+            return <Route path={'/' + text.slug}>
+              <Post data={text}></Post>
+            </Route>
+          })}
+          </Switch>
         </ThemeProvider>
       </Container>
-      );
+    );
   }
 }
 
