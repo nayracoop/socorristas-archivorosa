@@ -6,10 +6,7 @@ import ChapterHeaderImage from '../snippets/header/ChapterHeaderImage'
 
 const ChapterHeaderContainer = styled.header`
     position: relative;
-    height: 680px;
-    // display:grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    // grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
     display: flex;
     flex-flow: row wrap;
     margin: 0 0 6em;
@@ -27,7 +24,7 @@ const Image = styled.div`
 
 const HeaderBackground = styled.div`
     position: absolute;
-    left: ${props => props.theme.align === 'right' ? 'auto' : 0};
+    left: ${props => props.theme.align === 'left' ? 'auto' : 0};
     right: ${props => props.theme.align === 'right' ? 0 : 'auto'};
     top: 0;
     bottom: 0;
@@ -41,7 +38,7 @@ const ChapterHeader = (props) =>{
     console.log(props.theme)
     return(
         <ChapterHeaderContainer>
-                <Text>
+            <Text>
                 <ChapterTitle 
                     title={props.title} 
                     author={props.author}

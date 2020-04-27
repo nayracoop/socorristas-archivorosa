@@ -12,7 +12,11 @@ const HomeContainer = styled.div`
 const home = (props) =>{
     return(
         <HomeContainer>
-            <ChapterHeader titleSize="184" titleContent="Archivo rosa" image={image}></ChapterHeader>
+            <ChapterHeader theme={ {...props.theme, content: { align: 'left', margin: 0 }, background: { size: '50%', align: 'right' } } }
+                title="Archivo rosa" 
+                titleSize="192"
+                image={image}>
+            </ChapterHeader>
             <IndexGrid content={content}></IndexGrid>
         </HomeContainer>
     );

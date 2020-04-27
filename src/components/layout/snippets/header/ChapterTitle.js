@@ -12,7 +12,7 @@ const ChapterTitleContainer = styled.div`
 
 const Title = styled.h1`
     text-align: left;
-    // line-height:${props => props.titleSize ? props.titleSize-props.titleSize/2.5 + "px" : 32/2.5};
+    line-height:${props => props.titleSize ? props.titleSize-props.titleSize/2.5 + "px" : 32/2.5};
     font-family: ${props => props.theme.fonts.display };
     font-size: ${props => props.titleSize ? `${props.titleSize/16}em` : "2em"};
     z-index 10;

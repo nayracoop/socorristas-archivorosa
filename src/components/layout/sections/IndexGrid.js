@@ -5,7 +5,6 @@ import IndexItem from '../snippets/body/index/IndexItem'
 
 
 const IndexGridContainer = styled.div`
-    overflow: hidden;
     display: grid;
     grid-template-columns: ${props=> props.columns} ;
     grid-template-rows: 100vh 100vh 100vh 50vh 50vh 50vh 100vh 100vh;
