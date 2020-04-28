@@ -2,9 +2,8 @@ import React from 'react'
 import styled, { withTheme } from 'styled-components'
 
 const Image = styled.img`
-    width:100%;
-    max-height: 870px;
-    width: auto;
+    margin-top:5%;
+    height: 80%;
     position: absolute;
     right: 5px;
     animation: floating 4s ease-in-out alternate infinite;
@@ -13,9 +12,7 @@ const Image = styled.img`
 const ChapterHeaderImage = (props) =>{
     console.log(props.theme)
     return(
-        <div>
             <Image src={props.image} />
-        </div>
     );
 }
 

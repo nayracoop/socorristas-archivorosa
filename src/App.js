@@ -6,6 +6,7 @@ import Post from './components/templates/Post';
 import AnimationMockup from './components/animations/Mockup';
 
 import content from './assets/texts/posts.json'
+import texts from './assets/texts/indexItemsContent.json'
 import Home from './components/templates/Home';
 
 const background = require('./assets/imgs/background.jpg');
@@ -26,13 +27,14 @@ const theme = {
     m: 768,
     s: 576
   },
+  maxWidth: 1680,
   articleMaxWidth: 680,
 };
 
 const Container = styled.div`
   position: relative;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 ;
   width: 100%;
   max-width: ${theme.maxWidth}px;
 `

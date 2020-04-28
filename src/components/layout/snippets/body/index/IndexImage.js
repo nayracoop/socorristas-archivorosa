@@ -14,7 +14,7 @@ const IndexImageContainer = styled.div`
 const Image = styled.img`
     position:absolute;
     left:${props=>props.align === "left" ? "-1%" :"" };
-    right:${props=>props.align === "right" ? "-1%" :"" };
+    right:${props=>props.align === "right" ? "1%" :"" };
     height:100%;
     animation: floating 4s ease-in-out alternate infinite;
 `;

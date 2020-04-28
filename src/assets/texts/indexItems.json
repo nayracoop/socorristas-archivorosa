@@ -65,7 +65,7 @@
         "background":"transparent",
         "borderColor":"none",
         "textValign":"top",
-        "textHalign":"right",
+        "textHalign":"left",
         "imageAlign":"right"
         },
         {
@@ -81,8 +81,8 @@
         "gridce" : "3",
         "background":"pink",
         "borderColor":"none",
-        "textValign":"bottom",
-        "textHalign":"right",
+        "textValign":"top",
+        "textHalign":"left",
         "imageAlign":"center"
         },
         {
@@ -98,7 +98,7 @@
         "gridce" : "3",
         "background":"transparent",
         "borderColor":"black",
-        "textValign":"",
+        "textValign":"top",
         "textHalign":"left",
         "imageAlign":""
         },
@@ -134,7 +134,7 @@
         "borderColor":"none",
         "textValign":"top",
         "textHalign":"left",
-        "imageAlign":""
+        "imageAlign":"right"
         },
         {
         "title" : "Del socorro del socorro",
