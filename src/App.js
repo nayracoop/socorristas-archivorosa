@@ -3,6 +3,7 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
 import Post from './components/templates/Post';
+import AnimationMockup from './components/animations/Mockup';
 
 import content from './assets/texts/posts.json'
 import Home from './components/templates/Home';
@@ -25,7 +26,6 @@ const theme = {
     m: 768,
     s: 576
   },
-  maxWidth: 1366,
   articleMaxWidth: 680,
 };
 
@@ -46,9 +46,12 @@ class App extends Component {
           <Route path="/" exact>
             <Home />
           </Route>
+          <Route path="/anim" exact>
+            <AnimationMockup></AnimationMockup>
+          </Route>
           <Switch>
           {content.posts.map(post => {
-            return <Route path={'/' + post.meta.slug}>
+            return <Route key={post.meta.slug} path={'/' + post.meta.slug}>
               <Post data={post}></Post>
             </Route>
           })}
