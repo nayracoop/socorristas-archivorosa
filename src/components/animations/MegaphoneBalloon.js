@@ -1,7 +1,7 @@
 import React from 'react';
-import styled, { withTheme } from 'styled-components'
-import Float from './movieclips/Float'
+import styled from 'styled-components'
 import AlphaMatteImg from './graphics/AlphaMatteImg'
+import { withFloat } from './hoc/motion'
 
 const Image = styled(AlphaMatteImg)`
     width:100%;
@@ -13,10 +13,8 @@ const Image = styled(AlphaMatteImg)`
 
 const MegaphoneBalloon = (props) => {
   return (
-    <Float>
-      <Image src={require ('../../assets/imgs/el-aborto-como-lugar-para-conmover-me.jpg')} />
-    </Float>
+    <Image className={props.className} src={require ('../../assets/imgs/el-aborto-como-lugar-para-conmover-me.jpg')} />
   );
 }
 
-export default withTheme(MegaphoneBalloon);
+export default withFloat(MegaphoneBalloon);
