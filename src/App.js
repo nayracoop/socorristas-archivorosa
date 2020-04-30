@@ -6,12 +6,10 @@ import Post from './components/templates/Post';
 import AnimationMockup from './components/animations/Mockup';
 
 import content from './assets/texts/posts.json'
-import texts from './assets/texts/indexItemsContent.json'
 import Home from './components/templates/Home';
 
-const background = require('./assets/imgs/background.jpg');
 
-const theme = { 
+const theme = {
   colors: {
     dark: '#04090d',
     light: '#f8f8f8',
@@ -46,17 +44,18 @@ class App extends Component {
       <Container ref={this.container} className="App">
         <ThemeProvider theme={theme}>
           <Route path="/" exact>
-            <Home />
+            <Home content={content.posts}></Home>
           </Route>
           <Route path="/anim" exact>
             <AnimationMockup></AnimationMockup>
           </Route>
           <Switch>
-          {content.posts.map(post => {
-            return <Route key={post.meta.slug} path={'/' + post.meta.slug}>
-              <Post data={post}></Post>
-            </Route>
-          })}
+            {content.posts.map(post => {
+              const headerImage = require('./assets/imgs/header-' + post.meta.slug + '.png')
+              return <Route key={post.meta.slug} path={'/' + post.meta.slug}>
+                <Post data={post} headerImage={headerImage}></Post>
+              </Route>
+            })}
           </Switch>
         </ThemeProvider>
       </Container>

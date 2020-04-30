@@ -2,42 +2,40 @@ import React from 'react'
 import styled from 'styled-components'
 import IndexItem from '../snippets/body/index/IndexItem'
 
-
-
 const IndexGridContainer = styled.div`
     display: grid;
-    grid-template-columns: ${props=> props.columns} ;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 100vh 100vh 100vh 50vh 50vh 50vh 100vh 100vh;
 `;
 
 const IndexItemContainer = styled.div`
     position: relative;
-    overflow: visible
-    grid-row: ${props=> props.gridrs} / ${props=> props.gridre};
-    grid-column: ${props=> props.gridcs} / ${props=> props.gridce};
-    background-color:${props=> props.background};
+    overflow: visible;
+    grid-row: ${props => props.gridrs} / ${props => props.gridre};
+    grid-column: ${props => props.gridcs} / ${props => props.gridce};
 `
 
-const indexGrid = (props) =>{
-    return(
+const indexGrid = (props) => {
+    return (
         <IndexGridContainer>
-            {props.content.map((text, i)=>{
-                const image = require ('../../../assets/imgs/' + text.img + '.png')
-                return(
+            {props.content.map((post, i) => {
+                const image = require('../../../assets/imgs/index-' + post.meta.slug + '.png')
+                return (
                     <IndexItemContainer
-                        gridrs={text.gridrs} 
-                        gridre={text.gridre} 
-                        gridcs={text.gridcs} 
-                        gridce={text.gridce}
-                        background={text.background}>
-                        <IndexItem 
-                            key={i} 
-                            content={text.quote} 
+                        gridrs={post.theme.grid.row.start}
+                        gridre={post.theme.grid.row.end}
+                        gridcs={post.theme.grid.column.start}
+                        gridce={post.theme.grid.column.end}>
+                        <IndexItem
+                            key={i}
+                            content={post.excerpt}
+                            href={'/' + post.meta.slug}
                             image={image}
-                            borderColor={text.borderColor}
-                            imageAlign={text.imageAlign}
-                            textValign={text.textValign}
-                            textHalign={text.textHalign}>
+                            borderColor={post.theme.borderColor}
+                            imageAlign={post.theme.imageAlign}
+                            textValign={post.theme.textValign}
+                            textHalign={post.theme.textHalign}
+                            background={post.theme.background}>
                         </IndexItem>
                     </IndexItemContainer>
                 )

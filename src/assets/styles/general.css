@@ -27,10 +27,12 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+	width:100%;
+	overflow-x: hidden;
 	font: normal 100%/1.58 'PT Serif', serif;
 	background: #f8f8f8 url('../imgs/background.jpg') fixed;
-  background-image: url('../imgs/background-dust.jpg'), url('../imgs/background.jpg');
-  background-blend-mode: multiply;
+  	background-image: url('../imgs/background-dust.jpg'), url('../imgs/background.jpg');
+  	background-blend-mode: multiply;
 	background-attachment: fixed;  
 	background-size: cover, auto;  
 	color: rgb(40, 40, 40);
