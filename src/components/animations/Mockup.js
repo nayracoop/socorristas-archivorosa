@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { withTheme } from 'styled-components';
-import ButterflyBike from './ButterflyBike';
+import CloudsBench from './CloudsBench';
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,14 +12,14 @@ const Wrapper = styled.div`
 `
 
 const Show = styled.div`
-  min-width: 960px;
+  width:100%;
 `
 
 const Mockup = (props) => {
 
   return (
     <Wrapper>
-      <Show><ButterflyBike /></Show>
+      <Show><CloudsBench /></Show>
     </Wrapper>
   );
 }

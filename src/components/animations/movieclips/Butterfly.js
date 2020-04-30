@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components'
 import AlphaMatteImg from '../graphics/AlphaMatteImg'
 import {ButterflyLeftWing, ButterflyRightWing } from './ButterflyWing'
 
-
 const Wrapper = styled.div`
   max-width: 388px;
   position: relative;

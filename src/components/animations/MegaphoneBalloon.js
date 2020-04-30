@@ -4,16 +4,14 @@ import AlphaMatteImg from './graphics/AlphaMatteImg'
 import { withFloat } from './hoc/motion'
 
 const Image = styled(AlphaMatteImg)`
-    width:100%;
-    max-height: 870px;
-    width: auto;
-    position: absolute;
-    right: 5px;
+    max-width: 437px;
+    width: 100%;
+    height: auto;
 `;
 
 const MegaphoneBalloon = (props) => {
   return (
-    <Image className={props.className} src={require ('../../assets/imgs/el-aborto-como-lugar-para-conmover-me.jpg')} />
+    <Image className={props.className} src={require ('../../assets/imgs/el-aborto-como-lugar-para-conmover-me/balloon.jpg')} />
   );
 }
 

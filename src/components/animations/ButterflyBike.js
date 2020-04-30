@@ -5,7 +5,8 @@ import Butterfly from './movieclips/Butterfly'
 import { withFlutter } from './hoc/motion'
 
 const Wrapper = styled.div`
-  max-width: 666px;
+  width: 666px;
+  max-width: 100%;
   position: relative;
   ::before {
     content: "";
@@ -24,8 +25,16 @@ const StyledButterfly = styled(Butterfly)`
 
 const Bike = styled.img`
     position: absolute;
+    right: 0;
     bottom: 0;
-    width: 100%;
+    width: 96.09%;
+    height: auto;
+`;
+
+const Number = styled.img`
+    position: absolute;
+    bottom: 12.3%;
+    width: 13.66%;
     height: auto;
 `;
 
@@ -33,7 +42,8 @@ const ButterflyBike = (props) => {
   return (
     <Wrapper className={props.className}>
       <StyledButterfly />
-      <Bike src={require ('../../assets/imgs/hay-abortos/bike.png')} />
+      <Bike src={require ('../../assets/imgs/hay-abortos/bike.png')} alt="" />
+      <Number src={require ('../../assets/imgs/hay-abortos/number.png')} alt="10" />
     </Wrapper>
   );
 }
