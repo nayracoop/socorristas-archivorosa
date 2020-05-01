@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch, withRouter } from 'react-router-dom';
+import { HashRouter, Route, Switch, withRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
 import Post from './components/templates/Post';
@@ -43,20 +43,22 @@ class App extends Component {
     return (
       <Container ref={this.container} className="App">
         <ThemeProvider theme={theme}>
-          <Route path="/" exact>
-            <Home content={content.posts}></Home>
-          </Route>
-          <Route path="/anim" exact>
-            <AnimationMockup></AnimationMockup>
-          </Route>
-          <Switch>
-            {content.posts.map(post => {
-              const headerImage = require('./assets/imgs/header-' + post.meta.slug + '.png')
-              return <Route key={post.meta.slug} path={'/' + post.meta.slug}>
-                <Post data={post} headerImage={headerImage}></Post>
-              </Route>
-            })}
-          </Switch>
+          <HashRouter basename="/">
+            <Route path="/" exact>
+              <Home content={content.posts}></Home>
+            </Route>
+            <Route path="/anim" exact>
+              <AnimationMockup></AnimationMockup>
+            </Route>
+            <Switch>
+              {content.posts.map(post => {
+                const headerImage = require('./assets/imgs/header-' + post.meta.slug + '.png')
+                return <Route key={post.meta.slug} path={'/socorristas-archivorosa' + post.meta.slug}>
+                  <Post data={post} headerImage={headerImage}></Post>
+                </Route>
+              })}
+            </Switch>
+          </HashRouter>
         </ThemeProvider>
       </Container>
     );
