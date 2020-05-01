@@ -32,6 +32,7 @@ const Bike = styled.img`
 `;
 
 const Number = styled.img`
+    display: block;
     position: absolute;
     bottom: 12.3%;
     width: 13.66%;

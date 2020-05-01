@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components'
 import AlphaMatteImg from '../graphics/AlphaMatteImg'
 import { withFlutter } from '../hoc/motion'
 

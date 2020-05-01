@@ -8,19 +8,43 @@ export const withFlutter = (Component, settings = {}) => {
     100% { transform: rotate3d(${x},${y},${z},0deg); filter: brightness(100%); }
   `;
   const AnimatedComponent = styled(Component)`
-    animation: ${animation} ${duration} ease-in-out alternate infinite;
+    animation-name: ${animation};
+    animation-duration: ${duration};
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
   `
   return props => (<AnimatedComponent {...props} />)
 }
 
 export const withFloat = (Component, settings = {}) => {
-  const { duration = '4s' } = settings;
+  const { duration = '4s', offset = '15px' } = settings;
   const animation = keyframes`
-    0% { transform: translate3d(0,15px,0); }
-    100% { transform: translate3d(0,-15px,0); }
+    0% { transform: translate3d(0,${offset},0); }
+    100% { transform: translate3d(0,-${offset},0); }
   `;
   const AnimatedComponent = styled(Component)`
-    animation: ${animation} ${duration} ease-in-out alternate infinite;
+    animation-name: ${animation};
+    animation-duration: ${duration};
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  `
+  return props => (<AnimatedComponent {...props} />)
+}
+
+export const withWind = (Component, settings = {}) => {
+  const { duration = '1s', offset = '15px' } = settings;
+  const animation = keyframes`
+    0% { transform: scale(0) translate3d(-130px,${offset},0) skew(-45deg, 0deg)  }
+    100% { transform: scale(1) translate3d(0,-${offset},0) skew(0deg, 0deg)  }
+  `;
+  const AnimatedComponent = styled(Component)`
+    animation-name: ${animation};
+    animation-duration: ${duration};
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
   `
   return props => (<AnimatedComponent {...props} />)
 }
