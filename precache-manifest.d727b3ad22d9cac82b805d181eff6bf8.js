@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35e7c81726d2ad0f6d4dc93e9ae1f92e",
+    "revision": "a934fc04edd9ed10b11928afd707434a",
     "url": "/socorristas-archivorosa/index.html"
   },
   {
-    "revision": "09871a4481ae7c917d03",
+    "revision": "f03131a791eab03cea75",
     "url": "/socorristas-archivorosa/static/css/2.83ace7dd.chunk.css"
   },
   {
-    "revision": "f00726e1dd9c6493d1cd",
+    "revision": "2610c657183b325452fe",
     "url": "/socorristas-archivorosa/static/css/main.4045441e.chunk.css"
   },
   {
-    "revision": "09871a4481ae7c917d03",
-    "url": "/socorristas-archivorosa/static/js/2.339a6e4c.chunk.js"
+    "revision": "f03131a791eab03cea75",
+    "url": "/socorristas-archivorosa/static/js/2.cb9986ba.chunk.js"
   },
   {
-    "revision": "f00726e1dd9c6493d1cd",
-    "url": "/socorristas-archivorosa/static/js/main.fa11e38b.chunk.js"
+    "revision": "2610c657183b325452fe",
+    "url": "/socorristas-archivorosa/static/js/main.7759e8b0.chunk.js"
   },
   {
     "revision": "3b2ef7adffaf47a9e9f0",
@@ -28,16 +28,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/socorristas-archivorosa/static/media/background-dust.82f55bf2.jpg"
   },
   {
-    "revision": "ec726dc927fe8b535426498bcef5c363",
-    "url": "/socorristas-archivorosa/static/media/bike.ec726dc9.png"
+    "revision": "9ebbae52ebf1ca691e6a0ddc54051293",
+    "url": "/socorristas-archivorosa/static/media/bench.9ebbae52.jpg"
   },
   {
-    "revision": "637a4c0f61715a5bb3ef4ca993f8d6e8",
-    "url": "/socorristas-archivorosa/static/media/butterfly-left-wing.637a4c0f.jpg"
+    "revision": "a34cd3ff231faab4d5379aff71a0e576",
+    "url": "/socorristas-archivorosa/static/media/cloud.a34cd3ff.png"
   },
   {
-    "revision": "633fe8d84041445e48b4385ac70e5cf2",
-    "url": "/socorristas-archivorosa/static/media/butterfly-right-wing.633fe8d8.jpg"
+    "revision": "0b6b8bfeb163b14f7c45f2760a8035a7",
+    "url": "/socorristas-archivorosa/static/media/flowers-1.0b6b8bfe.jpg"
+  },
+  {
+    "revision": "8f30009f7ea8d0087ed6d636db0eb28b",
+    "url": "/socorristas-archivorosa/static/media/flowers-2.8f30009f.jpg"
   },
   {
     "revision": "632c0ee7bfc22bd5871cee45c98ac213",
@@ -138,5 +142,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "23fcad2857a855252513e9330c77ecba",
     "url": "/socorristas-archivorosa/static/media/index-viento-en-venecia.23fcad28.png"
+  },
+  {
+    "revision": "dd1246dc00b95d08ec083acab9d0ca25",
+    "url": "/socorristas-archivorosa/static/media/train.dd1246dc.png"
   }
 ]);

@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/socorristas-archivorosa/static/css/main.4045441e.chunk.css",
-    "main.js": "/socorristas-archivorosa/static/js/main.fa11e38b.chunk.js",
-    "main.js.map": "/socorristas-archivorosa/static/js/main.fa11e38b.chunk.js.map",
+    "main.js": "/socorristas-archivorosa/static/js/main.7759e8b0.chunk.js",
+    "main.js.map": "/socorristas-archivorosa/static/js/main.7759e8b0.chunk.js.map",
     "runtime-main.js": "/socorristas-archivorosa/static/js/runtime-main.e45eabad.js",
     "runtime-main.js.map": "/socorristas-archivorosa/static/js/runtime-main.e45eabad.js.map",
     "static/css/2.83ace7dd.chunk.css": "/socorristas-archivorosa/static/css/2.83ace7dd.chunk.css",
-    "static/js/2.339a6e4c.chunk.js": "/socorristas-archivorosa/static/js/2.339a6e4c.chunk.js",
-    "static/js/2.339a6e4c.chunk.js.map": "/socorristas-archivorosa/static/js/2.339a6e4c.chunk.js.map",
+    "static/js/2.cb9986ba.chunk.js": "/socorristas-archivorosa/static/js/2.cb9986ba.chunk.js",
+    "static/js/2.cb9986ba.chunk.js.map": "/socorristas-archivorosa/static/js/2.cb9986ba.chunk.js.map",
     "index.html": "/socorristas-archivorosa/index.html",
-    "precache-manifest.76dc9bab3e180b9fe5d4bb7a120a53f5.js": "/socorristas-archivorosa/precache-manifest.76dc9bab3e180b9fe5d4bb7a120a53f5.js",
+    "precache-manifest.d727b3ad22d9cac82b805d181eff6bf8.js": "/socorristas-archivorosa/precache-manifest.d727b3ad22d9cac82b805d181eff6bf8.js",
     "service-worker.js": "/socorristas-archivorosa/service-worker.js",
     "static/css/2.83ace7dd.chunk.css.map": "/socorristas-archivorosa/static/css/2.83ace7dd.chunk.css.map",
     "static/css/main.4045441e.chunk.css.map": "/socorristas-archivorosa/static/css/main.4045441e.chunk.css.map",
     "static/media/general.css": "/socorristas-archivorosa/static/media/background-dust.82f55bf2.jpg",
-    "static/media/bike.png": "/socorristas-archivorosa/static/media/bike.ec726dc9.png",
-    "static/media/butterfly-left-wing.jpg": "/socorristas-archivorosa/static/media/butterfly-left-wing.637a4c0f.jpg",
-    "static/media/butterfly-right-wing.jpg": "/socorristas-archivorosa/static/media/butterfly-right-wing.633fe8d8.jpg",
+    "static/media/bench.jpg": "/socorristas-archivorosa/static/media/bench.9ebbae52.jpg",
+    "static/media/cloud.png": "/socorristas-archivorosa/static/media/cloud.a34cd3ff.png",
+    "static/media/flowers-1.jpg": "/socorristas-archivorosa/static/media/flowers-1.0b6b8bfe.jpg",
+    "static/media/flowers-2.jpg": "/socorristas-archivorosa/static/media/flowers-2.8f30009f.jpg",
     "static/media/header-cuando-estamos-juntas.png": "/socorristas-archivorosa/static/media/header-cuando-estamos-juntas.632c0ee7.png",
     "static/media/header-del-socorro-del-socorro.png": "/socorristas-archivorosa/static/media/header-del-socorro-del-socorro.490509af.png",
     "static/media/header-el-aborto-como-lugar-para-conmover-me.png": "/socorristas-archivorosa/static/media/header-el-aborto-como-lugar-para-conmover-me.6a562372.png",
@@ -41,13 +42,14 @@
     "static/media/index-nilda.png": "/socorristas-archivorosa/static/media/index-nilda.a1fbc2ee.png",
     "static/media/index-quiero-que-salga.png": "/socorristas-archivorosa/static/media/index-quiero-que-salga.97fc88e9.png",
     "static/media/index-urgencia-rosa.png": "/socorristas-archivorosa/static/media/index-urgencia-rosa.a08baca9.png",
-    "static/media/index-viento-en-venecia.png": "/socorristas-archivorosa/static/media/index-viento-en-venecia.23fcad28.png"
+    "static/media/index-viento-en-venecia.png": "/socorristas-archivorosa/static/media/index-viento-en-venecia.23fcad28.png",
+    "static/media/train.png": "/socorristas-archivorosa/static/media/train.dd1246dc.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e45eabad.js",
     "static/css/2.83ace7dd.chunk.css",
-    "static/js/2.339a6e4c.chunk.js",
+    "static/js/2.cb9986ba.chunk.js",
     "static/css/main.4045441e.chunk.css",
-    "static/js/main.fa11e38b.chunk.js"
+    "static/js/main.7759e8b0.chunk.js"
   ]
 }
