@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/socorristas-archivorosa/precache-manifest.d4216a299725cace131b01747bcdcc9c.js"
+  "/socorristas-archivorosa/precache-manifest.141d073a9774a67e6d2029c547d42c20.js"
 );
 
 self.addEventListener('message', (event) => {
