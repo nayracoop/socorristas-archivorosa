@@ -43,7 +43,6 @@ class App extends Component {
     return (
       <Container ref={this.container} className="App">
         <ThemeProvider theme={theme}>
-          <HashRouter basename="/">
             <Route path="/" exact>
               <Home content={content.posts}></Home>
             </Route>
@@ -58,7 +57,6 @@ class App extends Component {
                 </Route>
               })}
             </Switch>
-          </HashRouter>
         </ThemeProvider>
       </Container>
     );
