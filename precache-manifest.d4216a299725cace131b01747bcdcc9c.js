@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "56f47cf220db4ffb9bdc91d0ad372d67",
+    "revision": "b5c5ffa0fe9ff0b4bb8a1cc137c02c8b",
     "url": "/socorristas-archivorosa/index.html"
   },
   {
-    "revision": "4a497683bb39a9a3c3a8",
+    "revision": "8c98bfc436fec5245c77",
     "url": "/socorristas-archivorosa/static/css/2.83ace7dd.chunk.css"
   },
   {
-    "revision": "e875671fd5f2e304d4e3",
+    "revision": "8092b047d8f079821089",
     "url": "/socorristas-archivorosa/static/css/main.4045441e.chunk.css"
   },
   {
-    "revision": "4a497683bb39a9a3c3a8",
-    "url": "/socorristas-archivorosa/static/js/2.ff31ec50.chunk.js"
+    "revision": "8c98bfc436fec5245c77",
+    "url": "/socorristas-archivorosa/static/js/2.ca6266b5.chunk.js"
   },
   {
-    "revision": "e875671fd5f2e304d4e3",
-    "url": "/socorristas-archivorosa/static/js/main.4e271926.chunk.js"
+    "revision": "8092b047d8f079821089",
+    "url": "/socorristas-archivorosa/static/js/main.9bb54ef0.chunk.js"
   },
   {
     "revision": "3b2ef7adffaf47a9e9f0",
