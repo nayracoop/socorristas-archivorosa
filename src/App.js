@@ -39,6 +39,12 @@ const Container = styled.div`
 
 class App extends Component {
 
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0)
+    }
+  }
+
   render() {
     return (
       <Container ref={this.container} className="App">
