@@ -25,7 +25,7 @@ const Post = (props) => {
   return (
 
     <Wrapper>
-      <ChapterHeader theme={{ ...props.theme, content: { align: 'left', margin: 0 }, background: { size: '480px', align: 'right' } }}
+      <ChapterHeader theme={{ ...props.theme, ...props.data.theme.header }}
         title={props.data.title}
         author={props.data.meta.author}
         info={props.data.meta.group}

@@ -8,7 +8,7 @@ const ChapterHeaderContainer = styled.header`
     position: relative;
     height: 100vh;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: ${props => props.theme.align === 'right' ? 'row-reverse' : 'row'} wrap;
     margin: 0 0 6em;
 `
 
@@ -24,7 +24,7 @@ const Image = styled.div`
 
 const HeaderBackground = styled.div`
     position: absolute;
-    left: ${props => props.theme.align === 'left' ? 'auto' : 0};
+    left: ${props => props.theme.align === 'left' ? 0 : 'auto'};
     right: ${props => props.theme.align === 'right' ? 0 : 'auto'};
     top: 0;
     bottom: 0;
@@ -37,7 +37,7 @@ const HeaderBackground = styled.div`
 const ChapterHeader = (props) => {
     console.log(props.theme)
     return (
-        <ChapterHeaderContainer>
+        <ChapterHeaderContainer theme={props.theme.content}>
             <Text>
                 <ChapterTitle
                     title={props.title}
