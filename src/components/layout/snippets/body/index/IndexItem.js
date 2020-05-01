@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import IndexImage from './IndexImage'
 
@@ -13,7 +14,7 @@ const QuoteContainer = styled.div`
   border-radius: 10px;
   
 `
-const Quote = styled.a`
+const Quote = styled(Link)`
   width: 60%;
   position: absolute;
   left:${props => props.textHalign === "left" ? "50px" : ""};
@@ -50,7 +51,7 @@ const indexItem = (props) => {
   return (
     <div>
       <QuoteContainer borderColor={props.borderColor}>
-        <Quote href={props.href} textValign={props.textValign} textHalign={props.textHalign}>
+        <Quote to={props.href} textValign={props.textValign} textHalign={props.textHalign}>
           {props.content}</Quote>
       </QuoteContainer>
       <IndexImage align={props.imageAlign} image={props.image}></IndexImage>
