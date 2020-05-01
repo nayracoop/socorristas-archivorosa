@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "273e87ab48a404de296974400176fbe1",
+    "revision": "3bcf61e1b10cad4356c52c72aed63422",
     "url": "/socorristas-archivorosa/index.html"
   },
   {
-    "revision": "f03131a791eab03cea75",
-    "url": "/socorristas-archivorosa/static/css/2.83ace7dd.chunk.css"
+    "revision": "83758c9bfd404da0934d",
+    "url": "/socorristas-archivorosa/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "82edbd326ebf0a62e5b1",
-    "url": "/socorristas-archivorosa/static/css/main.4045441e.chunk.css"
+    "revision": "52e03d606255249e44e7",
+    "url": "/socorristas-archivorosa/static/css/main.7938ca90.chunk.css"
   },
   {
-    "revision": "f03131a791eab03cea75",
-    "url": "/socorristas-archivorosa/static/js/2.cb9986ba.chunk.js"
+    "revision": "83758c9bfd404da0934d",
+    "url": "/socorristas-archivorosa/static/js/2.03aee8fd.chunk.js"
   },
   {
-    "revision": "82edbd326ebf0a62e5b1",
-    "url": "/socorristas-archivorosa/static/js/main.09c5d8af.chunk.js"
+    "revision": "52e03d606255249e44e7",
+    "url": "/socorristas-archivorosa/static/js/main.f12580d1.chunk.js"
   },
   {
     "revision": "3b2ef7adffaf47a9e9f0",
@@ -28,8 +28,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/socorristas-archivorosa/static/media/background-dust.82f55bf2.jpg"
   },
   {
+    "revision": "86bb5c60299d6ccb076afa185b94a0fe",
+    "url": "/socorristas-archivorosa/static/media/balloon.86bb5c60.jpg"
+  },
+  {
     "revision": "9ebbae52ebf1ca691e6a0ddc54051293",
     "url": "/socorristas-archivorosa/static/media/bench.9ebbae52.jpg"
+  },
+  {
+    "revision": "95bdc2b088c9a0ddfd67f5cb89f757c4",
+    "url": "/socorristas-archivorosa/static/media/bike.95bdc2b0.png"
+  },
+  {
+    "revision": "637a4c0f61715a5bb3ef4ca993f8d6e8",
+    "url": "/socorristas-archivorosa/static/media/butterfly-left-wing.637a4c0f.jpg"
+  },
+  {
+    "revision": "633fe8d84041445e48b4385ac70e5cf2",
+    "url": "/socorristas-archivorosa/static/media/butterfly-right-wing.633fe8d8.jpg"
   },
   {
     "revision": "a34cd3ff231faab4d5379aff71a0e576",
@@ -142,6 +158,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "23fcad2857a855252513e9330c77ecba",
     "url": "/socorristas-archivorosa/static/media/index-viento-en-venecia.23fcad28.png"
+  },
+  {
+    "revision": "b94e4383ba24969cfef47f307d67ff04",
+    "url": "/socorristas-archivorosa/static/media/number.b94e4383.png"
   },
   {
     "revision": "dd1246dc00b95d08ec083acab9d0ca25",
