@@ -28,22 +28,22 @@ const HeaderBackground = styled.div`
     right: ${props => props.theme.align === 'right' ? 0 : 'auto'};
     top: 0;
     bottom: 0;
-    width: ${props => props.theme.size ? props.theme.size : "50%"};
+    width: 50%;
     opacity:0.3;
     background-color: #bd8cbf;
     z-index: -1;
 `
 
-const ChapterHeader = (props) =>{
+const ChapterHeader = (props) => {
     console.log(props.theme)
-    return(
+    return (
         <ChapterHeaderContainer>
             <Text>
-                <ChapterTitle 
-                    title={props.title} 
+                <ChapterTitle
+                    title={props.title}
                     author={props.author}
-                    info={props.info} 
-                    date={props.date} 
+                    info={props.info}
+                    date={props.date}
                     titleSize={props.titleSize}>
                 </ChapterTitle>
             </Text>
