@@ -52,9 +52,6 @@ class App extends Component {
           <Route path="/" exact>
             <Home content={content.posts}></Home>
           </Route>
-          <Route path="/anim" exact>
-            <AnimationMockup></AnimationMockup>
-          </Route>
           <Switch>
             {content.posts.map(post => {
               const headerImage = require('./assets/imgs/header-' + post.meta.slug + '.png')

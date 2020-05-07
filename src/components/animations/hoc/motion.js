@@ -34,10 +34,10 @@ export const withFloat = (Component, settings = {}) => {
 }
 
 export const withWind = (Component, settings = {}) => {
-  const { duration = '1s', offset = '15px' } = settings;
+  const { duration = '3s', offset = '15px' } = settings;
   const animation = keyframes`
-    0% { transform: scale(0) translate3d(-130px,${offset},0) skew(-45deg, 0deg)  }
-    100% { transform: scale(1) translate3d(0,-${offset},0) skew(0deg, 0deg)  }
+    0% { transform: skew(1deg, -2deg) rotate3d(0,1,0,3deg); }
+    100% { transform: skew(-1deg, 2deg) rotate3d(0,1,0,-3deg); }
   `;
   const AnimatedComponent = styled(Component)`
     animation-name: ${animation};

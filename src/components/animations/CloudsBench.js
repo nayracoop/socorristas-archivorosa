@@ -35,6 +35,16 @@ const BigCloud = styled(Cloud)`
   animation-delay: -1.25s;
 `;
 
+const Fog = styled(Cloud)`
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  left: 0;
+  opacity: 0.25;
+`;
+
 const Bench = styled(AlphaMatteImg)`
   position: absolute;
   bottom: 0;
@@ -61,15 +71,16 @@ const Flowers1 = styled(Flowers)`
   height: auto;
   left: 11.98%;
   top: 25%;
-`;
-
-const Flowers2 = styled(Flowers)`
+  `;
+  
+  const Flowers2 = styled(Flowers)`
   position: absolute;
   bottom: 0;
   width: 13.34%;
   height: auto;
   left: 22.32%;
   top: 17.88%;
+  animation-delay: -0.75s;
 `;
 
 const Flowers3 = styled(Flowers)`
@@ -79,6 +90,7 @@ const Flowers3 = styled(Flowers)`
   height: auto;
   right: 19.5%;
   top: 0;
+  animation-delay: -1.25s;
 `;
 
 const CloudsBench = (props) => {
@@ -91,6 +103,7 @@ const CloudsBench = (props) => {
       <BigCloud src={require ('../../assets/imgs/lina/cloud.png')} />
       <Bench src={require ('../../assets/imgs/lina/bench.jpg')} />
       <Train src={require ('../../assets/imgs/lina/train.png')} />
+      <Fog src={require ('../../assets/imgs/lina/cloud.png')} />
     </Wrapper>
   );
 }
