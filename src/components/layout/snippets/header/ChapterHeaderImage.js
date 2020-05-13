@@ -1,41 +1,34 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Route, Switch, withRouter } from 'react-router-dom';
+import styled, { withTheme } from 'styled-components'
+import ButterflyBike from '../../../animations/ButterflyBike';
+import MegaphoneBalloon from '../../../animations/MegaphoneBalloon';
+import CloudsBench from '../../../animations/CloudsBench';
 
-const HeaderImageContainer = styled.div`
-   
+const Image = styled.img`
+    // margin-top:1%;
+    // height: 95%;
+    // position: absolute;
+    // right: 5px;
 `;
 
-const HeaderBackground = styled.div`
-    position: absolute;
-    left: 0;
-    top: 0;
-    width:${props=> props.backgroundWidth};
-    height:100%;
-    opacity:0.7;
-    background-color: pink;
-    background-size
-`
-
-const HeaderImage = styled.div`
-    background-image:url(${props=> props.image});
-    position: absolute;
-    left: 0;
-    top: 0;
-    width:100%;
-    height:100%;
-    z-index: 1000;
-    background-repeat: no-repeat;
-    background-size: auto 90%;
-`
-
-
-const ChapterHeaderImage = (props) =>{
-    return(
-        <HeaderImageContainer> 
-            <HeaderImage image={props.image} ></HeaderImage>
-            <HeaderBackground ></HeaderBackground>
-        </HeaderImageContainer>
+const ChapterHeaderImage = (props) => {
+    return (
+        <Switch>
+            <Route path="/hay-abortos" exact>
+                <ButterflyBike />
+            </Route>
+            <Route path="/el-aborto-como-lugar-para-conmover-me" exact>
+                <MegaphoneBalloon />
+            </Route>
+            <Route path="/lina" exact>
+                <CloudsBench />
+            </Route>
+            <Route path="/">
+                <Image src={props.image} />
+            </Route>
+        </Switch>
     );
 }
 
-export default ChapterHeaderImage
+export default withTheme(ChapterHeaderImage)

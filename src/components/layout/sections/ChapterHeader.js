@@ -1,55 +1,58 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 
 import ChapterTitle from '../snippets/header/ChapterTitle'
 import ChapterHeaderImage from '../snippets/header/ChapterHeaderImage'
 
-const ChapterHeaderContainer = styled.div`
+const ChapterHeaderContainer = styled.header`
     position: relative;
-    height:100vh;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-`;
-
-const ImageItem = styled.div`
-    grid-row: 1 / 4;
-    grid-column: 1 / 6;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-`;
+    flex-flow: ${props => props.theme.align === 'right' ? 'row-reverse' : 'row'} wrap;
+    margin: 0 0 6em;
+`
 
-const Image = styled.img`
-    max-width: 90%;
-    max-height: 90%;
-    width: auto;
-    height: auto;
-    animation: floating 3s ease-in-out alternate infinite;
-`;
+const Text = styled.div`
+    flex: 1;
+    align-self: center;
+`
 
-const ChapterHeader = (props) =>{
-    return(
-        <div>
-            <ChapterHeaderContainer>
-                <ChapterTitle 
-                    titleContent={props.titleContent} 
-                    authorContent={props.authorContent} 
-                    dateContent={props.dateContent} 
+const Image = styled.div`
+    flex: 1;
+    height: 100%;
+`
+
+const HeaderBackground = styled.div`
+    position: absolute;
+    left: ${props => props.theme.align === 'left' ? 0 : 'auto'};
+    right: ${props => props.theme.align === 'right' ? 0 : 'auto'};
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    opacity:0.3;
+    background-color: #bd8cbf;
+    z-index: -1;
+`
+
+const ChapterHeader = (props) => {
+    console.log(props.theme)
+    return (
+        <ChapterHeaderContainer theme={props.theme.content}>
+            <Text>
+                <ChapterTitle
+                    title={props.title}
+                    author={props.author}
+                    info={props.info}
+                    date={props.date}
                     titleSize={props.titleSize}>
                 </ChapterTitle>
-                <ImageItem>
-                    <Image width="545" height="1080" src={props.image} />
-                    {/* <ChapterHeaderImage image={props.image}></ChapterHeaderImage> */}
-                </ImageItem>
-            </ChapterHeaderContainer>
-        </div>
+            </Text>
+            <Image>
+                <ChapterHeaderImage image={props.image}></ChapterHeaderImage>
+                <HeaderBackground theme={props.theme.background} />
+            </Image>
+        </ChapterHeaderContainer>
     );
 }
 
-export default ChapterHeader
+export default withTheme(ChapterHeader)

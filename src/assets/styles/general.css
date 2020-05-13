@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@400;500&&family=Caveat&family=Gloria+Hallelujah&family=Indie+Flower&family=Nanum+Pen&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -27,10 +27,12 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-	font: normal 100%/1.58 'Open Sans', sans-serif;
+	width:100%;
+	overflow-x: hidden;
+	font: normal 100%/1.58 'PT Serif', serif;
 	background: #f8f8f8 url('../imgs/background.jpg') fixed;
-  background-image: url('../imgs/background-dust.jpg'), url('../imgs/background.jpg');
-  background-blend-mode: multiply;
+  	background-image: url('../imgs/background-dust.jpg'), url('../imgs/background.jpg');
+  	background-blend-mode: multiply;
 	background-attachment: fixed;  
 	background-size: cover, auto;  
 	color: rgb(40, 40, 40);
@@ -59,7 +61,19 @@ table {
 	margin:0;
 }
 
-@keyframes floating {
-	0% { transform: translateY(15px); }
-	100% { transform: translateY(-15px); }
+.ruth-zurbriggen {
+	font-family:'Caveat', 'Roboto Slab', serif;
+	font-weight: 400;
+}
+.belen-grosso {
+	font-family:'Gloria Hallelujah', 'Roboto Slab', serif;
+	font-weight: 400;
+}
+.luz-fernandez {
+	font-family:'Indie Flower', 'Roboto Slab', serif;
+	font-weight: 400;
+}
+.guille-peralta-y-vivi-fonseca {
+	font-family:'Nanum Pen', 'Roboto Slab', serif;
+	font-weight: 400;
 }

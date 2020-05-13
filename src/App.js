@@ -1,52 +1,68 @@
 import React, { Component } from 'react'
-import { Route, withRouter } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 
 import Post from './components/templates/Post';
+import AnimationMockup from './components/animations/Mockup';
 
-import texts from './assets/texts/indexItemsContent.json'
+import content from './assets/texts/posts.json'
 import Home from './components/templates/Home';
 
-const background = require('./assets/imgs/background.jpg');
 
-const theme = { 
+const theme = {
   colors: {
     dark: '#04090d',
     light: '#f8f8f8',
-    primary: 'indigo'
+    primary: '#bd8cbf' //'indigo',
   },
   fonts: {
     display: "'Roboto Slab', serif",
   },
   pageWidth: {
+    xxl: 1366,
     xl: 1200,
     l: 992,
     m: 768,
     s: 576
   },
+  maxWidth: 1680,
   articleMaxWidth: 680,
 };
 
+const Container = styled.div`
+  position: relative;
+  margin: 0 auto;
+  padding: 0 ;
+  width: 100%;
+  max-width: ${theme.maxWidth}px;
+`
+
 class App extends Component {
+
+  componentDidUpdate(prevProps) {
+    if (this.props.location !== prevProps.location) {
+      window.scrollTo(0, 0)
+    }
+  }
 
   render() {
     return (
-      <div className="app">
+      <Container ref={this.container} className="App">
         <ThemeProvider theme={theme}>
           <Route path="/" exact>
-            <Home></Home>
+            <Home content={content.posts}></Home>
           </Route>
-          <Route path='/post'>
-            <Post 
-              titleContent={texts.headers[0].title}
-              authorContent={texts.headers[0].author}
-              dateContent={texts.headers[0].date}
-              content= {texts.headers[0].text}>
-            </Post>
-          </Route>
+          <Switch>
+            {content.posts.map(post => {
+              const headerImage = require('./assets/imgs/header-' + post.meta.slug + '.png')
+              return <Route key={post.meta.slug} path={'/' + post.meta.slug}>
+                <Post data={post} headerImage={headerImage}></Post>
+              </Route>
+            })}
+          </Switch>
         </ThemeProvider>
-      </div>
-      );
+      </Container>
+    );
   }
 }
 

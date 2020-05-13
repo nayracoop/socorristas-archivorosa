@@ -2,7 +2,6 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import styled, { withTheme } from 'styled-components';
 import ChapterHeader from '../layout/sections/ChapterHeader'
-const image = require ('../../assets/imgs/el-aborto-como-lugar-para-conmover-me.png')
 
 const Wrapper = styled.div`
   display: flex;
@@ -24,26 +23,18 @@ const Content = styled.article`
 const Post = (props) => {
 
   return (
-    // <div>    
-    //   <ChapterHeader 
-    //     titleContent={props.titleContent} 
-    //     authorContent={props.authorContent} 
-    //     dateContent={props.dateContent} 
-    //     titleSize={props.titleSize}        
-    //     image={image}>
-    //   </ChapterHeader>
-      
-    // </div>
+
     <Wrapper>
-      <ChapterHeader 
-        titleContent={props.titleContent} 
-        authorContent={props.authorContent} 
-        dateContent={props.dateContent} 
-        titleSize={props.titleSize}        
-        image={image}>
+      <ChapterHeader theme={{ ...props.theme, ...props.data.theme.header }}
+        title={props.data.title}
+        author={props.data.meta.author}
+        info={props.data.meta.group}
+        date={props.data.date}
+        titleSize="48"
+        image={props.headerImage}>
       </ChapterHeader>
       <Content>
-        <ReactMarkdown source={props.content}/>
+        <ReactMarkdown source={props.data.content} />
       </Content>
     </Wrapper>
   );
