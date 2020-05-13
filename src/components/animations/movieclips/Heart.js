@@ -1,11 +1,11 @@
 import React from 'react';
-import { withFloat } from '../hoc/motion'
 import AlphaMatteImg from '../graphics/AlphaMatteImg'
+import { withBeat } from '../hoc/motion'
 
-const Cloud = (props) => {
+const Heart = (props) => {
   return (
     <AlphaMatteImg {...props} />
   );
 }
 
-export default withFloat(Cloud, { offset: '4px', duration: '4s' })
+export default withBeat(Heart)

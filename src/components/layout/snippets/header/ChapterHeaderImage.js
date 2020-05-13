@@ -4,6 +4,7 @@ import styled, { withTheme } from 'styled-components'
 import ButterflyBike from '../../../animations/ButterflyBike';
 import MegaphoneBalloon from '../../../animations/MegaphoneBalloon';
 import CloudsBench from '../../../animations/CloudsBench';
+import HeartChat from '../../../animations/HeartChat';
 
 const Image = styled.img`
     // margin-top:1%;
@@ -23,6 +24,9 @@ const ChapterHeaderImage = (props) => {
             </Route>
             <Route path="/lina" exact>
                 <CloudsBench />
+            </Route>
+            <Route path="/el-palpitar-de-los-abortos" exact>
+                <HeartChat />
             </Route>
             <Route path="/">
                 <Image src={props.image} />
