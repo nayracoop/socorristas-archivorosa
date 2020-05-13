@@ -35,15 +35,15 @@ const BigCloud = styled(Cloud)`
   animation-delay: -1.25s;
 `;
 
-const Fog = styled(Cloud)`
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  left: 0;
-  opacity: 0.25;
-`;
+// const Fog = styled(Cloud)`
+//   display: block;
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+//   height: auto;
+//   left: 0;
+//   opacity: 0.25;
+// `;
 
 const Bench = styled(AlphaMatteImg)`
   position: absolute;
@@ -100,10 +100,10 @@ const CloudsBench = (props) => {
       <Flowers2 src={require ('../../assets/imgs/lina/flowers-1.jpg')} />
       <Number src={require ('../../assets/imgs/lina/number.jpg')} />
       <Flowers3 src={require ('../../assets/imgs/lina/flowers-1.jpg')} />
-      <BigCloud src={require ('../../assets/imgs/lina/cloud.png')} />
+      <BigCloud src={require ('../../assets/imgs/lina/cloud.jpg')} />
       <Bench src={require ('../../assets/imgs/lina/bench.jpg')} />
-      <Train src={require ('../../assets/imgs/lina/train.png')} />
-      <Fog src={require ('../../assets/imgs/lina/cloud.png')} />
+      <Train src={require ('../../assets/imgs/lina/train.jpg')} />
+      {/* <Fog src={require ('../../assets/imgs/lina/cloud.png')} /> */}
     </Wrapper>
   );
 }

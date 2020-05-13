@@ -22,7 +22,7 @@ const AlphaMatteImg = (props) =>{
 				const index = (mask.width*j+i)*4
         const indexMascara = (mask.width*j+(i+canvas.current.width))*4
 				const gray = imgData.data[indexMascara+1]
-				imgData.data[index+3] = gray*3
+				imgData.data[index+3] = gray
 			}
 		}
 		maskContext.putImageData(imgData, 0, 0)
