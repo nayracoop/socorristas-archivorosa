@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import IndexImage from './IndexImage'
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import IndexImage from "./IndexImage";
 
 const QuoteContainer = styled.div`
   position: absolute;
@@ -10,18 +10,19 @@ const QuoteContainer = styled.div`
   left:10%;
   top:10%;
   padding: 10%;
-  border: ${props => props.borderColor !== "none" ? "1px solid " + props.borderColor : "none"}
+  border: ${(props) =>
+    props.borderColor !== "none" ? "1px solid " + props.borderColor : "none"}
   border-radius: 10px;
   
-`
+`;
 const Quote = styled(Link)`
   width: 60%;
   position: absolute;
-  left:${props => props.textHalign === "left" ? "50px" : ""};
-  right:${props => props.textHalign === "right" ? "50px" : ""};
-  top:${props => props.textValign === "top" ? "150px" : ""};
-  bottom:${props => props.textValign === "bottom" ? "150px" : ""};
-  font-family: ${props => props.theme.fonts.display};
+  left:${(props) => (props.texthalign === "left" ? "50px" : "")};
+  right:${(props) => (props.texthalign === "right" ? "50px" : "")};
+  top:${(props) => (props.textvalign === "top" ? "150px" : "")};
+  bottom:${(props) => (props.textvalign === "bottom" ? "150px" : "")};
+  font-family: ${(props) => props.theme.fonts.display};
   font-size: 2.2em;
   line-height: 1.1em;
   z-index 10000;
@@ -34,31 +35,35 @@ const Quote = styled(Link)`
     color: #000;
     opacity: .9;
   }
-`
+`;
 
 const IndexItemBackground = styled.div`
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity:${props => props.background === 1 ? .3 : 0};
-    background-color: #bd8cbf;
-    z-index: -1;
-`
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: ${(props) => (props.background === 1 ? 0.3 : 0)};
+  background-color: ${(props) => props.theme.colors.background};
+  z-index: -1;
+`;
 
 const indexItem = (props) => {
   return (
     <div>
       <QuoteContainer borderColor={props.borderColor}>
-        <Quote to={props.href} textValign={props.textValign} textHalign={props.textHalign}>
-          {props.content}</Quote>
+        <Quote
+          to={props.href}
+          textvalign={props.textvalign}
+          texthalign={props.texthalign}
+        >
+          {props.content}
+        </Quote>
       </QuoteContainer>
       <IndexImage align={props.imageAlign} image={props.image}></IndexImage>
       <IndexItemBackground background={props.background}></IndexItemBackground>
     </div>
   );
-}
+};
 
-
-export default indexItem
+export default indexItem;
