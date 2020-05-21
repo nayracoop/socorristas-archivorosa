@@ -19,14 +19,14 @@ const IntroductionContainer = styled.div`
     opacity: .7;
 `;
 
-
 const home = (props) => {
     return (
         <HomeContainer>
             <ChapterHeader theme={{ ...props.theme, content: { align: 'left', margin: 0 }, background: { size: '50%', align: 'right' } }}
                 title="Archivo rosa"
                 titleSize="192"
-                image={image}>
+                image={image}
+                scrollText="Scrolleá hacia abajo para conocer los relatos">
             </ChapterHeader>
             <IntroductionContainer>
                 <p>
@@ -41,6 +41,5 @@ const home = (props) => {
         </HomeContainer>
     );
 }
-
 
 export default home

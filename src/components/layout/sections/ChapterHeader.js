@@ -3,6 +3,7 @@ import styled, { withTheme } from "styled-components";
 
 import ChapterTitle from "../snippets/header/ChapterTitle";
 import ChapterHeaderImage from "../snippets/header/ChapterHeaderImage";
+import ScrollIndicator from '../snippets/header/ScrollIndicator'
 
 const ChapterHeaderContainer = styled.header`
   position: relative;
@@ -51,7 +52,8 @@ const ChapterHeader = (props) => {
       <Image>
         <ChapterHeaderImage image={props.image}></ChapterHeaderImage>
       </Image>
-      <HeaderBackground theme={props.theme.background} />
+      <HeaderBackground theme={props.theme.background} />        
+      <ScrollIndicator scrollText={props.scrollText} />
     </ChapterHeaderContainer>
   );
 };

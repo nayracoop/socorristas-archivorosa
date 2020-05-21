@@ -30,7 +30,8 @@ const Post = (props) => {
         date={props.data.date}
         titleSize="48"
         image={props.headerImage}
-      ></ChapterHeader>
+        scrollText="Scrolleá hacia abajo para leer el relato">
+      </ChapterHeader>
       <Content>
         <ReactMarkdown source={props.data.content} />
       </Content>
