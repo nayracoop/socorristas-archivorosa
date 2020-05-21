@@ -14,8 +14,8 @@ const FooterBackground = styled.div`
   width: 100%;
   height: 100vh;
   bottom: 0;
-  opacity: 0.3;
-  background-color: #bd8cbf;
+  opacity: ${(props) => props.theme.colors.backgroundOpacity};
+  background-color: ${(props) => props.theme.colors.background};
   z-index: -1;
 `;
 

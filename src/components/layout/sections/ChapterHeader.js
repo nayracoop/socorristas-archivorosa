@@ -3,14 +3,14 @@ import styled, { withTheme } from "styled-components";
 
 import ChapterTitle from "../snippets/header/ChapterTitle";
 import ChapterHeaderImage from "../snippets/header/ChapterHeaderImage";
-import ScrollIndicator from '../snippets/header/ScrollIndicator'
+import ScrollIndicator from "../snippets/header/ScrollIndicator";
 
 const ChapterHeaderContainer = styled.header`
   position: relative;
   height: 100vh;
   display: flex;
   flex-flow: ${(props) =>
-      props.theme.align === "right" ? "row-reverse" : "row"}
+    props.theme.align === "right" ? "row-reverse" : "row"}
     wrap;
   margin: 0 0 6em;
 `;
@@ -18,6 +18,7 @@ const ChapterHeaderContainer = styled.header`
 const Text = styled.div`
   flex: 1;
   align-self: center;
+  padding: 5%;
 `;
 
 const Image = styled.div`
@@ -32,14 +33,14 @@ const HeaderBackground = styled.div`
   top: 0;
   bottom: 0;
   width: 50%;
-  opacity: 0.3;
-  background-color: #bd8cbf;
+  opacity: ${(props) => props.theme.colors.backgroundOpacity} ;
+  background-color: ${(props) => props.theme.colors.background} ;
   z-index: -1;
 `;
 
 const ChapterHeader = (props) => {
   return (
-    <ChapterHeaderContainer theme={props.theme.content}>
+    <ChapterHeaderContainer>
       <Text>
         <ChapterTitle
           title={props.title}
@@ -52,8 +53,8 @@ const ChapterHeader = (props) => {
       <Image>
         <ChapterHeaderImage image={props.image}></ChapterHeaderImage>
       </Image>
-      <HeaderBackground theme={props.theme.background} />        
-      <ScrollIndicator scrollText={props.scrollText} />
+      <HeaderBackground />
+      <ScrollIndicator />
     </ChapterHeaderContainer>
   );
 };

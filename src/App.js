@@ -13,6 +13,7 @@ const theme = {
   colors: {
     text: "#04090d",
     background: "#bd8cbf",
+    backgroundOpacity: "0.3",
   },
   fonts: {
     display: "'Roboto Slab', serif",
