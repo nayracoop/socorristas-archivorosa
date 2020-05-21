@@ -12,6 +12,7 @@ import Footer from "./components/layout/sections/Footer";
 const theme = {
   colors: {
     text: "#04090d",
+    textOpacity: "0.7",
     background: "#bd8cbf",
     backgroundOpacity: "0.3",
   },

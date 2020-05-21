@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 import IndexImage from "./IndexImage";
 
 const QuoteContainer = styled.div`
@@ -10,8 +10,8 @@ const QuoteContainer = styled.div`
   left:10%;
   top:10%;
   padding: 10%;
-  border: ${(props) =>
-    props.borderColor !== "none" ? "1px solid " + props.borderColor : "none"}
+  border: ${(props) => props.borderColor !== "none" ? "1px solid " + props.theme.colors.text
+    : "none"}
   border-radius: 10px;
   
 `;
@@ -25,15 +25,14 @@ const Quote = styled(Link)`
   font-family: ${(props) => props.theme.fonts.display};
   font-size: 2.2em;
   line-height: 1.1em;
-  z-index 10000;
-  opacity: 0.6;
-  color: #000;
+  color: ${(props) => props.theme.colors.text};
+  opacity: ${(props) => props.theme.colors.textOpacity};
   cursor:pointer;
+  z-index 10000;
   transition: all ease-in .2s;
 
   :hover {
-    color: #000;
-    opacity: .9;
+   opacity: ${(props) => props.theme.colors.textOpacity * 2};  
   }
 `;
 
@@ -43,7 +42,7 @@ const IndexItemBackground = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: ${(props) => (props.background === 1 ? 0.3 : 0)};
+  opacity: ${(props) => props.background === 1 ? props.theme.colors.backgroundOpacity : 0};
   background-color: ${(props) => props.theme.colors.background};
   z-index: -1;
 `;
@@ -66,4 +65,4 @@ const indexItem = (props) => {
   );
 };
 
-export default indexItem;
+export default withTheme(indexItem);

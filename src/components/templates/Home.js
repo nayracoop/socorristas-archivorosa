@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 import IndexGrid from "../layout/sections/IndexGrid";
 import ChapterHeader from "../layout/sections/ChapterHeader";
 
@@ -15,8 +15,15 @@ const IntroductionContainer = styled.div`
   margin: 0 auto;
   padding-top: 15%;
   font-family: ${(props) => props.theme.fonts.display};
+  color: ${(props) => props.theme.colors.text};
   font-size: 2em;
-  opacity: 0.7;
+  opacity: ${(props) => props.theme.colors.textOpacity};
+
+  a {
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.text}
+    opacity: ${(props) => props.theme.colors.textOpacity * 2};
+  }
 `;
 
 const home = (props) => {
@@ -39,7 +46,7 @@ const home = (props) => {
         <p>
           El relato que estás por leer es un entramado de experiencias de
           activistes feministas de{" "}
-          <a href="http://larevuelta.com.ar/">La Revuelta</a> que dan forma a un
+          <a target="blank" href="http://larevuelta.com.ar/">La Revuelta</a> que dan forma a un
           deseo colectivo: construir lazos de sororidad en tiempos urgentes.
         </p>
 
@@ -54,4 +61,4 @@ const home = (props) => {
   );
 };
 
-export default home;
+export default withTheme(home);

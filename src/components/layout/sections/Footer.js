@@ -19,7 +19,7 @@ const FooterBackground = styled.div`
   z-index: -1;
 `;
 
-const FooterText = styled.p`
+const FooterText = styled.div`
   color: ${(props) => props.theme.colors.text};
   font-size: 1em;
   margin-bottom: 50px;
@@ -42,7 +42,6 @@ const FooterLink = styled.li`
 `;
 
 const Footer = (props) => {
-  console.log(props.theme);
   return (
     <div>
       <FooterContainer>
@@ -50,7 +49,7 @@ const Footer = (props) => {
           <p>
             Archivo Rosa es un experimento narrativo que busca compartir
             historias y reflexiones de activistas que forman parte de{" "}
-            <a href="http://socorristasenred.org/">
+            <a target="blank" href="http://socorristasenred.org/">
               Socorristas en Red (feministas que abortamos).
             </a>
           </p>
@@ -58,7 +57,6 @@ const Footer = (props) => {
         <FooterText>
           <ul>
             {props.content.map((post, i) => {
-              console.log(props.theme.colors.text);
               return (
                 <FooterLink key={i}>
                   <a href={"/" + post.meta.slug}>{post.title} . </a>
@@ -74,18 +72,18 @@ const Footer = (props) => {
           </p>
           <p>
             Collages:{" "}
-            <a href="https://www.instagram.com/mulata.dcv/">
+            <a target="blank" href="https://www.instagram.com/mulata.dcv/">
               María Reboredo (@mulata.cv)
             </a>
           </p>
           <p>
             {" "}
-            Diseño y programación:<a href="https://nayra.coop/"> nayra.coop </a>
+            Diseño y programación:<a target="blank" href="https://nayra.coop/"> nayra.coop </a>
           </p>
           <p>
             {" "}
             Producción audiovisual:
-            <a href="/"> Rodrigo Bonilla </a>
+            <a target="blank" href="/"> Rodrigo Bonilla </a>
           </p>
         </FooterText>
       </FooterContainer>
