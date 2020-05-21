@@ -38,7 +38,7 @@ const FooterText = styled.p`
 `;
 
 const FooterLink = styled.li`
-  display: inline;
+  display: block;
 `;
 
 const Footer = (props) => {
@@ -47,18 +47,13 @@ const Footer = (props) => {
     <div>
       <FooterContainer>
         <FooterText>
-          Archivo Rosa es lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla consectetur erat eget ex eleifend, nec maximus ante
-          posuere. Nullam in pretium arcu. Sed porta faucibus leo in egestas.
-          Vivamus non massa auctor, congue libero at, lacinia sem. Interdum et
-          malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi.
-          Nulla sit amet quam ultricies, laoreet eros id, tristique massa.
-          Mauris faucibus quam turpis, non efficitur arcu placerat in. Donec
-          luctus fermentum consequat. Praesent pulvinar viverra viverra. Nam
-          auctor ac mauris quis venenatis. Nulla tincidunt ultrices dui, id
-          dapibus felis pellentesque id. Nullam tristique dolor sit amet dui
-          luctus, vitae pharetra ipsum ultricies. Donec vestibulum sem nibh, sed
-          feugiat est accumsan et.
+          <p>
+            Archivo Rosa es un experimento narrativo que busca compartir
+            historias y reflexiones de activistas que forman parte de{" "}
+            <a href="http://socorristasenred.org/">
+              Socorristas en Red (feministas que abortamos).
+            </a>
+          </p>
         </FooterText>
         <FooterText>
           <ul>
@@ -73,15 +68,25 @@ const Footer = (props) => {
           </ul>
         </FooterText>
         <FooterText className="credits">
-          Collages:
-          <a href="https://www.instagram.com/mulata.dcv/">
-            María Reboredo (@mulata.cv)
-          </a>
-          <br></br>
-          Curaduría y gestión:
-          <a href="#"> Tomas Bergero y Victoria Gagliardi</a>
-          <br></br>
-          Diseño y programación: <a href="https://nayra.coop/"> nayra.coop </a>
+          <p>
+            Dirección y producción:{" "}
+            <a href="/"> Victoria Gagliardi y Tomás Bergero</a>
+          </p>
+          <p>
+            Collages:{" "}
+            <a href="https://www.instagram.com/mulata.dcv/">
+              María Reboredo (@mulata.cv)
+            </a>
+          </p>
+          <p>
+            {" "}
+            Diseño y programación:<a href="https://nayra.coop/"> nayra.coop </a>
+          </p>
+          <p>
+            {" "}
+            Producción audiovisual:
+            <a href="/"> Rodrigo Bonilla </a>
+          </p>
         </FooterText>
       </FooterContainer>
       <FooterBackground></FooterBackground>

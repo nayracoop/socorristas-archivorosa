@@ -1,45 +1,57 @@
-import React from 'react'
-import styled from 'styled-components'
-import IndexGrid from '../layout/sections/IndexGrid'
-import ChapterHeader from '../layout/sections/ChapterHeader'
+import React from "react";
+import styled from "styled-components";
+import IndexGrid from "../layout/sections/IndexGrid";
+import ChapterHeader from "../layout/sections/ChapterHeader";
 
-const image = require('../../assets/imgs/index-header.png')
+const image = require("../../assets/imgs/index-header.png");
 
 const HomeContainer = styled.div`
-    margin: 0 auto;
+  margin: 0 auto;
 `;
 
 const IntroductionContainer = styled.div`
-    height:100vh;
-    width:70%;
-    margin: 0 auto;
-    padding-top: 15%;
-    font-family: ${props => props.theme.fonts.display};
-    font-size: 2em;
-    opacity: .7;
+  height: 100vh;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 15%;
+  font-family: ${(props) => props.theme.fonts.display};
+  font-size: 2em;
+  opacity: 0.7;
 `;
 
 const home = (props) => {
-    return (
-        <HomeContainer>
-            <ChapterHeader theme={{ ...props.theme, content: { align: 'left', margin: 0 }, background: { size: '50%', align: 'right' } }}
-                title="Archivo rosa"
-                titleSize="192"
-                image={image}
-                scrollText="Scrolleá hacia abajo para conocer los relatos">
-            </ChapterHeader>
-            <IntroductionContainer>
-                <p>
-                    Une pide ayuda, otre escucha, alguien pasa el dato y todes acompañan. El relato que estás a punto de leer es un entramado de experiencias de activistes feministas de la Colectiva Feminista La Revuelta que dan forma a un sueño colectivo: construir lazos de sororidad en tiempos urgentes.
-                </p>
-                <p>
-                    Al hacer clic en cada fragmento podrás acceder a distintos testimonios que componen un cadáver exquisito hecho al calor de la lucha por el aborto libre y feminista.
+  return (
+    <HomeContainer>
+      <ChapterHeader
+        theme={{
+          ...props.theme,
+          content: { align: "left", margin: 0 },
+          background: { size: "50%", align: "right" },
+        }}
+        title="Archivo rosa"
+        titleSize="192"
+        image={image}
+      ></ChapterHeader>
+      <IntroductionContainer>
+        <p>
+          Alguien pide ayuda, un oído escucha, pasa el dato y la Red acompaña.
+        </p>
+        <p>
+          El relato que estás por leer es un entramado de experiencias de
+          activistes feministas de{" "}
+          <a href="http://larevuelta.com.ar/">La Revuelta</a> que dan forma a un
+          deseo colectivo: construir lazos de sororidad en tiempos urgentes.
+        </p>
 
-                </p>
-            </IntroductionContainer>
-            <IndexGrid content={props.content}></IndexGrid>
-        </HomeContainer>
-    );
-}
+        <p>
+          Al hacer clic en cada fragmento podrás acceder a distintos testimonios
+          que componen un cadáver exquisito hecho al calor de la lucha por el
+          aborto libre y feminista.
+        </p>
+      </IntroductionContainer>
+      <IndexGrid content={props.content}></IndexGrid>
+    </HomeContainer>
+  );
+};
 
-export default home
+export default home;
