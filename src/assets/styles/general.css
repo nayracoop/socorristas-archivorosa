@@ -60,7 +60,11 @@ table {
 	padding: 0;
 	margin:0;
 }
-
+.shaded {
+    -webkit-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
+    -moz-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
+	box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
+}
 .ruth-zurbriggen {
 	font-family:'Caveat', 'Roboto Slab', serif;
 	font-weight: 400;

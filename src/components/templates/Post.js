@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 import styled, { withTheme } from "styled-components";
+import HomeBtn from "../layout/snippets/header/HomeBtn";
 import ChapterHeader from "../layout/sections/ChapterHeader";
 
 const Wrapper = styled.div`
@@ -22,6 +23,11 @@ const Content = styled.article`
 const Post = (props) => {
   return (
     <Wrapper>
+      <HomeBtn
+      href="/"
+      btnText="Inicio"
+      class="shaded"
+      />
       <ChapterHeader
         theme={{ ...props.theme, ...props.data.theme.header }}
         title={props.data.title}
@@ -30,7 +36,8 @@ const Post = (props) => {
         date={props.data.date}
         titleSize="48"
         image={props.headerImage}
-        scrollText="Scrolleá hacia abajo para leer el relato">
+        scrollText="Scrolleá hacia abajo para conocer los relatos"
+        >
       </ChapterHeader>
       <Content>
         <ReactMarkdown source={props.data.content} />
