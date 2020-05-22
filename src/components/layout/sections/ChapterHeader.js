@@ -39,8 +39,9 @@ const HeaderBackground = styled.div`
 `;
 
 const ChapterHeader = (props) => {
+  console.log(props.theme)
   return (
-    <ChapterHeaderContainer>
+    <ChapterHeaderContainer theme={props.theme.content}>
       <Text>
         <ChapterTitle
           title={props.title}
@@ -53,7 +54,7 @@ const ChapterHeader = (props) => {
       <Image>
         <ChapterHeaderImage image={props.image}></ChapterHeaderImage>
       </Image>
-      <HeaderBackground />
+      <HeaderBackground theme={ { ...props.theme, ...props.theme.background } } />
       <ScrollIndicator />
     </ChapterHeaderContainer>
   );

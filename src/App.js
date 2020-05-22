@@ -74,4 +74,4 @@ class App extends Component {
   }
 }
 
-export default React.memo(withRouter(App));
+export default withRouter(App);
