@@ -15,46 +15,56 @@ const Image = styled.img`
     // right: 5px;
 `;
 
+const Wrapper = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+`
+
 const ChapterHeaderImage = (props) => {
     return (
-        <Switch>
-            <Route path="/la-buena-noticia">
-                <Image src={props.image} className="chapter-header-image"/>
-            </Route>
-            <Route path="/viento-en-venecia" exact>
-                <BassinetBranch />
-            </Route>
-            <Route path="/hay-abortos" exact>
-                <ButterflyBike className="chapter-header-image"/>
-            </Route>
-            <Route path="/el-aborto-como-lugar-para-conmover-me" exact>
-                <MegaphoneBalloon className="chapter-header-image"/>
-            </Route>
-            <Route path="/lina" exact>
-                <CloudsBench className="chapter-header-image"/>
-            </Route>
-            <Route path="/quiero-que-salga">
-                <Image src={props.image} />
-            </Route>
-            <Route path="/nilda">
-                <Image src={props.image} />
-            </Route>
-            <Route path="/del-socorro-del-socorro" exact>
-                <BirdChair className="chapter-header-image"/>
-            </Route>
-            <Route path="/urgencia-rosa" exact>
-                <BirdChair />
-            </Route>
-            <Route path="/cuando-estamos-juntas">
-                <Image src={props.image} />
-            </Route>
-            <Route path="/el-palpitar-de-los-abortos" exact>
-                <HeartChat />
-            </Route>
-            <Route path="/">
-                <Image src={props.image} className="chapter-header-image"/>
-            </Route>
-        </Switch>
+        <Wrapper className={props.className}>
+            <Switch>
+                <Route path="/la-buena-noticia">
+                    <Image src={props.image} className="chapter-header-image"/>
+                </Route>
+                <Route path="/viento-en-venecia" exact>
+                    <BassinetBranch />
+                </Route>
+                <Route path="/hay-abortos" exact>
+                    <ButterflyBike className="chapter-header-image"/>
+                </Route>
+                <Route path="/el-aborto-como-lugar-para-conmover-me" exact>
+                    <MegaphoneBalloon className="chapter-header-image"/>
+                </Route>
+                <Route path="/lina" exact>
+                    <CloudsBench className="chapter-header-image"/>
+                </Route>
+                <Route path="/quiero-que-salga">
+                    <Image src={props.image} />
+                </Route>
+                <Route path="/nilda">
+                    <Image src={props.image} />
+                </Route>
+                <Route path="/del-socorro-del-socorro" exact>
+                    <BirdChair className="chapter-header-image"/>
+                </Route>
+                <Route path="/urgencia-rosa" exact>
+                    <Image src={props.image} />
+                </Route>
+                <Route path="/cuando-estamos-juntas">
+                    <Image src={props.image} />
+                </Route>
+                <Route path="/el-palpitar-de-los-abortos" exact>
+                    <HeartChat />
+                </Route>
+                <Route path="/">
+                    <Image src={props.image} className="chapter-header-image"/>
+                </Route>
+            </Switch>
+        </Wrapper>
     );
 }
 

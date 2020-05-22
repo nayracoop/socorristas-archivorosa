@@ -54,12 +54,17 @@ table {
 	border-spacing: 0;
 }
 
+*::selection {
+  background: rgba(189, 140, 191, .65);
+}
+
 .app{
 	width:100%;
 	min-height:100vh;
 	padding: 0;
 	margin:0;
 }
+
 .shaded {
     -webkit-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
     -moz-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
@@ -81,6 +86,7 @@ table {
 	font-family:'Nanum Pen', 'Roboto Slab', serif;
 	font-weight: 400;
 }
+
 
 .container {
 	width: 100%;	
