@@ -52,13 +52,17 @@ class App extends Component {
             <Home content={content.posts}></Home>
           </Route>
           <Switch>
-            {content.posts.map((post) => {
-              const headerImage = require("./assets/imgs/header-" +
-                post.meta.slug +
-                ".png");
+            {content.posts.map((post, index) => {
+              const headerImage = require(`./assets/imgs/header-${post.meta.slug}.png`)
+              const previousPost = index === 0 ? content.posts.length : index
+              const nextPost = index === content.posts.length - 1 ? 1 : index + 2
+              console.log(index, previousPost, nextPost)
               return (
                 <Route key={post.meta.slug} path={"/" + post.meta.slug}>
-                  <Post data={post} headerImage={headerImage}></Post>
+                  <Post data={post} 
+                    headerImage={headerImage} 
+                    prev={ { index: previousPost, link: content.posts[previousPost-1].meta.slug } }
+                    next={ { index: nextPost, link: content.posts[nextPost-1].meta.slug } }></Post>
                 </Route>
               );
             })}
@@ -70,4 +74,4 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+export default React.memo(withRouter(App));
