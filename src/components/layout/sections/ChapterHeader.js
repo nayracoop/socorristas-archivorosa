@@ -8,6 +8,8 @@ import ScrollIndicator from "../snippets/header/ScrollIndicator";
 const ChapterHeaderContainer = styled.header`
   position: relative;
   height: 100vh;
+  width: 100%;
+  overflow: hidden;
   display: flex;
   flex-flow: ${(props) => props.theme.align === "right" ? "row-reverse" : "row"} wrap;
   margin: 0 0 6em;
