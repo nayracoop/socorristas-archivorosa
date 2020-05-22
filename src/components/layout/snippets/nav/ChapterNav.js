@@ -39,16 +39,7 @@ const NavList = styled.ul`
     }
 `;
 
-const NavPrevItem = styled.li`
-`;
-
-const NavNextItem = styled.li`
-`;
-
-const NavPrevLink = styled(Link)`
-`;
-
-const NavNextLink = styled(Link)`
+const NavItem = styled.li`
 `;
 
 const NavImagePrev = styled.img`
