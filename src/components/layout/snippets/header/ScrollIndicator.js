@@ -46,25 +46,9 @@ const ScrollIndicatorContainer = styled.div`
     }
 `;
 
-const ScrollCaption = styled.span`
-    font-size: .8rem;
-    color: #5f5b60;
-    margin-bottom: 8px;
-    display: block;
-    padding: 2px 5px;
-    background-color: rgba(240, 237, 238, 0.9);
-    -webkit-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
-    -moz-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
-    box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
-    @media screen and (max-width: 420px) {
-        font-size: .75rem;
-    }
-`;
-
-const ScrollIndicator = (props) => {  
-    return(
+const ScrollIndicator = (props) => {
+    return (
         <ScrollIndicatorContainer>
-            <ScrollCaption>{props.scrollText}</ScrollCaption> 
             <Arrow />
         </ScrollIndicatorContainer>
     );

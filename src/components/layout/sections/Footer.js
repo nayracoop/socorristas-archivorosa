@@ -14,12 +14,12 @@ const FooterBackground = styled.div`
   width: 100%;
   height: 100vh;
   bottom: 0;
-  opacity: 0.3;
-  background-color: #bd8cbf;
+  opacity: ${(props) => props.theme.colors.backgroundOpacity};
+  background-color: ${(props) => props.theme.colors.background};
   z-index: -1;
 `;
 
-const FooterText = styled.p`
+const FooterText = styled.div`
   color: ${(props) => props.theme.colors.text};
   font-size: 1em;
   margin-bottom: 50px;
@@ -38,32 +38,25 @@ const FooterText = styled.p`
 `;
 
 const FooterLink = styled.li`
-  display: inline;
+  display: block;
 `;
 
 const Footer = (props) => {
-  console.log(props.theme);
   return (
     <div>
       <FooterContainer>
         <FooterText>
-          Archivo Rosa es lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla consectetur erat eget ex eleifend, nec maximus ante
-          posuere. Nullam in pretium arcu. Sed porta faucibus leo in egestas.
-          Vivamus non massa auctor, congue libero at, lacinia sem. Interdum et
-          malesuada fames ac ante ipsum primis in faucibus. Nulla facilisi.
-          Nulla sit amet quam ultricies, laoreet eros id, tristique massa.
-          Mauris faucibus quam turpis, non efficitur arcu placerat in. Donec
-          luctus fermentum consequat. Praesent pulvinar viverra viverra. Nam
-          auctor ac mauris quis venenatis. Nulla tincidunt ultrices dui, id
-          dapibus felis pellentesque id. Nullam tristique dolor sit amet dui
-          luctus, vitae pharetra ipsum ultricies. Donec vestibulum sem nibh, sed
-          feugiat est accumsan et.
+          <p>
+            Archivo Rosa es un experimento narrativo que busca compartir
+            historias y reflexiones de activistas que forman parte de{" "}
+            <a target="blank" href="http://socorristasenred.org/">
+              Socorristas en Red (feministas que abortamos).
+            </a>
+          </p>
         </FooterText>
         <FooterText>
           <ul>
             {props.content.map((post, i) => {
-              console.log(props.theme.colors.text);
               return (
                 <FooterLink key={i}>
                   <a href={"/" + post.meta.slug}>{post.title} . </a>
@@ -73,15 +66,25 @@ const Footer = (props) => {
           </ul>
         </FooterText>
         <FooterText className="credits">
-          Collages:
-          <a href="https://www.instagram.com/mulata.dcv/">
-            María Reboredo (@mulata.cv)
-          </a>
-          <br></br>
-          Curaduría y gestión:
-          <a href="#"> Tomas Bergero y Victoria Gagliardi</a>
-          <br></br>
-          Diseño y programación: <a href="https://nayra.coop/"> nayra.coop </a>
+          <p>
+            Dirección y producción:{" "}
+            <a href="/"> Victoria Gagliardi y Tomás Bergero</a>
+          </p>
+          <p>
+            Collages:{" "}
+            <a target="blank" href="https://www.instagram.com/mulata.dcv/">
+              María Reboredo (@mulata.cv)
+            </a>
+          </p>
+          <p>
+            {" "}
+            Diseño y programación:<a target="blank" href="https://nayra.coop/"> nayra.coop </a>
+          </p>
+          <p>
+            {" "}
+            Producción audiovisual:
+            <a target="blank" href="/"> Rodrigo Bonilla </a>
+          </p>
         </FooterText>
       </FooterContainer>
       <FooterBackground></FooterBackground>

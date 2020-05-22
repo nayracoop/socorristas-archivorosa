@@ -1,22 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 
 
 const ChapterTitleContainer = styled.div`
-    // grid-row: 2 / 3;
-    // grid-column: 4 / 6;
-    color: ${props => props.theme.colors.dark}
-    // z-index: 10;
+    color: ${ (props) => props.theme.colors.text}
+     opacity: ${(props) => props.theme.colors.textOpacity};
     margin-left: 70px;
 `;
 
 const Title = styled.h1`
     text-align: left;
-    line-height:${props => props.titleSize ? props.titleSize-props.titleSize/2.5 + "px" : 32/2.5};
-    font-family: ${props => props.theme.fonts.display };
-    font-size: ${props => props.titleSize ? `${props.titleSize/16}em` : "2em"};
+    line-height:${props => props.titleSize ? props.titleSize - props.titleSize / 2.5 + "px" : 32 / 2.5};
+    font-family: ${props => props.theme.fonts.display};
+    font-size: ${props => props.titleSize ? `${props.titleSize / 16}em` : "2em"};
     z-index 10;
-    opacity: 0.7;
 `
 
 const Author = styled.h2`
@@ -26,12 +23,11 @@ const Author = styled.h2`
 const Date = styled.p`
 
 `
-
 const chapterTitle = (props) => {
 
     const authorClass = String(props.author).toLowerCase().replace(/[^a-z0-9 -]/g, "").replace(/\s+/g, "-").replace(/-+/g, "-").replace(/^-+/, "").replace(/-+$/, "");
 
-    return(
+    return (
         <ChapterTitleContainer>
             <Title titleSize={props.titleSize}>{props.title}</Title>
             <Author className={authorClass}>{props.author}</Author>
@@ -41,4 +37,4 @@ const chapterTitle = (props) => {
     );
 }
 
-export default chapterTitle
+export default withTheme(chapterTitle)

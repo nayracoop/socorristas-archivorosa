@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import styled, { withTheme } from "styled-components";
 import HomeBtn from "../layout/snippets/header/HomeBtn";
 import ChapterHeader from "../layout/sections/ChapterHeader";
+import ChapterNav from "../layout/snippets/nav/ChapterNav";
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,12 +13,16 @@ const Wrapper = styled.div`
 
 const Content = styled.article`
   max-width: ${(props) => props.theme.articleMaxWidth}px;
-  margin: 50px auto 200px;
+  margin: 50px auto;
   font-size: 1.3125em;
   align-self: center;
   p {
     margin-top: 1.5em;
   }
+`;
+
+const ContentWrapper = styled.div`
+  margin-bottom: 25px;
 `;
 
 const Post = (props) => {
@@ -39,9 +44,12 @@ const Post = (props) => {
         scrollText="Scrolleá hacia abajo para conocer los relatos"
         >
       </ChapterHeader>
-      <Content>
-        <ReactMarkdown source={props.data.content} />
-      </Content>
+      <ContentWrapper className="oooo">
+        <Content>
+          <ReactMarkdown source={props.data.content} /> 
+        </Content>
+        <ChapterNav/>
+      </ContentWrapper>
     </Wrapper>
   );
 };
