@@ -11,7 +11,7 @@ const NavBar = styled.nav`
     right: 0;
     margin: auto;
     margin-top: 55px;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1221px) {
         width: 100%;
         bottom: 4vh;
         padding: 0;
@@ -22,7 +22,7 @@ const NavList = styled.ul`
     display: flex; 
     justify-content: space-between;
     li {
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1221px) {
             background-color: #e7e3e1;
             padding: 5px 25px;
             -webkit-box-shadow: 0px 0px 5px rgb(176, 176, 176);
@@ -33,7 +33,7 @@ const NavList = styled.ul`
             display: flex;
             flex-direction: column;
             align-items: center;
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1221px) {
                 max-width: 40px;
             }
         }

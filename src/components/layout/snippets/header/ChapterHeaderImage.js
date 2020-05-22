@@ -19,25 +19,25 @@ const ChapterHeaderImage = (props) => {
     return (
         <Switch>
             <Route path="/hay-abortos" exact>
-                <ButterflyBike />
+                <ButterflyBike className="chapter-header-image"/>
             </Route>
             <Route path="/el-aborto-como-lugar-para-conmover-me" exact>
-                <MegaphoneBalloon />
+                <MegaphoneBalloon className="chapter-header-image"/>
             </Route>
             <Route path="/lina" exact>
                 <CloudsBench />
             </Route>
             <Route path="/el-palpitar-de-los-abortos" exact>
-                <HeartChat />
+                <HeartChat className="chapter-header-image"/>
             </Route>
             <Route path="/viento-en-venecia" exact>
-                <BassinetBranch />
+                <BassinetBranch className="chapter-header-image"/>
             </Route>
             <Route path="/del-socorro-del-socorro" exact>
-                <BirdChair />
+                <BirdChair className="chapter-header-image"/>
             </Route>
             <Route path="/">
-                <Image src={props.image} />
+                <Image src={props.image} className="chapter-header-image"/>
             </Route>
         </Switch>
     );
