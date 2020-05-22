@@ -19,19 +19,19 @@ const ChapterHeaderImage = (props) => {
     return (
         <Switch>
             <Route path="/la-buena-noticia">
-                <Image src={props.image} />
+                <Image src={props.image} className="chapter-header-image"/>
             </Route>
             <Route path="/viento-en-venecia" exact>
                 <BassinetBranch />
             </Route>
             <Route path="/hay-abortos" exact>
-                <ButterflyBike />
+                <ButterflyBike className="chapter-header-image"/>
             </Route>
             <Route path="/el-aborto-como-lugar-para-conmover-me" exact>
-                <MegaphoneBalloon />
+                <MegaphoneBalloon className="chapter-header-image"/>
             </Route>
             <Route path="/lina" exact>
-                <CloudsBench />
+                <CloudsBench className="chapter-header-image"/>
             </Route>
             <Route path="/quiero-que-salga">
                 <Image src={props.image} />
@@ -40,7 +40,7 @@ const ChapterHeaderImage = (props) => {
                 <Image src={props.image} />
             </Route>
             <Route path="/del-socorro-del-socorro" exact>
-                <BirdChair />
+                <BirdChair className="chapter-header-image"/>
             </Route>
             <Route path="/urgencia-rosa" exact>
                 <BirdChair />
@@ -52,7 +52,7 @@ const ChapterHeaderImage = (props) => {
                 <HeartChat />
             </Route>
             <Route path="/">
-                <Image src={props.image} />
+                <Image src={props.image} className="chapter-header-image"/>
             </Route>
         </Switch>
     );

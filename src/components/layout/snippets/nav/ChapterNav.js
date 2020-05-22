@@ -10,8 +10,7 @@ const NavBar = styled.nav`
     right: 0;
     margin: auto;
     margin-top: 55px;
-    
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1221px) {
         width: 100%;
         bottom: 4vh;
         padding: 0;
@@ -21,35 +20,26 @@ const NavBar = styled.nav`
 const NavList = styled.ul`
     display: flex; 
     justify-content: space-between;
+    li {
+        @media screen and (max-width: 1221px) {
+            background-color: #e7e3e1;
+            padding: 5px 25px;
+            box-shadow: 0px 0px 5px rgb(176, 176, 176);
+        }        
+    `;
+    
+    const NavLink = styled(Link)`
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media screen and (max-width: 1221px) {
+                max-width: 40px;
+            }
+        }
+    }
 `;
 
 const NavItem = styled.li`
-    @media screen and (max-width: ${(props) => props.theme.pageWidth.l}px) {
-        background-color: #e7e3e1;
-        padding: 5px 25px;
-        box-shadow: 0px 0px 5px rgb(176, 176, 176);
-    }
-`;
-
-const NavLink = styled(Link)`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media screen and (max-width: 768px) {
-        max-width: 40px;
-    }
-`;
-
-const NavPrevItem = styled.li`
-`;
-
-const NavNextItem = styled.li`
-`;
-
-const NavPrevLink = styled(Link)`
-`;
-
-const NavNextLink = styled(Link)`
 `;
 
 const NavImagePrev = styled.img`

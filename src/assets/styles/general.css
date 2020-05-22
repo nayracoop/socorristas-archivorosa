@@ -81,3 +81,13 @@ table {
 	font-family:'Nanum Pen', 'Roboto Slab', serif;
 	font-weight: 400;
 }
+
+.container {
+	width: 100%;	
+}
+
+@media screen and (max-width: 1221px) {
+	.container {
+		padding: 5%;
+	}
+}

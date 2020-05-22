@@ -6,6 +6,9 @@ const ChapterTitleContainer = styled.div`
     color: ${ (props) => props.theme.colors.text}
      opacity: ${(props) => props.theme.colors.textOpacity};
     margin-left: 70px;
+    @media screen and (max-width: 1221px) {
+        margin: 15px auto;
+    }    
 `;
 
 const Title = styled.h1`
@@ -19,6 +22,10 @@ const Title = styled.h1`
 const Author = styled.h2`
     font-size: 2em;
     margin: 0.5em 0 2em;
+    @media screen and (max-width: 1221px) {
+        font-size: 1.8rem;
+        margin: 0.5em 0 1.5em;
+    }    
 `
 const Date = styled.p`
 
