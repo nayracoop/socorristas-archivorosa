@@ -1,18 +1,44 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 import IndexItem from "../snippets/body/index/IndexItem";
 
 const IndexGridContainer = styled.div`
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100vh 100vh 100vh 50vh 50vh 50vh 100vh 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh;
+  grid-template-areas:
+  "first"
+  "second"
+  "third"
+  "fourth"
+  "fifth"
+  "sixth"
+  "seventh"
+  "eighth"
+  "ninth"
+  "tenth"
+  "eleventh"
+  "twelfth";
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100vh 100vh 100vh 50vh 50vh 50vh 100vh 100vh;
+    grid-template-areas:
+    "first first"
+    "second third"
+    "fourth fifth"
+    "sixth sixth"
+    "seventh seventh"
+    "eighth eighth"
+    "ninth tenth"
+    "eleventh twelfth";
+  }
 `;
 
 const IndexItemContainer = styled.div`
   position: relative;
-  overflow: visible;
-  grid-row: ${(props) => props.gridrs} / ${(props) => props.gridre};
-  grid-column: ${(props) => props.gridcs} / ${(props) => props.gridce};
+  grid-area: ${(props) => props.area}
 `;
 
 const indexGrid = (props) => {
@@ -22,13 +48,11 @@ const indexGrid = (props) => {
         const image = require("../../../assets/imgs/index-" +
           post.meta.slug +
           ".png");
+
         return (
           <IndexItemContainer
             key={i}
-            gridrs={post.theme.grid.row.start}
-            gridre={post.theme.grid.row.end}
-            gridcs={post.theme.grid.column.start}
-            gridce={post.theme.grid.column.end}
+            area={post.theme.grid}
           >
             <IndexItem
               content={post.excerpt}
@@ -47,4 +71,4 @@ const indexGrid = (props) => {
   );
 };
 
-export default indexGrid;
+export default withTheme(indexGrid);

@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components";
 import IndexImage from "./IndexImage";
 
+const IndexItemContainer = styled.div`
+  width:100%;
+  overflow-x: hidden;
+`
+
 const QuoteContainer = styled.div`
   position: absolute;
   width: 80%;
@@ -23,13 +28,16 @@ const Quote = styled(Link)`
   top:${(props) => (props.textvalign === "top" ? "150px" : "")};
   bottom:${(props) => (props.textvalign === "bottom" ? "150px" : "")};
   font-family: ${(props) => props.theme.fonts.display};
-  font-size: 2.2em;
+
+  font-size: 2em;
   line-height: 1.1em;
   color: ${(props) => props.theme.colors.text};
   opacity: ${(props) => props.theme.colors.textOpacity};
   cursor:pointer;
   z-index 10000;
   transition: all ease-in .2s;
+  
+  background: 
 
   :hover {
    opacity: ${(props) => props.theme.colors.textOpacity * 2};  
@@ -49,7 +57,7 @@ const IndexItemBackground = styled.div`
 
 const indexItem = (props) => {
   return (
-    <div>
+    <IndexItemContainer>
       <QuoteContainer borderColor={props.borderColor}>
         <Quote
           to={props.href}
@@ -61,7 +69,7 @@ const indexItem = (props) => {
       </QuoteContainer>
       <IndexImage align={props.imageAlign} image={props.image}></IndexImage>
       <IndexItemBackground background={props.background}></IndexItemBackground>
-    </div>
+    </IndexItemContainer>
   );
 };
 
