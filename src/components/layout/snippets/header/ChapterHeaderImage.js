@@ -18,6 +18,12 @@ const Image = styled.img`
 const ChapterHeaderImage = (props) => {
     return (
         <Switch>
+            <Route path="/la-buena-noticia">
+                <Image src={props.image} className="chapter-header-image"/>
+            </Route>
+            <Route path="/viento-en-venecia" exact>
+                <BassinetBranch />
+            </Route>
             <Route path="/hay-abortos" exact>
                 <ButterflyBike className="chapter-header-image"/>
             </Route>
@@ -25,16 +31,25 @@ const ChapterHeaderImage = (props) => {
                 <MegaphoneBalloon className="chapter-header-image"/>
             </Route>
             <Route path="/lina" exact>
-                <CloudsBench />
+                <CloudsBench className="chapter-header-image"/>
             </Route>
-            <Route path="/el-palpitar-de-los-abortos" exact>
-                <HeartChat className="chapter-header-image"/>
+            <Route path="/quiero-que-salga">
+                <Image src={props.image} />
             </Route>
-            <Route path="/viento-en-venecia" exact>
-                <BassinetBranch className="chapter-header-image"/>
+            <Route path="/nilda">
+                <Image src={props.image} />
             </Route>
             <Route path="/del-socorro-del-socorro" exact>
                 <BirdChair className="chapter-header-image"/>
+            </Route>
+            <Route path="/urgencia-rosa" exact>
+                <BirdChair />
+            </Route>
+            <Route path="/cuando-estamos-juntas">
+                <Image src={props.image} />
+            </Route>
+            <Route path="/el-palpitar-de-los-abortos" exact>
+                <HeartChat />
             </Route>
             <Route path="/">
                 <Image src={props.image} className="chapter-header-image"/>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
-
 const NavBar = styled.nav`
     position: sticky;
     bottom: 2vh;
@@ -25,11 +24,11 @@ const NavList = styled.ul`
         @media screen and (max-width: 1221px) {
             background-color: #e7e3e1;
             padding: 5px 25px;
-            -webkit-box-shadow: 0px 0px 5px rgb(176, 176, 176);
-            -moz-box-shadow: 0px 0px 5px rgb(176, 176, 176);
             box-shadow: 0px 0px 5px rgb(176, 176, 176);
-        }
-        a {
+        }        
+    `;
+    
+    const NavLink = styled(Link)`
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -73,18 +72,18 @@ const ChapterNav = (props) => {
     return (
         <NavBar>
             <NavList>
-                <NavPrevItem>
-                    <NavPrevLink>
-                        <NavImagePrev src={require('../../../../assets/imgs/numeros/11.png')} />
+                <NavItem>
+                    <NavLink to={props.prev.link}>
+                        <NavImagePrev src={require('../../../../assets/imgs/numeros/'+props.prev.index+'.png')} />
                         <NavArrow className="nav-arrows prev-arrow" src={require('../../../../assets/imgs/numeros/arrow.png')} />
-                    </NavPrevLink>
-                </NavPrevItem>
-                <NavNextItem>
-                    <NavNextLink>
-                        <NavImageNext src={require('../../../../assets/imgs/numeros/12.png')} />
+                    </NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink to={props.next.link}>
+                        <NavImageNext src={require('../../../../assets/imgs/numeros/'+props.next.index+'.png')} />
                         <NavArrow className="nav-arrows next-arrow" src={require('../../../../assets/imgs/numeros/arrow.png')} />
-                    </NavNextLink>
-                </NavNextItem>
+                    </NavLink>
+                </NavItem>
             </NavList>
         </NavBar>        
     );

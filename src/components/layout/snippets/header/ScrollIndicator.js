@@ -4,12 +4,14 @@ import { ReactComponent as Arrow } from '../../../../assets/imgs/arrow.svg';
 
 const ScrollIndicatorContainer = styled.div`
     position: absolute;
-    left: calc(50% - 75px); 
-    right: calc(50% - 75px);
-    margin: auto;
+    left: 0; 
+    right: 0;
+    margin: 0 auto;
     bottom: 20px;
     max-width: 150px;
     text-align: center;
+    cursor: pointer;
+
     svg {
         width: 35px;
         -webkit-animation: bounce 1s ease-in-out infinite;
@@ -47,8 +49,16 @@ const ScrollIndicatorContainer = styled.div`
 `;
 
 const ScrollIndicator = (props) => {
+
+    function scrollDown() {
+        window.scrollTo({
+            top: document.documentElement.clientHeight,
+            behavior: 'smooth',
+        })
+    }
+
     return (
-        <ScrollIndicatorContainer>
+        <ScrollIndicatorContainer onClick={scrollDown}>
             <Arrow />
         </ScrollIndicatorContainer>
     );

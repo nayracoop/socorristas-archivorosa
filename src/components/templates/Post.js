@@ -57,7 +57,7 @@ const Post = (props) => {
         <Content className="container">
           <ReactMarkdown source={props.data.content} /> 
         </Content>
-        <ChapterNav/>
+        <ChapterNav prev={props.prev} next={props.next}/>
       </ContentWrapper>
     </Wrapper>
   );
