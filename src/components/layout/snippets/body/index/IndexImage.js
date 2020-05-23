@@ -4,18 +4,16 @@ import styled from 'styled-components'
 
 const IndexImageContainer = styled.div`
     position: absolute;
-    height:120%;
-    width:120%;
-    top:-10%;
-    left:-10%;
+    height:105%;
+    width:100%;
+    top:-2.5%;
     z-index: 9999;
 `;
 
 const Image = styled.img`
     position:absolute;
-    height:100%;
-    left:${props => props.align === "left" ? "-1%" : "0"};
-    right:${props => props.align === "right" ? "-1%" : "0"};
+    width:100%;
+    bottom:-5%
 `;
 
 

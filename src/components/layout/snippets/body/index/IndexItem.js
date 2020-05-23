@@ -25,8 +25,8 @@ const Quote = styled(Link)`
   position: absolute;
   left:${(props) => (props.texthalign === "left" ? "50px" : "")};
   right:${(props) => (props.texthalign === "right" ? "50px" : "")};
-  top:${(props) => (props.textvalign === "top" ? "150px" : "")};
-  bottom:${(props) => (props.textvalign === "bottom" ? "150px" : "")};
+  top:${(props) => (props.textvalign === "top" ? "50px" : "")};
+  bottom:${(props) => (props.textvalign === "bottom" ? "50px" : "")};
   font-family: ${(props) => props.theme.fonts.display};
 
   font-size: 2em;
