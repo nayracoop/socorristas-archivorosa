@@ -18,26 +18,41 @@ const Image = styled.img`
 const ChapterHeaderImage = (props) => {
     return (
         <Switch>
-            <Route path="/hay-abortos" exact>
-                <ButterflyBike />
-            </Route>
-            <Route path="/el-aborto-como-lugar-para-conmover-me" exact>
-                <MegaphoneBalloon />
-            </Route>
-            <Route path="/lina" exact>
-                <CloudsBench />
-            </Route>
-            <Route path="/el-palpitar-de-los-abortos" exact>
-                <HeartChat />
+            <Route path="/la-buena-noticia">
+                <Image src={props.image} className="chapter-header-image"/>
             </Route>
             <Route path="/viento-en-venecia" exact>
                 <BassinetBranch />
             </Route>
+            <Route path="/hay-abortos" exact>
+                <ButterflyBike className="chapter-header-image"/>
+            </Route>
+            <Route path="/el-aborto-como-lugar-para-conmover-me" exact>
+                <MegaphoneBalloon className="chapter-header-image"/>
+            </Route>
+            <Route path="/lina" exact>
+                <CloudsBench className="chapter-header-image"/>
+            </Route>
+            <Route path="/quiero-que-salga">
+                <Image src={props.image} />
+            </Route>
+            <Route path="/nilda">
+                <Image src={props.image} />
+            </Route>
             <Route path="/del-socorro-del-socorro" exact>
+                <BirdChair className="chapter-header-image"/>
+            </Route>
+            <Route path="/urgencia-rosa" exact>
                 <BirdChair />
             </Route>
-            <Route path="/">
+            <Route path="/cuando-estamos-juntas">
                 <Image src={props.image} />
+            </Route>
+            <Route path="/el-palpitar-de-los-abortos" exact>
+                <HeartChat />
+            </Route>
+            <Route path="/">
+                <Image src={props.image} className="chapter-header-image"/>
             </Route>
         </Switch>
     );

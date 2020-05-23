@@ -9,6 +9,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: column wrap;
   width: 100%;
+  @media screen and (max-width: 1221px) {
+    h1 {
+      line-height: 1.05;
+      font-size: 2.8rem;
+    }
+  }    
 `;
 
 const Content = styled.article`
@@ -16,6 +22,9 @@ const Content = styled.article`
   margin: 50px auto;
   font-size: 1.3125em;
   align-self: center;
+  @media screen and (max-width: 1221px) {
+    margin-top: 10px;
+  }    
   p {
     margin-top: 1.5em;
   }
@@ -44,11 +53,11 @@ const Post = (props) => {
         scrollText="Scrolleá hacia abajo para conocer los relatos"
         >
       </ChapterHeader>
-      <ContentWrapper className="oooo">
-        <Content>
+      <ContentWrapper>
+        <Content className="container">
           <ReactMarkdown source={props.data.content} /> 
         </Content>
-        <ChapterNav/>
+        <ChapterNav prev={props.prev} next={props.next}/>
       </ContentWrapper>
     </Wrapper>
   );
