@@ -1,6 +1,7 @@
 import React, { useState, useEffect }  from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom';
 import styled, { withTheme } from 'styled-components'
+import { useParallax } from '../../../animations/hooks/parallax'
 import ButterflyBike from '../../../animations/ButterflyBike';
 import MegaphoneBalloon from '../../../animations/MegaphoneBalloon';
 import CloudsBench from '../../../animations/CloudsBench';
@@ -28,26 +29,10 @@ const Wrapper = styled.div`
 
 const ChapterHeaderImage = (props) => {
 
-    const [scrollY, setScrollY] = useState(0)
-
-    function onScroll() {
-        const scrollPos = window.pageYOffset * -0.5
-        setScrollY(scrollPos); 
-    }   
-    
-    useEffect(() => {    
-      // function watchScroll() {      
-      // }    
-      // watchScroll(); 
-      window.addEventListener("scroll", onScroll); 
-      
-      return () => {      
-        window.removeEventListener("scroll", onScroll); 
-      }; 
-    });
+    const scrollY = useParallax();
 
     return (
-        <Wrapper theme={{ top: scrollY }} className={props.className}>
+        <Wrapper theme={ { top: scrollY } } className={props.className}>
             <Switch>
                 <Route path="/la-buena-noticia">
                     <Image src={props.image} className="chapter-header-image"/>

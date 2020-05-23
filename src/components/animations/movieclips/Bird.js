@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import AlphaMatteImg from '../graphics/AlphaMatteImg'
 
@@ -49,6 +49,7 @@ const Bird = (props) => {
   const [ transform, setTransform ] = useState({ body:'none', head:'none' })
   const headTransforms = [ 'rotate(-10deg) skew(0deg, 5deg)', 'rotate(15deg) skew(-10deg, 0deg)', 'none' ]
   const bodyTransforms = [ 'skew(-1deg, 0deg)', 'skew(2deg, 0deg)', 'none' ]
+  let timer = null
 
   const move = () => {
     const ih = Math.round(Math.random()*(headTransforms.length-1))
@@ -58,7 +59,13 @@ const Bird = (props) => {
       setTransform({ body:bodyTransforms[ib], head:headTransforms[ih] })
     }
   }
-  setTimeout(move, 600 + Math.random()*2000)
+
+  useEffect(() => {    
+    timer = setTimeout(move, 600 + Math.random()*2000)
+    return () => { 
+      clearTimeout(timer)
+    }
+  })
 
   return (
     <Wrapper className={props.className}>

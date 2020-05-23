@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 
 const AlphaMatteImg = (props) =>{
 
@@ -29,8 +29,14 @@ const AlphaMatteImg = (props) =>{
 		context.drawImage(mask, 0, 0)
   }
   
-  img.src = props.src
-  img.addEventListener('load', loaded)
+  useEffect(() => {    
+    img.src = props.src
+    img.addEventListener('load', loaded)
+    
+    return () => { 
+      img.removeEventListener('load', loaded)
+    }
+  })
 
   return (
     <canvas ref={canvas} className={props.className}></canvas>

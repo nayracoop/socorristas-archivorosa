@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
+import { useParallax } from '../../animations/hooks/parallax'
 
 import ChapterTitle from "../snippets/header/ChapterTitle";
 import ChapterHeaderImage from "../snippets/header/ChapterHeaderImage";
@@ -13,7 +14,7 @@ const ChapterHeaderContainer = styled.header`
 const Header = styled.div`
   position: relative;
   height: 100%;
-  
+
   // padding-top: 7vh;
   display: flex;
   flex-flow: ${(props) => props.theme.align === "right" ? "row-reverse" : "row"} wrap;
@@ -40,6 +41,7 @@ const TextColumn = styled.div`
   flex: 1;
   max-width: ${(props) => props.theme.size};
   align-self: center;
+  transform: translate3d(0,${props => props.theme.top}px,0);
   // padding: 5%;
 `;
 
@@ -87,6 +89,9 @@ const HeaderBackground = styled.div`
   width: ${(props) => props.theme.size};
   opacity: ${(props) => props.theme.colors.backgroundOpacity} ;
   background-color: ${(props) => props.theme.colors.background} ;
+  transform: translate3d(0,${props => props.theme.top}px,0);
+  transition: transform 500ms ease-out;
+
   z-index: -1;
   @media screen and (max-width: 1221px) {
     left: 0;
@@ -94,7 +99,10 @@ const HeaderBackground = styled.div`
 `;
 
 const ChapterHeader = (props) => {
-  console.log(props.theme)
+
+  const bgScrollY = useParallax(-0.15);
+  // const textScrollY = useParallax(-0.35);
+
   return (
     <ChapterHeaderContainer>
       <Header theme={props.theme.content}>
@@ -111,7 +119,7 @@ const ChapterHeader = (props) => {
           <Image image={props.image} />
         </ImageColumn>
       </Header>
-      <HeaderBackground theme={ { ...props.theme, ...props.theme.background } } />
+      <HeaderBackground theme={ { ...props.theme, ...props.theme.background, top: bgScrollY } } />
       <ScrollIndicator />
     </ChapterHeaderContainer>
   );
