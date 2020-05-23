@@ -77,7 +77,10 @@ const ImageColumn = styled.div`
 
 const Image = styled(ChapterHeaderImage)`
   position: absolute;
-  left: 0;
+  top: ${(props) => props.theme.top ? props.theme.top : "auto" };
+  right: ${(props) => props.theme.right ? props.theme.right : "auto" };
+  bottom: ${(props) => props.theme.bottom ? props.theme.bottom : "auto" };
+  left: ${(props) => props.theme.left ? props.theme.left : "auto" };
 `;
 
 const HeaderBackground = styled.div`
@@ -100,9 +103,9 @@ const HeaderBackground = styled.div`
 
 const ChapterHeader = (props) => {
 
-  const bgScrollY = useParallax(-0.15);
+  const bgTopPosition = useParallax(-0.15);
   // const textScrollY = useParallax(-0.35);
-
+  console.log(props.theme.imagePosition)
   return (
     <ChapterHeaderContainer>
       <Header theme={props.theme.content}>
@@ -116,10 +119,10 @@ const ChapterHeader = (props) => {
           ></ChapterTitle>
         </TextColumn>
         <ImageColumn theme={ { ...props.theme, size: props.theme.content.size.substr(-1) === '%' ? (100-parseInt(props.theme.content.size)) + '%' : 'auto' } } className="---container ---chapter-header-img-cont">
-          <Image image={props.image} />
+          <Image image={props.image} theme={props.theme.imagePosition} />
         </ImageColumn>
       </Header>
-      <HeaderBackground theme={ { ...props.theme, ...props.theme.background, top: bgScrollY } } />
+      <HeaderBackground theme={ { ...props.theme, ...props.theme.background, top: bgTopPosition } } />
       <ScrollIndicator />
     </ChapterHeaderContainer>
   );

@@ -23,16 +23,16 @@ const Wrapper = styled.div`
     // width: 100%;
     // height: 100%;
 
-    transform: translate3d(0,${props => props.theme.top}px,0);
+    // transform: translate3d(0,${props => props.theme.top}px,0);
     // transition: trnasform 1ms ease-in-out;
 `
 
 const ChapterHeaderImage = (props) => {
 
-    const scrollY = useParallax();
+    // const scrollY = useParallax();
 
     return (
-        <Wrapper theme={ { top: scrollY } } className={props.className}>
+        <Wrapper className={props.className}>
             <Switch>
                 <Route path="/la-buena-noticia">
                     <Image src={props.image} className="chapter-header-image"/>

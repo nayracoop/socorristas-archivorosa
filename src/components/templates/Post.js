@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 
 const Content = styled.article`
   max-width: ${(props) => props.theme.articleMaxWidth}px;
-  margin: 50px auto;
+  margin: 10em auto;
   font-size: 1.3125em;
   align-self: center;
   @media screen and (max-width: 1221px) {
