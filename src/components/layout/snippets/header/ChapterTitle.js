@@ -4,8 +4,9 @@ import styled, { withTheme } from 'styled-components'
 
 const ChapterTitleContainer = styled.div`
     color: ${ (props) => props.theme.colors.text}
-     opacity: ${(props) => props.theme.colors.textOpacity};
+    opacity: ${(props) => props.theme.colors.textOpacity};
     margin-left: 70px;
+    margin-right: 70px;
     @media screen and (max-width: 1221px) {
         margin: 15px auto;
     }    
@@ -13,7 +14,7 @@ const ChapterTitleContainer = styled.div`
 
 const Title = styled.h1`
     text-align: left;
-    line-height:${props => props.titleSize ? props.titleSize - props.titleSize / 2.5 + "px" : 32 / 2.5};
+    line-height: 1.25;
     font-family: ${props => props.theme.fonts.display};
     font-size: ${props => props.titleSize ? `${props.titleSize / 16}em` : "2em"};
     z-index 10;

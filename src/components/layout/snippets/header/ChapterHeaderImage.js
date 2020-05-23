@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 import { Route, Switch, withRouter } from 'react-router-dom';
 import styled, { withTheme } from 'styled-components'
 import ButterflyBike from '../../../animations/ButterflyBike';
@@ -16,16 +16,38 @@ const Image = styled.img`
 `;
 
 const Wrapper = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // width: 100%;
+    // height: 100%;
+
+    transform: translate3d(0,${props => props.theme.top}px,0);
+    // transition: trnasform 1ms ease-in-out;
 `
 
 const ChapterHeaderImage = (props) => {
+
+    const [scrollY, setScrollY] = useState(0)
+
+    function onScroll() {
+        const scrollPos = window.pageYOffset * -0.5
+        setScrollY(scrollPos); 
+    }   
+    
+    useEffect(() => {    
+      // function watchScroll() {      
+      // }    
+      // watchScroll(); 
+      window.addEventListener("scroll", onScroll); 
+      
+      return () => {      
+        window.removeEventListener("scroll", onScroll); 
+      }; 
+    });
+
     return (
-        <Wrapper className={props.className}>
+        <Wrapper theme={{ top: scrollY }} className={props.className}>
             <Switch>
                 <Route path="/la-buena-noticia">
                     <Image src={props.image} className="chapter-header-image"/>

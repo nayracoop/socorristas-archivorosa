@@ -13,11 +13,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "40%",
                         "align": "right",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "490px",
                         "align": "left"
                     }
                 },
@@ -42,11 +43,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "52%",
                         "align": "right",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "52%",
                         "align": "right"
                     }
                 },
@@ -71,11 +73,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "53%",
                         "align": "right",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "53%",
                         "align": "right"
                     }
                 },
@@ -101,6 +104,7 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "none",
                         "align": "left",
                         "margin": 0
                     },
@@ -130,6 +134,7 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "40%",
                         "align": "right",
                         "margin": 0
                     },
@@ -159,11 +164,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "36%",
                         "align": "right",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "36%",
                         "align": "right"
                     }
                 },
@@ -188,11 +194,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "46%",
                         "align": "right",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "55%",
                         "align": "right"
                     }
                 },
@@ -218,11 +225,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "none",
                         "align": "left",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "50%",
                         "align": "right"
                     }
                 },
@@ -248,11 +256,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "37%",
                         "align": "left",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "50%",
                         "align": "right"
                     }
                 },
@@ -278,11 +287,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "40%",
                         "align": "left",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "40%",
                         "align": "left"
                     }
                 },
@@ -308,11 +318,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "61%",
                         "align": "left",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "39%",
                         "align": "right"
                     }
                 },
@@ -338,11 +349,12 @@
             "theme": {
                 "header": {
                     "content": {
+                        "size": "41%",
                         "align": "right",
                         "margin": 0
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "66%",
                         "align": "right"
                     }
                 },

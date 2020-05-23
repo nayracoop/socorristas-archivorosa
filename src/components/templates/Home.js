@@ -39,7 +39,7 @@ const home = (props) => {
       <ChapterHeader
         theme={{
           ...props.theme,
-          content: { align: "left", margin: 0 },
+          content: { size: "50%", align: "left", margin: 0 },
           background: { size: "50%", align: "right" },
         }}
         title="Archivo rosa"

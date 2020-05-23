@@ -8,8 +8,13 @@ import ScrollIndicator from "../snippets/header/ScrollIndicator";
 const ChapterHeaderContainer = styled.header`
   position: relative;
   height: 100vh;
-  width: 100%;
-  padding-top: 7vh;
+`;
+
+const Header = styled.div`
+  position: relative;
+  height: 100%;
+  
+  // padding-top: 7vh;
   display: flex;
   flex-flow: ${(props) => props.theme.align === "right" ? "row-reverse" : "row"} wrap;
   margin: 0 0 6em;
@@ -31,39 +36,46 @@ const ChapterHeaderContainer = styled.header`
   }
 `;
 
-const Text = styled.div`
+const TextColumn = styled.div`
   flex: 1;
+  max-width: ${(props) => props.theme.size};
   align-self: center;
-  padding: 5%;
+  // padding: 5%;
 `;
 
-const Image = styled.div`
+const ImageColumn = styled.div`
   flex: 1;
-  height: 100%;
-  max-height: 100%;
-  @media screen and (max-width: 1221px) {
-    &.chapter-header-img-cont {
-      max-height: 50vh;
-      margin-bottom: 5vh;
-      text-align: center;
-    }
-    .chapter-header-image {
-      height: 100%;
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
-  @media screen and (max-width: 1221px) and (max-height: 700px) {
-    &.chapter-header-img-cont {
-      max-height: unset;
-      .chapter-header-image {
-        height: unset;
-        max-width: 100%;
-      }
-    }
-  }
+  max-width: ${(props) => props.theme.size};
+  position: relative;
+
+  // @media screen and (max-width: 1221px) {
+  //   &.chapter-header-img-cont {
+  //     max-height: 50vh;
+  //     margin-bottom: 5vh;
+  //     text-align: center;
+  //   }
+  //   .chapter-header-image {
+  //     height: 100%;
+  //     width: auto;
+  //     height: auto;
+  //     max-width: 100%;
+  //     max-height: 100%;
+  //   }
+  // }
+  // @media screen and (max-width: 1221px) and (max-height: 700px) {
+  //   &.chapter-header-img-cont {
+  //     max-height: unset;
+  //     .chapter-header-image {
+  //       height: unset;
+  //       max-width: 100%;
+  //     }
+  //   }
+  // }
+`;
+
+const Image = styled(ChapterHeaderImage)`
+  position: absolute;
+  left: 0;
 `;
 
 const HeaderBackground = styled.div`
@@ -72,7 +84,7 @@ const HeaderBackground = styled.div`
   right: ${(props) => (props.theme.align === "right" ? 0 : "auto")};
   top: 0;
   bottom: 0;
-  width: 50%;
+  width: ${(props) => props.theme.size};
   opacity: ${(props) => props.theme.colors.backgroundOpacity} ;
   background-color: ${(props) => props.theme.colors.background} ;
   z-index: -1;
@@ -84,19 +96,21 @@ const HeaderBackground = styled.div`
 const ChapterHeader = (props) => {
   console.log(props.theme)
   return (
-    <ChapterHeaderContainer theme={props.theme.content}>
-      <Text className="container">
-        <ChapterTitle
-          title={props.title}
-          author={props.author}
-          info={props.info}
-          date={props.date}
-          titleSize={props.titleSize}
-        ></ChapterTitle>
-      </Text>
-      <Image className="container chapter-header-img-cont">
-        <ChapterHeaderImage image={props.image}></ChapterHeaderImage>
-      </Image>
+    <ChapterHeaderContainer>
+      <Header theme={props.theme.content}>
+        <TextColumn theme={props.theme.content}> {/*className="container">*/}
+          <ChapterTitle
+            title={props.title}
+            author={props.author}
+            info={props.info}
+            date={props.date}
+            titleSize={props.titleSize}
+          ></ChapterTitle>
+        </TextColumn>
+        <ImageColumn theme={ { ...props.theme, size: props.theme.content.size.substr(-1) === '%' ? (100-parseInt(props.theme.content.size)) + '%' : 'auto' } } className="---container ---chapter-header-img-cont">
+          <Image image={props.image} />
+        </ImageColumn>
+      </Header>
       <HeaderBackground theme={ { ...props.theme, ...props.theme.background } } />
       <ScrollIndicator />
     </ChapterHeaderContainer>
