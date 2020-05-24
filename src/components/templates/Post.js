@@ -19,19 +19,25 @@ const Wrapper = styled.div`
 
 const Content = styled.article`
   max-width: ${(props) => props.theme.articleMaxWidth}px;
-  margin: 10em auto;
+  margin: 10em auto 3em;
   font-size: 1.3125em;
   align-self: center;
-  @media screen and (max-width: 1221px) {
-    margin-top: 10px;
-  }    
+  // @media screen and (max-width: 1221px) {
+    //   margin-top: 10px;
+    // }    
   p {
     margin-top: 1.5em;
+  }
+    
+  @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+    padding: 0 30px;
+    margin-top: 1em;
   }
 `;
 
 const ContentWrapper = styled.div`
-  margin-bottom: 25px;
+  margin-bottom: 2em;
+  width: 100%;
 `;
 
 const Post = (props) => {

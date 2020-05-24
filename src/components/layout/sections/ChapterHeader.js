@@ -26,7 +26,7 @@ const Header = styled.div`
   margin: 0 0 6em;
 
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
-    flex-flow: column-reverse;
+    flex-flow: column-reverse wrap;
   }
 
   // @media screen and (max-width: 1221px) {
@@ -51,11 +51,12 @@ const TextColumn = styled.div`
   flex: 1;
   max-width: ${(props) => props.theme.size};
   align-self: center;
-  transform: translate3d(0,${props => props.theme.top}px,0);
+  
   // padding: 5%;
 
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
     max-width: none;
+    flex: 1 1 auto;
   }
 `;
 
@@ -65,8 +66,9 @@ const ImageColumn = styled.div`
   position: relative;
 
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
-    max-width: none;
-    min-height: 70vh;
+    max-width: 100vw;
+    flex: 1 1 100vh;
+    // min-height: 100vh;
   }
 
   // @media screen and (max-width: 1221px) {
@@ -102,13 +104,25 @@ const Image = styled(ChapterHeaderImage)`
   left: ${(props) => props.theme.left ? props.theme.left : "auto" };
 
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+    position: relative;
     top: auto;
     right: auto;
     bottom: auto;
     left: auto;
+    margin: 0 auto;
+    width:80%;
+    height: 100%;
+    padding: 2em 0;
+    
+    // width: 100%;
+    // height: 100vh;
 
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+
   }
 `;
 
@@ -128,7 +142,7 @@ const HeaderBackground = styled.div`
     width: auto;
     left: 0;
     right: 0;
-    height: 70vh;
+    height: calc(100% + 60px - 100vh);
     bottom: 0;
     top: auto;
   }

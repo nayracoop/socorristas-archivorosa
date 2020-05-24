@@ -2,21 +2,13 @@ import React from "react";
 import styled, { withTheme } from "styled-components";
 
 const FooterContainer = styled.footer`
-  max-width: ${(props) => props.theme.maxWidth}px;
-  height: 100vh;
+  // max-width: ${(props) => props.theme.maxWidth}px;
+  // min-height: 100vh;
   margin: 0 auto;
-  padding: 15% 2em;
+  padding: 6em 30px;
   text-align: center;
-`;
-
-const FooterBackground = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  bottom: 0;
-  opacity: ${(props) => props.theme.colors.backgroundOpacity};
-  background-color: ${(props) => props.theme.colors.background};
-  z-index: -1;
+  // opacity: ${(props) => props.theme.colors.backgroundOpacity};
+  background-color: ${(props) => props.theme.colors.background + parseInt(props.theme.colors.backgroundOpacity*255).toString(16)};
 `;
 
 const FooterText = styled.div`
@@ -43,8 +35,7 @@ const FooterLink = styled.li`
 
 const Footer = (props) => {
   return (
-    <div>
-      <FooterContainer>
+    <FooterContainer>
         <FooterText>
           <p>
             Archivo Rosa es un experimento narrativo que busca compartir
@@ -68,27 +59,13 @@ const Footer = (props) => {
         <FooterText className="credits">
           <p>
             Dirección y producción:{" "}
-            <a href="/"> Victoria Gagliardi y Tomás Bergero</a>
+            <a href="/">Victoria Gagliardi y Tomás Bergero</a>
           </p>
-          <p>
-            Collages:{" "}
-            <a target="blank" href="https://www.instagram.com/mulata.dcv/">
-              María Reboredo (@mulata.cv)
-            </a>
-          </p>
-          <p>
-            {" "}
-            Diseño y programación:<a target="blank" href="https://nayra.coop/"> nayra.coop </a>
-          </p>
-          <p>
-            {" "}
-            Producción audiovisual:
-            <a target="blank" href="/"> Rodrigo Bonilla </a>
-          </p>
+          <p>Collages: <a target="blank" href="https://www.instagram.com/mulata.dcv/">María Reboredo (@mulata.cv)</a></p>
+          <p>Diseño y programación: <a target="blank" href="https://nayra.coop/">nayra.coop</a></p>
+          <p>Producción audiovisual: <a target="blank" href="/">Rodrigo Bonilla</a></p>
         </FooterText>
       </FooterContainer>
-      <FooterBackground></FooterBackground>
-    </div>
   );
 };
 
