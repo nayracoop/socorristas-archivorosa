@@ -10,7 +10,7 @@ const ChapterTitleContainer = styled.div`
 
     @media (max-width: ${props => props.theme.pageWidth.xl}px) {
         max-width: ${(props) => props.theme.articleMaxWidth}px;
-        margin: 3em auto;
+        margin: 3em auto 0;
         width: 100vw;
         padding: 0 30px;
     }

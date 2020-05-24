@@ -19,40 +19,20 @@ const ChapterHeaderContainer = styled.header`
 const Header = styled.div`
   position: relative;
   min-height: 100%;
+  margin: 0 0 6em;
 
-  // padding-top: 7vh;
   display: flex;
   flex-flow: ${(props) => props.theme.align === "right" ? "row-reverse" : "row"} wrap;
-  margin: 0 0 6em;
 
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
     flex-flow: column-reverse wrap;
   }
-
-  // @media screen and (max-width: 1221px) {
-  //   height: 93vh;
-  //   flex-direction: column;
-  //   flex-wrap: nowrap;
-  //   align-items: center;
-  //   margin-bottom: 10px;
-  //   .container {
-  //     max-height: 45vh;
-  //   }
-  //   @media screen and (max-width: 1221px) and (max-height: 700px) {
-  //     height: unset;
-  //     .container {
-  //       max-height: unset;
-  //     }
-  //   }
-  // }
 `;
 
 const TextColumn = styled.div`
   flex: 1;
   max-width: ${(props) => props.theme.size};
   align-self: center;
-  
-  // padding: 5%;
 
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
     max-width: none;
@@ -67,33 +47,9 @@ const ImageColumn = styled.div`
 
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
     max-width: 100vw;
-    flex: 1 1 100vh;
-    // min-height: 100vh;
+    flex: 1 1 auto;
+    overflow: hidden;
   }
-
-  // @media screen and (max-width: 1221px) {
-  //   &.chapter-header-img-cont {
-  //     max-height: 50vh;
-  //     margin-bottom: 5vh;
-  //     text-align: center;
-  //   }
-  //   .chapter-header-image {
-  //     height: 100%;
-  //     width: auto;
-  //     height: auto;
-  //     max-width: 100%;
-  //     max-height: 100%;
-  //   }
-  // }
-  // @media screen and (max-width: 1221px) and (max-height: 700px) {
-  //   &.chapter-header-img-cont {
-  //     max-height: unset;
-  //     .chapter-header-image {
-  //       height: unset;
-  //       max-width: 100%;
-  //     }
-  //   }
-  // }
 `;
 
 const Image = styled(ChapterHeaderImage)`
@@ -111,17 +67,20 @@ const Image = styled(ChapterHeaderImage)`
     left: auto;
     margin: 0 auto;
     width:80%;
-    height: 100%;
-    padding: 2em 0;
-    
-    // width: 100%;
-    // height: 100vh;
+    ${(props) => props.theme.responsiveSize ? `
+      max-width: ${props.theme.responsiveSize.maxWidth};
+      min-width: ${props.theme.responsiveSize.minWidth};
+      transform: translateX(${Math.floor((window.innerWidth-parseInt(props.theme.responsiveSize.minWidth))/2)}px);
+    ` : ''}
+
+    // height: 100%;
+    padding: 6em 0 0;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    // height: 100vh;
 
   }
 `;
@@ -142,22 +101,17 @@ const HeaderBackground = styled.div`
     width: auto;
     left: 0;
     right: 0;
-    height: calc(100% + 60px - 100vh);
+    height: 50%;
     bottom: 0;
     top: auto;
   }
-
   z-index: -1;
-  // @media screen and (max-width: 1221px) {
-  //   left: 0;
-  // }
 `;
 
 const ChapterHeader = (props) => {
 
   const bgTopPosition = useParallax(-0.15);
   // const textScrollY = useParallax(-0.35);
-  console.log(props.theme.imagePosition)
   return (
     <ChapterHeaderContainer>
       <Header theme={{...props.theme.content, pageWidth: {...props.theme.pageWidth}}}>

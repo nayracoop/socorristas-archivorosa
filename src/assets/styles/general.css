@@ -54,6 +54,10 @@ table {
 	border-spacing: 0;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 *::selection {
   background: rgba(189, 140, 191, .65);
 }

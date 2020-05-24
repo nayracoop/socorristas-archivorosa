@@ -56,7 +56,6 @@ class App extends Component {
               const headerImage = require(`./assets/imgs/header-${post.meta.slug}.png`)
               const previousPost = index === 0 ? content.posts.length : index
               const nextPost = index === content.posts.length - 1 ? 1 : index + 2
-              console.log(index, previousPost, nextPost)
               return (
                 <Route key={post.meta.slug} path={"/" + post.meta.slug}>
                   <Post data={post} 
