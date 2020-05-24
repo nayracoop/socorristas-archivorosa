@@ -1,9 +1,12 @@
 import React from "react";
+import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components";
 import IndexImage from "./IndexImage";
 
-const IndexItemContainer = styled.div`
+const paperBackground = require('../../../../../assets/imgs/background.png');
+
+const ItemContainer = styled.div`
   width:100%;
   overflow-x: hidden;
 `
@@ -21,26 +24,41 @@ const QuoteContainer = styled.div`
   
 `;
 const Quote = styled(Link)`
-  width: 60%;
   position: absolute;
   left:${(props) => (props.texthalign === "left" ? "50px" : "")};
   right:${(props) => (props.texthalign === "right" ? "50px" : "")};
   top:${(props) => (props.textvalign === "top" ? "50px" : "")};
   bottom:${(props) => (props.textvalign === "bottom" ? "50px" : "")};
   font-family: ${(props) => props.theme.fonts.display};
-
   font-size: 2em;
-  line-height: 1.1em;
+  line-height: 1.3em;
   color: ${(props) => props.theme.colors.text};
   opacity: ${(props) => props.theme.colors.textOpacity};
   cursor:pointer;
   z-index 10000;
-  transition: all ease-in .2s;
+  padding: 20px;
   
-  background: 
+  &.pink{
+    background-color: rgba(189,140,191,.5);
+    background-size: 100%;
+  }
 
+   &.paper{
+    background-image:url(${paperBackground});
+    background-size: 100%;
+    filter: drop-shadow(3px 4px 7px rgba(50,50,50,.7) );
+
+  }
+  
   :hover {
    opacity: ${(props) => props.theme.colors.textOpacity * 2};  
+   color: ${(props) => props.theme.colors.text};
+   text-decoration: none;
+
+
+    &.paper{
+    background-color: blue;
+  }
   }
 `;
 
@@ -57,19 +75,20 @@ const IndexItemBackground = styled.div`
 
 const indexItem = (props) => {
   return (
-    <IndexItemContainer>
+    <ItemContainer>
       <QuoteContainer borderColor={props.borderColor}>
         <Quote
           to={props.href}
           textvalign={props.textvalign}
           texthalign={props.texthalign}
+          className={props.quoteHighlight}
         >
-          {props.content}
+          <ReactMarkdown>{props.content}</ReactMarkdown>
         </Quote>
       </QuoteContainer>
       <IndexImage align={props.imageAlign} image={props.image}></IndexImage>
       <IndexItemBackground background={props.background}></IndexItemBackground>
-    </IndexItemContainer>
+    </ItemContainer>
   );
 };
 
