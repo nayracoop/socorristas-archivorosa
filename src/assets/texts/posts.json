@@ -31,7 +31,8 @@
                 "borderColor": "none",
                 "textvalign": "bottom",
                 "texthalign": "right",
-                "imageAlign": "left"
+                "imageAlign": "left",
+                "quoteHighlight": "pink"
             }
         },
         {
@@ -65,7 +66,8 @@
                 "borderColor": "none",
                 "textvalign": "top",
                 "texthalign": "left",
-                "imageAlign": "center"
+                "imageAlign": "center",
+                "quoteHighlight": "paper"
             }
         },
         {
@@ -99,7 +101,8 @@
                 "borderColor": "black",
                 "textvalign": "top",
                 "texthalign": "left",
-                "imageAlign": "center"
+                "imageAlign": "center",
+                "quoteHighlight": "pink"
             }
         },
         {
@@ -134,7 +137,8 @@
                 "borderColor": "none",
                 "textvalign": "top",
                 "texthalign": "left",
-                "imageAlign": "right"
+                "imageAlign": "right",
+                "quoteHighlight": "pink"
             }
         },
         {
@@ -170,7 +174,8 @@
                 "borderColor": "none",
                 "textvalign": "top",
                 "texthalign": "left",
-                "imageAlign": "center"
+                "imageAlign": "center",
+                "quoteHighlight": "paper"
             }
         },
         {
@@ -204,7 +209,8 @@
                 "borderColor": "black",
                 "textvalign": "top",
                 "texthalign": "left",
-                "imageAlign": ""
+                "imageAlign": "",
+                "quoteHighlight": "pink"
             }
         },
         {
@@ -240,7 +246,8 @@
                 "borderColor": "none",
                 "textvalign": "bottom",
                 "texthalign": "right",
-                "imageAlign": ""
+                "imageAlign": "",
+                "quoteHighlight": "paper"
             }
         },
         {
@@ -277,7 +284,8 @@
                 "borderColor": "none",
                 "textvalign": "top",
                 "texthalign": "left",
-                "imageAlign": "right"
+                "imageAlign": "right",
+                "quoteHighlight": "pink"
             }
         },
         {
@@ -312,7 +320,8 @@
                 "borderColor": "none",
                 "textvalign": "top",
                 "texthalign": "left",
-                "imageAlign": ""
+                "imageAlign": "",
+                "quoteHighlight": "paper"
             }
         },
         {
@@ -349,7 +358,8 @@
                 "borderColor": "black",
                 "textvalign": "bottom",
                 "texthalign": "right",
-                "imageAlign": "top"
+                "imageAlign": "top",
+                "quoteHighlight": "pink"
             }
         },
         {
@@ -386,7 +396,8 @@
                 "borderColor": "black",
                 "textvalign": "top",
                 "texthalign": "left",
-                "imageAlign": "bottom"
+                "imageAlign": "bottom",
+                "quoteHighlight": "pink"
             }
         },
         {
@@ -421,7 +432,8 @@
                 "borderColor": "none",
                 "textvalign": "bottom",
                 "texthalign": "right",
-                "imageAlign": "top"
+                "imageAlign": "top",
+                "quoteHighlight": "pink"
             }
         }
     ]

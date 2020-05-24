@@ -63,6 +63,7 @@ const indexGrid = (props) => {
               textvalign={post.theme.textvalign}
               texthalign={post.theme.texthalign}
               background={post.theme.background}
+              quoteHighlight={post.theme.quoteHighlight}
             ></IndexItem>
           </IndexItemContainer>
         );

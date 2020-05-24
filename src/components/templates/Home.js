@@ -7,17 +7,10 @@ const image = require("../../assets/imgs/index-header.png");
 
 const HomeContainer = styled.div`
   margin: 0 auto;
-  @media screen and (max-width: 1221px) {
-    &.home {
-      h1 {
-        font-size: 5rem!important;
-      }
-    }
-  }
 `;
 
 const IntroductionContainer = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   width: 70%;
   margin: 0 auto;
   padding-top: 15%;
@@ -35,7 +28,7 @@ const IntroductionContainer = styled.div`
 
 const home = (props) => {
   return (
-    <HomeContainer className="home">
+    <HomeContainer>
       <ChapterHeader
         theme={{
           ...props.theme,
