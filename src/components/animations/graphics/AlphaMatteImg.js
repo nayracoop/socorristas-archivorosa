@@ -37,9 +37,8 @@ const AlphaMatteImg = (props) =>{
       img.removeEventListener('load', loaded)
     }
   })
-
   return (
-    <canvas ref={canvas} className={props.className}></canvas>
+    <canvas ref={canvas} className={props.className} style={props.style}></canvas>
   );
 }
 

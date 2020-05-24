@@ -8,6 +8,7 @@ import CloudsBench from '../../../animations/CloudsBench';
 import HeartChat from '../../../animations/HeartChat';
 import BassinetBranch from '../../../animations/BassinetBranch';
 import BirdChair from '../../../animations/BirdChair';
+import MelonChat from '../../../animations/MelonChat';
 
 const Image = styled.img`
     // margin-top:1%;
@@ -50,7 +51,7 @@ const ChapterHeaderImage = (props) => {
                     <CloudsBench className="chapter-header-image"/>
                 </Route>
                 <Route path="/quiero-que-salga">
-                    <Image src={props.image} />
+                    <MelonChat src={props.image} />
                 </Route>
                 <Route path="/nilda">
                     <Image src={props.image} />

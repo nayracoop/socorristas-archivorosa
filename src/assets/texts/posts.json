@@ -279,18 +279,16 @@
                         "margin": 0
                     },
                     "imagePosition": {
-                        "top": "auto",
-                        "right": "auto",
+                        "bottom": "0",
+                        "right": "60px",
                         "responsiveSize": {
-                            "maxWidth": "80%",
-                            "minWidth": "400px",
-                            "offsetY": "0",
+                            "maxWidth": "50%",
+                            "minWidth": "350px",
+                            "offsetY": "15px",
                             "offsetX": "0",
-                            "marginVertical": "0",
+                            "marginVertical": "35px",
                             "justify": "center"
-                        },
-                        "bottom": "auto",
-                        "left": "auto"
+                        }
                     },
                     "background": {
                         "size": "55%",

@@ -100,7 +100,6 @@ const HeaderBackground = styled.div`
   width: ${(props) => props.theme.size};
   opacity: ${(props) => props.theme.colors.backgroundOpacity} ;
   background-color: ${(props) => props.theme.colors.background} ;
-  transform: translate3d(0,${props => props.theme.top}px,0);
   transition: transform 500ms ease-out;
 
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
@@ -116,8 +115,8 @@ const HeaderBackground = styled.div`
 
 const ChapterHeader = (props) => {
 
-  const bgTopPosition = useParallax(-0.15);
-  // const textScrollY = useParallax(-0.35);
+  const scrollY = useParallax(-0.15);
+  
   return (
     <ChapterHeaderContainer>
       <Header theme={{...props.theme.content, pageWidth: {...props.theme.pageWidth}}}>
@@ -134,7 +133,7 @@ const ChapterHeader = (props) => {
           <Image image={props.image} theme={{...props.theme.imagePosition, pageWidth: {...props.theme.pageWidth}}} />
         </ImageColumn>
       </Header>
-      <HeaderBackground theme={ { ...props.theme, ...props.theme.background, top: bgTopPosition } } />
+      <HeaderBackground theme={ { ...props.theme, ...props.theme.background } } style={{transform: `translate3d(0,${scrollY}px,0)`}} />
       <ScrollIndicator />
     </ChapterHeaderContainer>
   );

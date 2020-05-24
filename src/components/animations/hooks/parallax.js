@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from 'styled-components'
 
-export const useParallax = (offset = -0.5) => {
+export const useParallax = (offsets = -0.5) => {
 
   const [scrollY, setScrollY] = useState(0)
   
   function onScroll() {    
-    const scrollPos = window.pageYOffset * offset
+    const scrollPos = Array.isArray(offsets) ? offsets.map(offset => window.pageYOffset * offset) : window.pageYOffset * offsets
     setScrollY(scrollPos); 
   }   
   
