@@ -25,7 +25,9 @@ const Header = styled.div`
   flex-flow: ${(props) => props.theme.align === "right" ? "row-reverse" : "row"} wrap;
 
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
-    flex-flow: column-reverse wrap;
+    flex-flow: column-reverse nowrap;
+    width: 100vw;
+    overflow: hidden;
   }
 `;
 
@@ -48,7 +50,8 @@ const ImageColumn = styled.div`
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
     max-width: 100vw;
     flex: 1 1 auto;
-    overflow: hidden;
+    // overflow-x: hidden;
+    // overflow-y: visible;
   }
 `;
 
@@ -70,11 +73,14 @@ const Image = styled(ChapterHeaderImage)`
     ${(props) => props.theme.responsiveSize ? `
       max-width: ${props.theme.responsiveSize.maxWidth};
       min-width: ${props.theme.responsiveSize.minWidth};
-      transform: translateX(${Math.floor((window.innerWidth-parseInt(props.theme.responsiveSize.minWidth))/2)}px);
+      transform: translateX(${window.innerWidth-parseInt(props.theme.responsiveSize.minWidth) < 0 ? Math.floor((window.innerWidth-parseInt(props.theme.responsiveSize.minWidth))/2+parseInt(props.theme.responsiveSize.offsetX)) : parseInt(props.theme.responsiveSize.offsetX) }px) translateY(${props.theme.responsiveSize.offsetY});
+      margin-top: ${props.theme.responsiveSize.marginVertical};
+      margin-bottom: ${props.theme.responsiveSize.marginVertical};
+      justify-content: ${props.theme.responsiveSize.justify};
     ` : ''}
 
     // height: 100%;
-    padding: 6em 0 0;
+    padding: 2em 0 0;
 
     display: flex;
     flex-flow: row wrap;
@@ -101,7 +107,7 @@ const HeaderBackground = styled.div`
     width: auto;
     left: 0;
     right: 0;
-    height: 50%;
+    height: 45%;
     bottom: 0;
     top: auto;
   }
