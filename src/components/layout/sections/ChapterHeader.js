@@ -9,32 +9,42 @@ import ScrollIndicator from "../snippets/header/ScrollIndicator";
 const ChapterHeaderContainer = styled.header`
   position: relative;
   height: 100vh;
+
+  @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+    height: auto;
+    min-height: 100vh;
+  }
 `;
 
 const Header = styled.div`
   position: relative;
-  height: 100%;
+  min-height: 100%;
 
   // padding-top: 7vh;
   display: flex;
   flex-flow: ${(props) => props.theme.align === "right" ? "row-reverse" : "row"} wrap;
   margin: 0 0 6em;
-  @media screen and (max-width: 1221px) {
-    height: 93vh;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-bottom: 10px;
-    .container {
-      max-height: 45vh;
-    }
-    @media screen and (max-width: 1221px) and (max-height: 700px) {
-      height: unset;
-      .container {
-        max-height: unset;
-      }
-    }
+
+  @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+    flex-flow: column-reverse;
   }
+
+  // @media screen and (max-width: 1221px) {
+  //   height: 93vh;
+  //   flex-direction: column;
+  //   flex-wrap: nowrap;
+  //   align-items: center;
+  //   margin-bottom: 10px;
+  //   .container {
+  //     max-height: 45vh;
+  //   }
+  //   @media screen and (max-width: 1221px) and (max-height: 700px) {
+  //     height: unset;
+  //     .container {
+  //       max-height: unset;
+  //     }
+  //   }
+  // }
 `;
 
 const TextColumn = styled.div`
@@ -43,12 +53,21 @@ const TextColumn = styled.div`
   align-self: center;
   transform: translate3d(0,${props => props.theme.top}px,0);
   // padding: 5%;
+
+  @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+    max-width: none;
+  }
 `;
 
 const ImageColumn = styled.div`
   flex: 1;
   max-width: ${(props) => props.theme.size};
   position: relative;
+
+  @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+    max-width: none;
+    min-height: 70vh;
+  }
 
   // @media screen and (max-width: 1221px) {
   //   &.chapter-header-img-cont {
@@ -81,6 +100,16 @@ const Image = styled(ChapterHeaderImage)`
   right: ${(props) => props.theme.right ? props.theme.right : "auto" };
   bottom: ${(props) => props.theme.bottom ? props.theme.bottom : "auto" };
   left: ${(props) => props.theme.left ? props.theme.left : "auto" };
+
+  @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const HeaderBackground = styled.div`
@@ -95,10 +124,19 @@ const HeaderBackground = styled.div`
   transform: translate3d(0,${props => props.theme.top}px,0);
   transition: transform 500ms ease-out;
 
-  z-index: -1;
-  @media screen and (max-width: 1221px) {
+  @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+    width: auto;
     left: 0;
+    right: 0;
+    height: 70vh;
+    bottom: 0;
+    top: auto;
   }
+
+  z-index: -1;
+  // @media screen and (max-width: 1221px) {
+  //   left: 0;
+  // }
 `;
 
 const ChapterHeader = (props) => {
@@ -108,8 +146,8 @@ const ChapterHeader = (props) => {
   console.log(props.theme.imagePosition)
   return (
     <ChapterHeaderContainer>
-      <Header theme={props.theme.content}>
-        <TextColumn theme={props.theme.content}> {/*className="container">*/}
+      <Header theme={{...props.theme.content, pageWidth: {...props.theme.pageWidth}}}>
+        <TextColumn theme={{...props.theme.content, pageWidth: {...props.theme.pageWidth}}}> {/*className="container">*/}
           <ChapterTitle
             title={props.title}
             author={props.author}
@@ -118,8 +156,8 @@ const ChapterHeader = (props) => {
             titleSize={props.titleSize}
           ></ChapterTitle>
         </TextColumn>
-        <ImageColumn theme={ { ...props.theme, size: props.theme.content.size.substr(-1) === '%' ? (100-parseInt(props.theme.content.size)) + '%' : 'auto' } } className="---container ---chapter-header-img-cont">
-          <Image image={props.image} theme={props.theme.imagePosition} />
+        <ImageColumn theme={ { ...props.theme, size: props.theme.content.size.substr(-1) === '%' ? (100-parseInt(props.theme.content.size)) + '%' : 'auto', pageWidth: {...props.theme.pageWidth} } } className="---container ---chapter-header-img-cont">
+          <Image image={props.image} theme={{...props.theme.imagePosition, pageWidth: {...props.theme.pageWidth}}} />
         </ImageColumn>
       </Header>
       <HeaderBackground theme={ { ...props.theme, ...props.theme.background, top: bgTopPosition } } />

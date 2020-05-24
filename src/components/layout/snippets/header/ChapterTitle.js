@@ -7,9 +7,17 @@ const ChapterTitleContainer = styled.div`
     opacity: ${(props) => props.theme.colors.textOpacity};
     margin-left: 70px;
     margin-right: 70px;
-    @media screen and (max-width: 1221px) {
-        margin: 15px auto;
-    }    
+
+    @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+        max-width: ${(props) => props.theme.articleMaxWidth}px;
+        width: 680px;
+        margin: 5em auto;
+        max-width: 100%;
+    }
+
+    // @media screen and (max-width: 1221px) {
+    //     margin: 15px auto;
+    // }    
 `;
 
 const Title = styled.h1`
@@ -20,20 +28,36 @@ const Title = styled.h1`
     z-index 10;
 `
 
-const Author = styled.h2`
+const Author = styled.p`
     font-size: 2em;
     margin: 0.5em 0 2em;
-    @media screen and (max-width: 1221px) {
-        font-size: 1.8rem;
-        margin: 0.5em 0 1.5em;
-    }    
+
+    @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+        margin-bottom: 0.5em;
+    }
+
+
+    // @media screen and (max-width: 1221px) {
+    //     font-size: 1.8rem;
+    //     margin: 0.5em 0 1.5em;
+    // }    
 `
 const Date = styled.p`
 
 `
 const chapterTitle = (props) => {
 
-    const authorClass = String(props.author).toLowerCase().replace(/[^a-z0-9 -]/g, "").replace(/\s+/g, "-").replace(/-+/g, "-").replace(/^-+/, "").replace(/-+$/, "");
+    const authorClass = String(props.author).toLowerCase()
+                                            .replace('á', 'a')
+                                            .replace('é', 'e')
+                                            .replace('í', 'i')
+                                            .replace('ó', 'o')
+                                            .replace('ú', 'u')
+                                            .replace(/[^a-z0-9 -]/g, "")
+                                            .replace(/\s+/g, "-")
+                                            .replace(/-+/g, "-")
+                                            .replace(/^-+/, "")
+                                            .replace(/-+$/, "")
 
     return (
         <ChapterTitleContainer>
