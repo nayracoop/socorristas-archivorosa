@@ -58,6 +58,7 @@ const indexGrid = (props) => {
               content={post.excerpt}
               href={"/" + post.meta.slug}
               image={image}
+              collage={post.meta.slug}
               borderColor={post.theme.index.borderColor}
               imageAlign={post.theme.index.imageAlign}
               textvalign={post.theme.index.textvalign}

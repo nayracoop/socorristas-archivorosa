@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import HayAbortos from "../../../../animations/index/HayAbortos"
+import VientoEnVenecia from "../../../../animations/index/VientoEnVenecia"
+import ElPalpitarDeLosAbortos from "../../../../animations/index/ElPalpitarDeLosAbortos"
 
 const IndexImageContainer = styled.div`
     position: absolute;
@@ -16,11 +18,41 @@ const Image = styled.img`
     bottom:-5%
 `;
 
+const Collage = (props) => {
+    switch (props.collage) {
+        case 'la-buena-noticia':
+            return <Image align={props.align} src={props.image} ></Image>;
+        case 'viento-en-venecia':
+            return <VientoEnVenecia></VientoEnVenecia>;
+        case 'hay-abortos':
+            return <HayAbortos></HayAbortos>;
+        case 'el-aborto-como-lugar-para-conmover-me':
+            return <Image align={props.align} src={props.image} ></Image>;
+        case 'la-buena-noticia-':
+            return <Image align={props.align} src={props.image} ></Image>;
+        case 'lina':
+            return <Image align={props.align} src={props.image} ></Image>;
+        case 'quiero-que-salga':
+            return <Image align={props.align} src={props.image} ></Image>;
+        case 'nilda':
+            return <Image align={props.align} src={props.image} ></Image>;
+        case 'del-socorro-del-socorro':
+            return <Image align={props.align} src={props.image} ></Image>;
+        case 'urgencia-rosa':
+            return <Image align={props.align} src={props.image} ></Image>;
+        case 'cuando-estamos-juntas':
+            return <Image align={props.align} src={props.image} ></Image>;
+        case 'el-palpitar-de-los-abortos':
+            return <ElPalpitarDeLosAbortos></ElPalpitarDeLosAbortos>;
+        default:
+            return null;
+    }
+}
 
 const indexImage = (props) => {
     return (
         <IndexImageContainer >
-            <Image align={props.align} src={props.image} ></Image>
+            <Collage collage={props.collage} image={props.image}  ></Collage>
         </IndexImageContainer>
     );
 }

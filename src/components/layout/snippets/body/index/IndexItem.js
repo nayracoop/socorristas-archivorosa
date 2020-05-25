@@ -24,10 +24,10 @@ const QuoteContainer = styled.div`
 `;
 const Quote = styled(Link)`
   position: absolute;
-  left:${(props) => (props.texthalign === "left" ? "50px" : "")};
-  right:${(props) => (props.texthalign === "right" ? "50px" : "")};
-  top:${(props) => (props.textvalign === "top" ? "50px" : "")};
-  bottom:${(props) => (props.textvalign === "bottom" ? "50px" : "")};
+  left:${(props) => (props.texthalign === "left" ? "100px" : "")};
+  right:${(props) => (props.texthalign === "right" ? "100px" : "")};
+  top:${(props) => (props.textvalign === "top" ? "100px" : "")};
+  bottom:${(props) => (props.textvalign === "bottom" ? "100px" : "")};
   font-family: ${(props) => props.theme.fonts.display};
   font-size: 2em;
   line-height: 1.3em;
@@ -130,7 +130,7 @@ const indexItem = (props) => {
           }
         </Quote>
       </QuoteContainer>
-      <IndexImage align={props.imageAlign} image={props.image}></IndexImage>
+      <IndexImage align={props.imageAlign} image={props.image} collage={props.collage}></IndexImage>
       <IndexItemBackground background={props.background}></IndexItemBackground>
     </ItemContainer >
   );
