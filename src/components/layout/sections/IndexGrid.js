@@ -52,18 +52,18 @@ const indexGrid = (props) => {
         return (
           <IndexItemContainer
             key={i}
-            area={post.theme.grid}
+            area={post.theme.index.grid}
           >
             <IndexItem
               content={post.excerpt}
               href={"/" + post.meta.slug}
               image={image}
-              borderColor={post.theme.borderColor}
-              imageAlign={post.theme.imageAlign}
-              textvalign={post.theme.textvalign}
-              texthalign={post.theme.texthalign}
-              background={post.theme.background}
-              quoteHighlight={post.theme.quoteHighlight}
+              borderColor={post.theme.index.borderColor}
+              imageAlign={post.theme.index.imageAlign}
+              textvalign={post.theme.index.textvalign}
+              texthalign={post.theme.index.texthalign}
+              background={post.theme.index.background}
+              quoteHighlight={post.theme.index.quoteHighlight}
             ></IndexItem>
           </IndexItemContainer>
         );

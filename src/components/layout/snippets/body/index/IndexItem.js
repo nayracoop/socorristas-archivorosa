@@ -18,8 +18,7 @@ const QuoteContainer = styled.div`
   left:10%;
   top:10%;
   padding: 10%;
-  border: ${(props) => props.borderColor !== "none" ? "1px solid " + props.theme.colors.text
-    : "none"}
+  border: ${(props) => props.borderColor !== "none" ? "1px solid " + props.theme.colors.text : "none"}
   border-radius: 10px;
   
 `;
@@ -34,31 +33,68 @@ const Quote = styled(Link)`
   line-height: 1.3em;
   color: ${(props) => props.theme.colors.text};
   opacity: ${(props) => props.theme.colors.textOpacity};
+  z-index: 10000;
   cursor:pointer;
-  z-index 10000;
   padding: 20px;
-  
+
   &.pink{
-    background-color: rgba(189,140,191,.5);
-    background-size: 100%;
+    span{
+      background: linear-gradient(to right, rgba(189,140,191,.7), rgba(189,140,191,.6));
+      background-repeat: no-repeat;
+      padding: 5px 10px 8px 20px;
+      margin-top:-10px;
+      transition: all ease-out .7s;
+
+         &.line0{
+          margin-left: -50px;
+          background-position: -700px;
+        }
+        &.line1{
+          margin-left: 10px;
+          background-position: -600px;
+        }
+        &.line2{
+          margin-left:-30px;
+          background-position:-500px;
+        }
+        &.line3{
+          margin-left: -5px;
+          background-position:-800px;
+        }
+
+      &:hover {
+        &.line0{
+          background-position: 1px;
+        }
+        &.line1{
+          background-position: 1px;
+        }
+        &.line2{
+          background-position:1px;
+        }
+        &.line3{
+          background-position:1px;
+        }
+      }
+      }
+    
+    }
   }
 
-   &.paper{
+  &.paper{
     background-image:url(${paperBackground});
     background-size: 100%;
-    filter: drop-shadow(3px 4px 7px rgba(50,50,50,.7) );
-
+    filter: drop-shadow(3px 4px 7px rgba(50,50,50,.7));
   }
   
   :hover {
    opacity: ${(props) => props.theme.colors.textOpacity * 2};  
    color: ${(props) => props.theme.colors.text};
    text-decoration: none;
-
-
-    &.paper{
-    background-color: blue;
   }
+
+  span{
+    display:inline-block;
   }
 `;
 
@@ -83,12 +119,18 @@ const indexItem = (props) => {
           texthalign={props.texthalign}
           className={props.quoteHighlight}
         >
-          <ReactMarkdown>{props.content}</ReactMarkdown>
+          {props.content.map(
+            (excerpt, i) => {
+              return (
+                <span width={20 + excerpt.line.length * 10} className={"line" + i} key={i} > {excerpt.line}</span>
+              )
+            }
+          )}
         </Quote>
       </QuoteContainer>
       <IndexImage align={props.imageAlign} image={props.image}></IndexImage>
       <IndexItemBackground background={props.background}></IndexItemBackground>
-    </ItemContainer>
+    </ItemContainer >
   );
 };
 
