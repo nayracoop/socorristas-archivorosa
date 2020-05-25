@@ -15,6 +15,7 @@ const Image = styled.img`
     // height: 95%;
     // position: absolute;
     // right: 5px;
+    max-width: 100%;
 `;
 
 const Wrapper = styled.div`
@@ -35,8 +36,8 @@ const ChapterHeaderImage = (props) => {
     return (
         <Wrapper className={props.className}>
             <Switch>
-                <Route path="/la-buena-noticia">
-                    <Image src={props.image} className="chapter-header-image"/>
+                <Route path="/la-buena-noticia" exact>
+                    <Image src={require('../../../../assets/imgs/la-buena-noticia/completo.png')} />
                 </Route>
                 <Route path="/viento-en-venecia" exact>
                     <BassinetBranch />
@@ -50,25 +51,25 @@ const ChapterHeaderImage = (props) => {
                 <Route path="/lina" exact>
                     <CloudsBench className="chapter-header-image"/>
                 </Route>
-                <Route path="/quiero-que-salga">
+                <Route path="/quiero-que-salga" exact>
                     <MelonChat src={props.image} />
                 </Route>
-                <Route path="/nilda">
-                    <Image src={props.image} />
+                <Route path="/nilda" exact>
+                    <Image src={require('../../../../assets/imgs/nilda/completo.png')} />
                 </Route>
                 <Route path="/del-socorro-del-socorro" exact>
                     <BirdChair className="chapter-header-image"/>
                 </Route>
                 <Route path="/urgencia-rosa" exact>
-                    <Image src={props.image} />
+                    <Image src={require('../../../../assets/imgs/urgencia-rosa/completo.png')} />
                 </Route>
-                <Route path="/cuando-estamos-juntas">
-                    <Image src={props.image} />
+                <Route path="/cuando-estamos-juntas" exact>
+                    <Image src={require('../../../../assets/imgs/cuando-estamos-juntas/completo.png')} />
                 </Route>
                 <Route path="/el-palpitar-de-los-abortos" exact>
                     <HeartChat />
                 </Route>
-                <Route path="/">
+                <Route path="/" exact>
                     <Image src={props.image} className="chapter-header-image"/>
                 </Route>
             </Switch>
