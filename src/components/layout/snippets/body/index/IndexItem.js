@@ -33,68 +33,68 @@ const Quote = styled(Link)`
   line-height: 1.3em;
   color: ${(props) => props.theme.colors.text};
   opacity: ${(props) => props.theme.colors.textOpacity};
-  z-index: 10000;
   cursor:pointer;
-  padding: 20px;
+  padding: 20px; 
+  z-index: 10000;
 
-  &.pink{
-    span{
-      background: linear-gradient(to right, rgba(189,140,191,.7), rgba(189,140,191,.6));
-      background-repeat: no-repeat;
-      padding: 5px 10px 8px 20px;
-      margin-top:-10px;
-      transition: all ease-out .7s;
+  span{
+    display:block;
+    background: linear-gradient(to right , rgba(189,140,191,.7), rgba(189,140,191,.2));
+    background-repeat: no-repeat;
+    padding: 5px 30px 8px 10px;
+    margin-top:-10px;
+    transition: all ease-in-out .5s;
+    background-position: -700px;     
 
-         &.line0{
-          margin-left: -50px;
-          background-position: -700px;
-        }
-        &.line1{
-          margin-left: 10px;
-          background-position: -600px;
-        }
-        &.line2{
-          margin-left:-30px;
-          background-position:-500px;
-        }
-        &.line3{
-          margin-left: -5px;
-          background-position:-800px;
-        }
-
-      &:hover {
-        &.line0{
-          background-position: 1px;
-        }
-        &.line1{
-          background-position: 1px;
-        }
-        &.line2{
-          background-position:1px;
-        }
-        &.line3{
-          background-position:1px;
-        }
-      }
-      }
-    
+    &.line0{
+      margin-left: -50px; 
+      font-size: 1em;
+      line-height: 1em;         
+    }
+    &.line1{
+      margin-left: 10px;
+      font-size: 1.2em;  
+      line-height: 1em; 
+    }
+    &.line2{
+      margin-left:-30px;
+      font-size: 1em;  
+      line-height: 1em; 
+    }
+    &.line3{
+      margin-left: -5px;
+      font-size: 1.5em;  
+      line-height: 1em; 
+    }
+    &.line4{
+      margin-left: 20px;
+      font-size: 1em;  
+      line-height: 1em; 
     }
   }
 
-  &.paper{
-    background-image:url(${paperBackground});
-    background-size: 100%;
-    filter: drop-shadow(3px 4px 7px rgba(50,50,50,.7));
-  }
-  
-  :hover {
-   opacity: ${(props) => props.theme.colors.textOpacity * 2};  
-   color: ${(props) => props.theme.colors.text};
-   text-decoration: none;
-  }
-
-  span{
-    display:inline-block;
+    &:hover{
+      text-decoration:none;
+      color: ${(props) => props.theme.colors.text};
+      opacity: ${(props) => props.theme.colors.textOpacity * 2};
+      
+      span{
+         background-position: 0px;
+          &.line1{
+           transition-delay: .2s
+          }
+          &.line2{
+           transition-delay: .4s 
+          }
+          &.line3{
+           transition-delay: .6s 
+          }
+          &.line4{
+           transition-delay: .8s 
+          }
+        }  
+      }  
+    }
   }
 `;
 
@@ -116,16 +116,18 @@ const indexItem = (props) => {
         <Quote
           to={props.href}
           textvalign={props.textvalign}
-          texthalign={props.texthalign}
-          className={props.quoteHighlight}
-        >
-          {props.content.map(
-            (excerpt, i) => {
-              return (
-                <span width={20 + excerpt.line.length * 10} className={"line" + i} key={i} > {excerpt.line}</span>
-              )
-            }
-          )}
+          texthalign={props.texthalign}>
+          {
+            props.content.map(
+              (excerpt, i) => {
+                return (
+                  <span style={{ width: 200 + excerpt.line.length * 10 + 'px' }} className={"line" + i} key={i} >
+                    {excerpt.line}
+                  </span>
+                )
+              }
+            )
+          }
         </Quote>
       </QuoteContainer>
       <IndexImage align={props.imageAlign} image={props.image}></IndexImage>
