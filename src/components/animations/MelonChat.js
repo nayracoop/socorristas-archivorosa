@@ -65,9 +65,9 @@ const FrontMelon = styled(AlphaMatteImg)`
   transition: transform 300ms ease-out;
 `;
 
-const CloudsBench = (props) => {
+const MelonChat = (props) => {
 
-  const scrollY = useParallax([-0.15, -0.1, 0.15, -0.11, -0.5])
+  const scrollY = useParallax([-0.15, -0.1, -0.08, -0.11, -0.5])
 
   return (
     <Wrapper className={props.className}>
@@ -80,4 +80,4 @@ const CloudsBench = (props) => {
   );
 }
 
-export default CloudsBench;
+export default MelonChat;

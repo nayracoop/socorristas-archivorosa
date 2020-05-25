@@ -9,6 +9,7 @@ import HeartChat from '../../../animations/HeartChat';
 import BassinetBranch from '../../../animations/BassinetBranch';
 import BirdChair from '../../../animations/BirdChair';
 import MelonChat from '../../../animations/MelonChat';
+import SuitcasePlant from '../../../animations/SuitcasePlant';
 
 const Image = styled.img`
     // margin-top:1%;
@@ -55,7 +56,7 @@ const ChapterHeaderImage = (props) => {
                     <MelonChat src={props.image} />
                 </Route>
                 <Route path="/nilda" exact>
-                    <Image src={require('../../../../assets/imgs/nilda/completo.png')} />
+                    <SuitcasePlant />
                 </Route>
                 <Route path="/del-socorro-del-socorro" exact>
                     <BirdChair className="chapter-header-image"/>
