@@ -32,6 +32,7 @@ const Chat = styled(AlphaMatteImg)`
   height: auto;
   left: 4.62%;
   top: 0;
+  transition: transform 300ms ease-out;
 `;
 
 const Shadow = styled(AlphaMatteImg)`
@@ -41,7 +42,7 @@ const Shadow = styled(AlphaMatteImg)`
   height: auto;
   right: 0;
   bottom: 0;
-  // transition: transform 400ms ease-out;
+  transition: transform 300ms ease-out;
 `;
 
 const BackMelon = styled(AlphaMatteImg)`
@@ -51,7 +52,7 @@ const BackMelon = styled(AlphaMatteImg)`
   height: auto;
   left: 0;
   top: 19.55%;
-  // transition: transform 800ms ease-out;
+  transition: transform 300ms ease-out;
 `;
 
 const FrontMelon = styled(AlphaMatteImg)`
@@ -61,7 +62,7 @@ const FrontMelon = styled(AlphaMatteImg)`
   height: auto;
   left: 16.17%;
   top: 35.34%;
-  // transition: transform 800ms ease-out;
+  transition: transform 300ms ease-out;
 `;
 
 const CloudsBench = (props) => {
