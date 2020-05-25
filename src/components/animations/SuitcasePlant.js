@@ -2,61 +2,25 @@ import React from 'react';
 import styled from 'styled-components'
 import { useParallax } from './hooks/parallax'
 import AlphaMatteImg from './graphics/AlphaMatteImg'
+import Collage from './Collage'
+import CollagePiece from './CollagePiece'
 
-const Wrapper = styled.div`
-  width: 634px;
-  max-width: 100%;
-  position: relative;
-  ::before {
-    content: "";
-    display: block;
-    padding-top: 92.11%;
-  }
-`
-
-const Number = styled(AlphaMatteImg)`
-  position: absolute;
-  bottom: 0;
-  width: 10.41%;
-  height: auto;
-  left: 49.52%;
-  top: 18.32%;
+const CollagePieceSmooth = styled(CollagePiece)`
   transition: transform 800ms ease-out;
 `;
-
-const Plant = styled(AlphaMatteImg)`
-  position: absolute;
-  bottom: 0;
-  width: 30.12%;
-  height: auto;
-  top: 0;
-  left: 31.23%;
-  transition: transform 800ms ease-out;
-`;
-
-const Shadow = styled(AlphaMatteImg)`
-  position: absolute;
-  bottom: 0;
-  width: 96.37%;
-  height: auto;
-  top: 25.68%;
-  right: 0;
-  transition: transform 800ms ease-out;
-`;
-
 
 const SuitcasePlant = (props) => {
 
-  const scrollY = useParallax([-0.15, -0.1, -0.08, -0.11, -0.5])
+  const scrollY = useParallax([-0.15, 0.1, -0.08, -0.11, 0.09])
 
-  console.log(React.Children)
-  
   return (
-    <Wrapper className={props.className}>
-      <Shadow style={{transform: `translate3d(0,${scrollY[4]}px,0)`}} src={require ('../../assets/imgs/nilda/shadow.jpg')} />
-      <Plant style={{transform: `translate3d(0,${scrollY[4]}px,0)`}} src={require ('../../assets/imgs/nilda/plantpot.jpg')} />
-      <Number style={{transform: `translate3d(0,${scrollY[4]}px,0)`}} src={require ('../../assets/imgs/nilda/number.jpg')} />
-    </Wrapper>
+    <Collage width={634} height={584} className={props.className}>
+      <CollagePieceSmooth src={require ('../../assets/imgs/nilda/tickets.jpg')} x={168} y={89} width={93} style={{transform: `translate3d(0,${scrollY[2]}px,0)`}} />
+      <CollagePieceSmooth src={require ('../../assets/imgs/nilda/shadow.jpg')} x={23} y={150} width={611} style={{transform: `translate3d(0,${scrollY[3]}px,0)`}} />
+      <CollagePieceSmooth src={require ('../../assets/imgs/nilda/suitcases.jpg')} x={7} y={185} width={611} style={{transform: `translate3d(0,${scrollY[0]}px,0)`}} />
+      <CollagePieceSmooth src={require ('../../assets/imgs/nilda/plantpot.jpg')} x={198} y={0} width={191} style={{transform: `translate3d(${scrollY[1]}px,${scrollY[0]}px,0)`}} />
+      <CollagePieceSmooth src={require ('../../assets/imgs/nilda/number.jpg')} x={314} y={107} width={66} style={{transform: `translate3d(${scrollY[4]}px,${scrollY[0]}px,0)`}} />
+    </Collage>
   );
 }
 
