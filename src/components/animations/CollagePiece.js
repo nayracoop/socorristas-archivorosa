@@ -8,6 +8,7 @@ const Piece = styled(AlphaMatteImg)`
   height: auto;
   left: ${props => props.theme.left}%;
   top: ${props => props.theme.top}%;
+  transition: transform 800ms ease-out;
 `;
 
 const CollagePiece = (props) => {
