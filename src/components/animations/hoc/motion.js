@@ -167,3 +167,35 @@ export const withSpin = (Component, settings = {}) => {
   `
   return props => (<AnimatedComponent {...props} />)
 }
+
+export const withTilt = (Component, settings = {}) => {
+  const { duration = '2s', direction = 1 } = settings;
+  const animation = keyframes`
+    0% { transform: rotate(53deg); }
+    50% { transform: rotate(53deg); }
+    100% { transform: none; }
+  `;
+  const AnimatedComponent = styled(Component)`
+    animation-name: ${animation};
+    animation-duration: ${duration};
+    animation-timing-function: ease-in-out;
+  `
+  return props => (<AnimatedComponent {...props} />)
+}
+
+
+export const withSwinging = (Component, settings = {}) => {
+  const { duration = '3s', swinging = 8 } = settings;
+  const animation = keyframes`
+    0% { transform: rotate(${swinging}deg); }
+    100% { transform: rotate(${-swinging}deg); }
+  `;
+  const AnimatedComponent = styled(Component)`
+    animation-name: ${animation};
+    animation-duration: ${duration};
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+  `
+  return props => (<AnimatedComponent {...props} />)
+}
