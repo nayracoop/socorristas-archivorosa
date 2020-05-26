@@ -5,6 +5,13 @@ import IndexItem from "../snippets/body/index/IndexItem";
 const IndexGridContainer = styled.div`
   margin: 0 auto;
   width:100%;
+  overflow:hidden;
+  height: auto;
+  `;
+
+const GridContainer = styled.div`
+  margin: 0 auto;
+  width:100%;
   height: auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -38,6 +45,24 @@ const IndexGridContainer = styled.div`
   }
 `;
 
+
+const IntroductionContainer = styled.div`
+  min-height: 100vh;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 15%;
+  font-family: ${(props) => props.theme.fonts.display};
+  color: ${(props) => props.theme.colors.text};
+  font-size: 2em;
+  opacity: ${(props) => props.theme.colors.textOpacity};
+
+  a {
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.text}
+    opacity: ${(props) => props.theme.colors.textOpacity * 2};
+  }
+`;
+
 const IndexItemContainer = styled.div`
   position: relative;
   grid-area: ${(props) => props.area}
@@ -46,31 +71,52 @@ const IndexItemContainer = styled.div`
 const indexGrid = (props) => {
   return (
     <IndexGridContainer>
-      {props.content.map((post, i) => {
-        const image = require("../../../assets/imgs/index-" +
-          post.meta.slug +
-          ".png");
+      <IntroductionContainer>
+        <p>
+          Alguien pide ayuda, un oído escucha, pasa el dato y la Red acompaña.
+        </p>
+        <p>
+          El relato que estás por leer es un entramado de experiencias de
+          activistes feministas de{" "}
+          <a target="blank" href="http://larevuelta.com.ar/">La Revuelta</a> que dan forma a un
+          deseo colectivo: construir lazos de sororidad en tiempos urgentes.
+        </p>
 
-        return (
-          <IndexItemContainer
-            key={i}
-            area={post.theme.index.grid}
-          >
-            <IndexItem
-              content={post.excerpt}
-              href={"/" + post.meta.slug}
-              image={image}
-              collage={post.meta.slug}
-              borderColor={post.theme.index.borderColor}
-              imageAlign={post.theme.index.imageAlign}
-              textvalign={post.theme.index.textvalign}
-              texthalign={post.theme.index.texthalign}
-              background={post.theme.index.background}
-              quoteHighlight={post.theme.index.quoteHighlight}
-            ></IndexItem>
-          </IndexItemContainer>
-        );
-      })}
+        <p>
+          Al hacer clic en cada fragmento podrás acceder a distintos testimonios
+          que componen un cadáver exquisito hecho al calor de la lucha por el
+          aborto libre y feminista.
+        </p>
+      </IntroductionContainer>
+
+      <GridContainer>
+        {props.content.map((post, i) => {
+          const image = require("../../../assets/imgs/index-" +
+            post.meta.slug +
+            ".png");
+
+          return (
+            <IndexItemContainer
+              key={i}
+              area={post.theme.index.grid}
+            >
+              <IndexItem
+                content={post.excerpt}
+                href={"/" + post.meta.slug}
+                image={image}
+                collage={post.meta.slug}
+                borderColor={post.theme.index.borderColor}
+                imageAlign={post.theme.index.imageAlign}
+                textvalign={post.theme.index.textvalign}
+                texthalign={post.theme.index.texthalign}
+                background={post.theme.index.background}
+                quoteHighlight={post.theme.index.quoteHighlight}
+              ></IndexItem>
+            </IndexItemContainer>
+          );
+        })}
+      </GridContainer>
+
     </IndexGridContainer>
   );
 };
