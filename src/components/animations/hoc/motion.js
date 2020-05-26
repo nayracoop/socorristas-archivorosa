@@ -121,6 +121,40 @@ export const withBlastOff = (Component, settings = {}) => {
   return props => (<BlastOff className={props.className}><Component {...props} /></BlastOff>)
 }
 
+export const withFlight = (Component, settings = {}) => {
+  const { duration = '10s', offset = '-30%' } = settings;
+  const animation = keyframes`
+    0% { transform: translate3d(0,100%,0); }}
+    10% { transform: translate3d(0,80%,0); }}
+    100% { transform: translate3d(100%,0,0); }
+  `;
+  const Flight = styled(Component)`
+    animation-name: ${animation};
+    animation-duration: ${duration};
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  `
+  return props => (<Flight {...props} />)
+}
+
+export const withFlightHorizontal = (Component, settings = {}) => {
+  const { duration = '10s', offset = '-30%' } = settings;
+  const animation = keyframes`
+    0% { transform: translateX(0); }}
+    100% { transform: translateX(300px); }
+  `;
+  const Flight = styled.div`
+    animation-name: ${animation};
+    animation-duration: ${duration};
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  `
+  return props => (<Flight className={props.className}><Component {...props} /></Flight>)
+}
+
 export const withFloatingWrap = (Component, settings = {}) => {
   const { duration = '3.25s', offset = '5%' } = settings;
   const animation = keyframes`
