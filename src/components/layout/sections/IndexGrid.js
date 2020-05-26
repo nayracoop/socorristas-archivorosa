@@ -4,6 +4,8 @@ import IndexItem from "../snippets/body/index/IndexItem";
 
 const IndexGridContainer = styled.div`
   margin: 0 auto;
+  width:100%;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh 100vh;

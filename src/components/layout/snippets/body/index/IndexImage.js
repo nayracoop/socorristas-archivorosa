@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import HayAbortos from "../../../../animations/index/HayAbortos"
 import VientoEnVenecia from "../../../../animations/index/VientoEnVenecia"
 import ElPalpitarDeLosAbortos from "../../../../animations/index/ElPalpitarDeLosAbortos"
+import ElAbortoComoLugarParaConmoverme from "../../../../animations/index/ElAbortoComoLugarParaConmoverme"
+import Lina from "../../../../animations/index/Lina"
+import QuieroQueSalga from "../../../../animations/index/QuieroQueSalga"
 
 const IndexImageContainer = styled.div`
     position: absolute;
@@ -27,13 +30,13 @@ const Collage = (props) => {
         case 'hay-abortos':
             return <HayAbortos></HayAbortos>;
         case 'el-aborto-como-lugar-para-conmover-me':
-            return <Image align={props.align} src={props.image} ></Image>;
+            return <ElAbortoComoLugarParaConmoverme></ElAbortoComoLugarParaConmoverme>;
         case 'la-buena-noticia-':
             return <Image align={props.align} src={props.image} ></Image>;
         case 'lina':
-            return <Image align={props.align} src={props.image} ></Image>;
+            return <Lina ></Lina>;
         case 'quiero-que-salga':
-            return <Image align={props.align} src={props.image} ></Image>;
+            return <QuieroQueSalga></QuieroQueSalga>;
         case 'nilda':
             return <Image align={props.align} src={props.image} ></Image>;
         case 'del-socorro-del-socorro':
