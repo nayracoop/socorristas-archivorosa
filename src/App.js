@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 
-import Post from "./components/templates/Post";
-import AnimationMockup from "./components/animations/Mockup";
-
 import content from "./assets/texts/posts.json";
 import Home from "./components/templates/Home";
+import Post from "./components/templates/Post";
 import Footer from "./components/layout/sections/Footer";
 
 const theme = {

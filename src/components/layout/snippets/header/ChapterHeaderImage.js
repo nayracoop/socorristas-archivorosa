@@ -1,7 +1,6 @@
-import React, { useState, useEffect }  from 'react'
-import { Route, Switch, withRouter } from 'react-router-dom';
+import React  from 'react'
+import { Route, Switch } from 'react-router-dom';
 import styled, { withTheme } from 'styled-components'
-import { useParallax } from '../../../animations/hooks/parallax'
 import ButterflyBike from '../../../animations/ButterflyBike';
 import MegaphoneBalloon from '../../../animations/MegaphoneBalloon';
 import CloudsBench from '../../../animations/CloudsBench';
@@ -10,6 +9,7 @@ import BassinetBranch from '../../../animations/BassinetBranch';
 import BirdChair from '../../../animations/BirdChair';
 import MelonChat from '../../../animations/MelonChat';
 import SuitcasePlant from '../../../animations/SuitcasePlant';
+import CongressBirds from '../../../animations/CongressBirds';
 
 const Image = styled.img`
     // margin-top:1%;
@@ -31,14 +31,11 @@ const Wrapper = styled.div`
 `
 
 const ChapterHeaderImage = (props) => {
-
-    // const scrollY = useParallax();
-
     return (
         <Wrapper className={props.className}>
             <Switch>
                 <Route path="/la-buena-noticia" exact>
-                    <Image src={require('../../../../assets/imgs/la-buena-noticia/completo.png')} />
+                    <CongressBirds />
                 </Route>
                 <Route path="/viento-en-venecia" exact>
                     <BassinetBranch />

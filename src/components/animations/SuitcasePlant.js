@@ -1,11 +1,11 @@
 import React from 'react'
 import { useParallax } from './hooks/parallax'
-import Collage from './Collage'
-import CollagePiece from './CollagePiece'
+import Collage from './graphics/Collage'
+import CollagePiece from './graphics/CollagePiece'
 
 const SuitcasePlant = (props) => {
 
-  const scrollY = useParallax([-0.15, 0.1, -0.08, -0.11, 0.09])
+  const scrollY = useParallax([-0.15, 0.1, -0.08, -0.11, 0.09], -250, 250)
 
   return (
     <Collage width={634} height={584} className={props.className}>
