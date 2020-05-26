@@ -47,7 +47,7 @@ const BackMelon = styled(AlphaMatteImg)`
 const FrontMelon = styled(AlphaMatteImg)`
   position: absolute;
   width: 35%;
- left: 0%;
+  left: 0%;
   bottom: 0%;
   transition: transform 300ms ease-out;
 `;

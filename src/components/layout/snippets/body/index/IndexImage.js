@@ -6,6 +6,11 @@ import ElPalpitarDeLosAbortos from "../../../../animations/index/ElPalpitarDeLos
 import ElAbortoComoLugarParaConmoverme from "../../../../animations/index/ElAbortoComoLugarParaConmoverme"
 import Lina from "../../../../animations/index/Lina"
 import QuieroQueSalga from "../../../../animations/index/QuieroQueSalga"
+import LaBuenaNoticia from "../../../../animations/index/LaBuenaNoticia"
+import LaBuenaNoticiaFlock from "../../../../animations/index/LaBuenaNoticiaFlock"
+import Nilda from "../../../../animations/index/Nilda"
+import DelSocorroDelSocorro from "../../../../animations/index/DelSocorroDelSocorro"
+
 
 const IndexImageContainer = styled.div`
     position: absolute;
@@ -24,7 +29,7 @@ const Image = styled.img`
 const Collage = (props) => {
     switch (props.collage) {
         case 'la-buena-noticia':
-            return <Image align={props.align} src={props.image} ></Image>;
+            return <LaBuenaNoticia></LaBuenaNoticia>;
         case 'viento-en-venecia':
             return <VientoEnVenecia></VientoEnVenecia>;
         case 'hay-abortos':
@@ -32,15 +37,15 @@ const Collage = (props) => {
         case 'el-aborto-como-lugar-para-conmover-me':
             return <ElAbortoComoLugarParaConmoverme></ElAbortoComoLugarParaConmoverme>;
         case 'la-buena-noticia-':
-            return <Image align={props.align} src={props.image} ></Image>;
+            return <LaBuenaNoticiaFlock></LaBuenaNoticiaFlock>;
         case 'lina':
             return <Lina ></Lina>;
         case 'quiero-que-salga':
             return <QuieroQueSalga></QuieroQueSalga>;
         case 'nilda':
-            return <Image align={props.align} src={props.image} ></Image>;
+            return <Nilda></Nilda>
         case 'del-socorro-del-socorro':
-            return <Image align={props.align} src={props.image} ></Image>;
+            return <DelSocorroDelSocorro></DelSocorroDelSocorro>;
         case 'urgencia-rosa':
             return <Image align={props.align} src={props.image} ></Image>;
         case 'cuando-estamos-juntas':

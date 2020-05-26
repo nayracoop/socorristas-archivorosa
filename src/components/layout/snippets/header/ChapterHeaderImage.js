@@ -10,6 +10,7 @@ import BirdChair from '../../../animations/BirdChair';
 import MelonChat from '../../../animations/MelonChat';
 import SuitcasePlant from '../../../animations/SuitcasePlant';
 import CongressBirds from '../../../animations/CongressBirds';
+import LamppostDoor from '../../../animations/LamppostDoor';
 
 const Image = styled.img`
     // margin-top:1%;
@@ -62,7 +63,7 @@ const ChapterHeaderImage = (props) => {
                     <Image src={require('../../../../assets/imgs/urgencia-rosa/completo.png')} />
                 </Route>
                 <Route path="/cuando-estamos-juntas" exact>
-                    <Image src={require('../../../../assets/imgs/cuando-estamos-juntas/completo.png')} />
+                    <LamppostDoor />
                 </Route>
                 <Route path="/el-palpitar-de-los-abortos" exact>
                     <HeartChat />
