@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
 import { withSpin, withRails, withBlastOff, withFloatingWrap, withZoom } from '../hoc/motion'
-import AlphaMatteImg from '../graphics/AlphaMatteImg'
 
 const Wrapper = styled.div`
   position: absolute;

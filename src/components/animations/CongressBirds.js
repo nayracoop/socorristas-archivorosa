@@ -1,5 +1,6 @@
 import React from 'react'
 import { useParallax } from './hooks/parallax'
+import AlphaMatteSprite from './graphics/AlphaMatteSprite'
 import Collage from './graphics/Collage'
 import CollagePiece from './graphics/CollagePiece'
 import Congress from './movieclips/Congress'
