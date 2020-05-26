@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
 import IndexGrid from "../layout/sections/IndexGrid";
-import ChapterHeader from "../layout/sections/ChapterHeader";
+import IndexHeader from "../layout/sections/IndexHeader";
 
 const image = require("../../assets/imgs/index-header.png");
 
@@ -29,16 +29,17 @@ const IntroductionContainer = styled.div`
 const home = (props) => {
   return (
     <HomeContainer>
-      <ChapterHeader
+      <IndexHeader
         theme={{
           ...props.theme,
-          content: { size: "50%", align: "left", margin: 0 },
-          background: { size: "50%", align: "right" },
+          content: { size: "50%", margin: 0 },
+          background: { size: "50%" },
         }}
-        title="Archivo rosa"
-        titleSize="192"
+        titleLine1="Archivo"
+        titleLine2="Rosa."
+        titleSize="144"
         image={image}
-      ></ChapterHeader>
+      ></IndexHeader>
       <IntroductionContainer>
         <p>
           Alguien pide ayuda, un oído escucha, pasa el dato y la Red acompaña.
