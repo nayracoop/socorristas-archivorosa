@@ -2,7 +2,7 @@ import React from 'react'
 import { useParallax } from './hooks/parallax'
 import Collage from './graphics/Collage'
 import CollagePiece from './graphics/CollagePiece'
-import Congress from './movieclips/Congress'
+import Autumm from './movieclips/Autumm'
 import Roses from './movieclips/Roses'
 
 const LamppostDoor = (props) => {
@@ -17,7 +17,7 @@ const LamppostDoor = (props) => {
       <Collage width={538} height={706} x={0} y={0} style={{ transform: `translate3d(0,${scrollY[2]}px,0)`}}>
         <Roses src={require('../../assets/imgs/cuando-estamos-juntas/flowers.jpg')} width={176} x={85} y={94} />
       </Collage>
-      <Collage width={538} height={294} x={0} y={312} />
+      <Autumm width={898} height={294} x={-80} y={312} src={require('../../assets/imgs/cuando-estamos-juntas/leaves.jpg')} />
       {/* <Collage width={835} height={651} x={0} y={0} style={{ transform: `translate3d(0,${scrollY[2]}px,0)`}}>
         <SingleFlower src={require('../../assets/imgs/la-buena-noticia/big_flower.jpg')} width={224} x={245} y={330} origin="85% bottom" />
         <SingleFlower src={require('../../assets/imgs/la-buena-noticia/flower_right.jpg')} width={186} x={426} y={348} delay="-2.9s" />

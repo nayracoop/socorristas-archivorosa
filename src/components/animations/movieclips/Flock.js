@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import AlphaMatteSprite from '../graphics/AlphaMatteSprite'
+// import AlphaMatteSprite from '../graphics/AlphaMatteSprite'
 import Collage from '../graphics/Collage'
-import FlyingBird from './FlyingBird'
+// import FlyingBird from './__FlyingBird'
 
 // const LeaveDiv = styled.div`
 //   background: gray;
