@@ -11,6 +11,7 @@ import LaBuenaNoticiaFlock from "../../../../animations/index/LaBuenaNoticiaFloc
 import Nilda from "../../../../animations/index/Nilda"
 import DelSocorroDelSocorro from "../../../../animations/index/DelSocorroDelSocorro"
 import CuandoEstamosJuntas from "../../../../animations/index/CuandoEstamosJuntas"
+import UrgenciaRosa from "../../../../animations/index/UrgenciaRosa"
 
 const IndexImageContainer = styled.div`
     position: absolute;
@@ -47,7 +48,7 @@ const Collage = (props) => {
         case 'del-socorro-del-socorro':
             return <DelSocorroDelSocorro></DelSocorroDelSocorro>;
         case 'urgencia-rosa':
-            return <Image align={props.align} src={props.image} ></Image>;
+            return <UrgenciaRosa></UrgenciaRosa>;
         case 'cuando-estamos-juntas':
             return <CuandoEstamosJuntas></CuandoEstamosJuntas>
         case 'el-palpitar-de-los-abortos':
