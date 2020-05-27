@@ -17,6 +17,10 @@ const Number = styled(AlphaMatteImg)`
   height: auto;
   right: 5%;
   top: 5%;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+
+  }
 `;
 
 const Branch = styled(AlphaMatteImg)`
@@ -24,26 +28,45 @@ const Branch = styled(AlphaMatteImg)`
   width:80%;
   height: auto;
   left: 0;
-  bottom: -20%;
+  bottom: 0;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    position: absolute;
+    width:80%;
+    height: auto;
+    left: 0;
+    bottom: -20%;
+  }
 `;
 
 const Flower = styled(Flowers)`
   position: absolute;
-  bottom: 0;
-  width: 31.94%;
+  width: 50%;
   height: auto;
-  left: 1.2%;
-  bottom: -10;
+  left: -5%;
+  bottom: 0;
   transform-origin: bottom center;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    position: absolute;
+    width: 31.94%;
+    left: 1.2%;
+    bottom: -10;
+    }
 `;
 
 const Bassinet = styled(AlphaMatteImg)`
   position: absolute;
-  bottom: 0;
-  width: 55.26%;
+  width: 100%;
   height: auto;
+  left: 2%;
+  bottom: 15%;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+  width: 55.26%;
   left: 12%;
   bottom: 4%;
+  }
 `;
 
 const HangingMobile = styled(AlphaMatteImg)`
@@ -53,24 +76,32 @@ const HangingMobile = styled(AlphaMatteImg)`
   height: auto;
   left: 5%;
   top: 0;
+
 `;
 
 const Blanket = styled(AlphaMatteImg)`
   position: absolute;
-  bottom: 0;
-  width: 54.66%;
+  width: 100%;
   height: auto;
-  left: 15%;
-  bottom:-5%;
+  left: 10%;
+  bottom:2%;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    width: 54.66%;
+    height: auto;
+    left: 15%;
+    bottom:-5%;
+  }
 `;
 
 const AutumnLeaves = styled(Leaves)`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 30%;
-  left: 0;
-  top: 30%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    left: 0;
+    top: 30%;
+
 `;
 
 const VientoEnVenecia = (props) => {
