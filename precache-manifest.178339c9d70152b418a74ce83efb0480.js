@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16cec42d66f3dcce8a1c0fab577aaf87",
+    "revision": "b7854b3dbb3db324dec67bd68eaf4b57",
     "url": "/socorristas-archivorosa/index.html"
   },
   {
-    "revision": "f292e419caf898519348",
+    "revision": "af2ebb03c59733f88ddb",
     "url": "/socorristas-archivorosa/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "08597ee2dd08acff9700",
+    "revision": "922e928a49fb5846a8d9",
     "url": "/socorristas-archivorosa/static/css/main.eaa37abf.chunk.css"
   },
   {
-    "revision": "f292e419caf898519348",
-    "url": "/socorristas-archivorosa/static/js/2.61ebe3a6.chunk.js"
+    "revision": "af2ebb03c59733f88ddb",
+    "url": "/socorristas-archivorosa/static/js/2.8b8da6a1.chunk.js"
   },
   {
-    "revision": "08597ee2dd08acff9700",
-    "url": "/socorristas-archivorosa/static/js/main.1470e524.chunk.js"
+    "revision": "922e928a49fb5846a8d9",
+    "url": "/socorristas-archivorosa/static/js/main.8f4fd871.chunk.js"
   },
   {
     "revision": "3b2ef7adffaf47a9e9f0",
@@ -64,16 +64,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/socorristas-archivorosa/static/media/9.2a6b9414.png"
   },
   {
-    "revision": "37d1d120a371fd3edfc57018f373e3bb",
-    "url": "/socorristas-archivorosa/static/media/arrow.37d1d120.svg"
-  },
-  {
     "revision": "7626749f0340b693ec523e84cb991ae8",
     "url": "/socorristas-archivorosa/static/media/arrow.7626749f.png"
   },
   {
-    "revision": "0bf1d317cb9d24ef5b1d96357e8b667f",
-    "url": "/socorristas-archivorosa/static/media/back.0bf1d317.svg"
+    "revision": "a9191d12c560ac43ec0cf9400622a893",
+    "url": "/socorristas-archivorosa/static/media/back.a9191d12.png"
   },
   {
     "revision": "9091584c35c8e6c9a0dc30c85d96d88a",
@@ -82,10 +78,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "82f55bf220a93a540e5cdddcf2fed2c1",
     "url": "/socorristas-archivorosa/static/media/background-dust.82f55bf2.jpg"
-  },
-  {
-    "revision": "ba2c5a6ae890ac025e9dde43b087fd58",
-    "url": "/socorristas-archivorosa/static/media/background.ba2c5a6a.png"
   },
   {
     "revision": "86bb5c60299d6ccb076afa185b94a0fe",
@@ -312,8 +304,40 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/socorristas-archivorosa/static/media/note-2.fd463f27.jpg"
   },
   {
-    "revision": "b94e4383ba24969cfef47f307d67ff04",
-    "url": "/socorristas-archivorosa/static/media/number.b94e4383.png"
+    "revision": "0cc4ccee3e706e894c1cf4f581e32c68",
+    "url": "/socorristas-archivorosa/static/media/number.0cc4ccee.jpg"
+  },
+  {
+    "revision": "1ecc4c6c47ffacd6fde77b924458ee25",
+    "url": "/socorristas-archivorosa/static/media/number.1ecc4c6c.jpg"
+  },
+  {
+    "revision": "2a6b94145cf50883aad37658de9f226c",
+    "url": "/socorristas-archivorosa/static/media/number.2a6b9414.png"
+  },
+  {
+    "revision": "2cdab209248a4377cd217cc26d59221d",
+    "url": "/socorristas-archivorosa/static/media/number.2cdab209.jpg"
+  },
+  {
+    "revision": "6d3c7f6d9119f2eed42a84c0f6e6ac0a",
+    "url": "/socorristas-archivorosa/static/media/number.6d3c7f6d.jpg"
+  },
+  {
+    "revision": "9dc87d79c70018b070343730352996bd",
+    "url": "/socorristas-archivorosa/static/media/number.9dc87d79.jpg"
+  },
+  {
+    "revision": "a6ce3d810ac730385b9840c3403d161c",
+    "url": "/socorristas-archivorosa/static/media/number.a6ce3d81.jpg"
+  },
+  {
+    "revision": "be4485a0b608935b303c04ad8ee72365",
+    "url": "/socorristas-archivorosa/static/media/number.be4485a0.jpg"
+  },
+  {
+    "revision": "efab38a3b39e3ae3107f0a3d7f1dfccc",
+    "url": "/socorristas-archivorosa/static/media/number.efab38a3.jpg"
   },
   {
     "revision": "6b6b1ff262aa844bbc76898e9ddb0362",
@@ -326,6 +350,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "84784033027dfef0fde69b27b453dbf1",
     "url": "/socorristas-archivorosa/static/media/red_phone_cable_2.84784033.jpg"
+  },
+  {
+    "revision": "02bed4f2b7503eb9cd9598a5d8ffd3cf",
+    "url": "/socorristas-archivorosa/static/media/scroll-arrow.02bed4f2.png"
   },
   {
     "revision": "3490d346e12d7ed411572e0f055a7ae6",
