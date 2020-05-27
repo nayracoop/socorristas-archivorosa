@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/socorristas-archivorosa/static/css/main.eaa37abf.chunk.css",
-    "main.js": "/socorristas-archivorosa/static/js/main.f4ef3e3b.chunk.js",
-    "main.js.map": "/socorristas-archivorosa/static/js/main.f4ef3e3b.chunk.js.map",
+    "main.js": "/socorristas-archivorosa/static/js/main.1470e524.chunk.js",
+    "main.js.map": "/socorristas-archivorosa/static/js/main.1470e524.chunk.js.map",
     "runtime-main.js": "/socorristas-archivorosa/static/js/runtime-main.e45eabad.js",
     "runtime-main.js.map": "/socorristas-archivorosa/static/js/runtime-main.e45eabad.js.map",
     "static/css/2.0624914a.chunk.css": "/socorristas-archivorosa/static/css/2.0624914a.chunk.css",
     "static/js/2.61ebe3a6.chunk.js": "/socorristas-archivorosa/static/js/2.61ebe3a6.chunk.js",
     "static/js/2.61ebe3a6.chunk.js.map": "/socorristas-archivorosa/static/js/2.61ebe3a6.chunk.js.map",
     "index.html": "/socorristas-archivorosa/index.html",
-    "precache-manifest.6aca9405b128f07e214eb8f81fcd0d09.js": "/socorristas-archivorosa/precache-manifest.6aca9405b128f07e214eb8f81fcd0d09.js",
+    "precache-manifest.dddd0e1a39eeca2d621cfd04a4612a6b.js": "/socorristas-archivorosa/precache-manifest.dddd0e1a39eeca2d621cfd04a4612a6b.js",
     "service-worker.js": "/socorristas-archivorosa/service-worker.js",
     "static/css/2.0624914a.chunk.css.map": "/socorristas-archivorosa/static/css/2.0624914a.chunk.css.map",
     "static/css/main.eaa37abf.chunk.css.map": "/socorristas-archivorosa/static/css/main.eaa37abf.chunk.css.map",
@@ -98,6 +98,6 @@
     "static/css/2.0624914a.chunk.css",
     "static/js/2.61ebe3a6.chunk.js",
     "static/css/main.eaa37abf.chunk.css",
-    "static/js/main.f4ef3e3b.chunk.js"
+    "static/js/main.1470e524.chunk.js"
   ]
 }
