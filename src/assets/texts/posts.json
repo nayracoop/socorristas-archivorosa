@@ -252,21 +252,19 @@
                         "margin": 0
                     },
                     "imagePosition": {
-                        "top": "auto",
-                        "right": "auto",
+                        "bottom": "-15px",
+                        "left": "0",
                         "responsiveSize": {
-                            "maxWidth": "80%",
+                            "maxWidth": "60%",
                             "minWidth": "400px",
-                            "offsetY": "0",
-                            "offsetX": "0",
-                            "marginVertical": "0",
+                            "offsetY": "60px",
+                            "offsetX": "5px",
+                            "marginVertical": "40px",
                             "justify": "center"
-                        },
-                        "bottom": "auto",
-                        "left": "auto"
+                        }
                     },
                     "background": {
-                        "size": "480px",
+                        "size": "490px",
                         "align": "left"
                     }
                 },

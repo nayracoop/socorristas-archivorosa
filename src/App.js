@@ -42,6 +42,13 @@ class App extends Component {
     }
   }
 
+  getArrowDestiny(order) {
+    const postId = order-1
+    const slug = (content.posts[postId].meta.slug.endsWith('-')) ? content.posts[postId].meta.slug.slice(0, -1) : content.posts[postId].meta.slug
+    const url = (order === 1) ? '' : slug
+    return { index: order, link: url }
+  }
+
   render() {
     return (
       <Container ref={this.container} className="App">
@@ -51,17 +58,20 @@ class App extends Component {
           </Route>
           <Switch>
             {content.posts.map((post, index) => {
-              const headerImage = require(`./assets/imgs/header-${post.meta.slug}.png`)
-              const previousPost = index === 0 ? content.posts.length : index
-              const nextPost = index === content.posts.length - 1 ? 1 : index + 2
-              return (
-                <Route key={post.meta.slug} path={"/" + post.meta.slug}>
-                  <Post data={post} 
-                    headerImage={headerImage} 
-                    prev={ { index: previousPost, link: content.posts[previousPost-1].meta.slug } }
-                    next={ { index: nextPost, link: content.posts[nextPost-1].meta.slug } }></Post>
-                </Route>
-              );
+              if(index > 0) {
+                const headerImage = require(`./assets/imgs/header-${post.meta.slug}.png`)
+                const previousPost = index === 0 ? content.posts.length : index
+                const nextPost = index === content.posts.length - 1 ? 1 : index + 2
+                const urlSlug = (post.meta.slug.endsWith('-')) ? post.meta.slug.slice(0, -1) : post.meta.slug
+                return (
+                  <Route key={post.meta.slug} path={"/" + urlSlug}>
+                    <Post data={post} 
+                      headerImage={headerImage} 
+                      prev={ this.getArrowDestiny(previousPost) }
+                      next={ this.getArrowDestiny(nextPost) }></Post>
+                  </Route>
+                )
+              }
             })}
           </Switch>
           <Footer content={content.posts}></Footer>
