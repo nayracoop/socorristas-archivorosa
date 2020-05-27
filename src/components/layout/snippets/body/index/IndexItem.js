@@ -1,5 +1,4 @@
 import React from "react";
-import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components";
 import IndexImage from "./IndexImage";
@@ -33,8 +32,8 @@ const Quote = styled.div`
 
   left:${(props) => (props.quoteHorizontalAlign === "left" ? "5%" : "")};
   right:${(props) => (props.quoteHorizontalAlign === "right" ? "5%" : "")};
-  top:${(props) => (props.quoteVerticalAlign === "top" ? "25%;" : "")};
-  bottom:${(props) => (props.quoteVerticalAlign === "bottom" ? "20%" : "")};
+  top:${(props) => (props.quoteVerticalAlign === "top" ? "20%;" : "")};
+  bottom:${(props) => (props.quoteVerticalAlign === "bottom" ? "15%" : "")};
   filter: drop-shadow(1px 1px 3px rgba(255,255,255,.7));
 
   cursor:pointer;
