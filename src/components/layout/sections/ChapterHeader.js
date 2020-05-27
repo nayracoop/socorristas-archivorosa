@@ -134,7 +134,7 @@ const ChapterHeader = (props) => {
         </ImageColumn>
       </Header>
       <HeaderBackground theme={ { ...props.theme, ...props.theme.background } } style={{transform: `translate3d(0,${scrollY}px,0)`}} />
-      <ScrollIndicator />
+      {/* <ScrollIndicator /> */}
     </ChapterHeaderContainer>
   );
 };

@@ -1,57 +1,56 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useEffect, useState } from 'react'
+import styled, { keyframes } from 'styled-components'
+import { useScrollPosition } from '../../../animations/hooks/parallax';
+
+const bounce = keyframes`
+    0% { transform: translateY(-3px); }
+    100% { transform: translateY(3px); }
+`;
+
+// const inOut = keyframes`
+//     0% { transform: rotateX(90deg); opacity: 0; }
+//     10% { transform: rotateX(90deg); opacity: 1; }
+//     100% { transform: rotateX(0deg); opacity: 1; }
+// `;
 
 const ScrollIndicatorContainer = styled.div`
-    position: absolute;
+    position: fixed;
     left: 0; 
     right: 0;
     margin: 0 auto;
-    bottom: 20px;
-    max-width: 150px;
+    bottom: 10px;
+    width: 55px;
     text-align: center;
     cursor: pointer;
     z-index: 9999;
+    perspective: 250px;
 
-    svg {
-        width: 35px;
-        -webkit-animation: bounce 1s ease-in-out infinite;
-        -moz-animation: bounce 1s ease-in-out infinite;
-        -ms-animation: bounce 1s ease-in-out infinite;
-        -o-animation: bounce 1s ease-in-out infinite;
-        animation: bounce 1s ease-in-out infinite;
-        -webkit-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
-        -moz-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
-        box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
+    transition: all 500ms ease-in-out;
+    &:hover, &:active {
+        img { filter: brightness(.85) }
     }
-    @keyframes bounce {
-        0% {
-            -ms-transform: translateY(0px);
-            -moz-transform: translateY(0px);
-            -webkit-transform: translateY(0px);
-            -o-transform: translateY(0px);
-            transform: translateY(0px);
-        }
-        50% {
-            -ms-transform: translateY(5px);
-            -moz-transform: translateY(5px);
-            -webkit-transform: translateY(5px);
-            -o-transform: translateY(5px);
-            transform: translateY(5px);
-        }
-        100% {
-            -ms-transform: translateY(0px);
-            -moz-transform: translateY(0px);
-            -webkit-transform: translateY(0px);
-            -o-transform: translateY(0px);
-            transform: translateY(0px);
-        }
+
+    ${props => !props.visible ? 'pointer-events: none; transform: translateY(70px);' : 'transition-delay: 300ms;' }
+
+    @media (max-width: ${props => props.theme.pageWidth.s}px) {
+        display: none;
     }
 `;
 const ArrowImage = styled.img`
     width: 55px;
+    animation: ${bounce} 1s ease-in-out alternate infinite;
 `;
 
 const ScrollIndicator = (props) => {
+
+    const scrollPosition = useScrollPosition()
+    const [ visibility, setVisibility ] = useState(true)
+
+    useEffect(() => {    
+        if(scrollPosition > 30) {
+            if(visibility) setVisibility(false)
+        } else if(!visibility) setVisibility(true)
+    }, [scrollPosition])
 
     function scrollDown() {
         window.scrollTo({
@@ -61,8 +60,8 @@ const ScrollIndicator = (props) => {
     }
 
     return (
-        <ScrollIndicatorContainer onClick={scrollDown}>
-            <ArrowImage src={require('../../../../assets/imgs/scroll-arrow.png')} />
+        <ScrollIndicatorContainer onClick={scrollDown} visible={visibility}>
+            <ArrowImage visible={visibility} src={require('../../../../assets/imgs/scroll-arrow.png')} />
         </ScrollIndicatorContainer>
     );
 }

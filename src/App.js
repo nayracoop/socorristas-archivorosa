@@ -6,6 +6,7 @@ import content from "./assets/texts/posts.json";
 import Home from "./components/templates/Home";
 import Post from "./components/templates/Post";
 import Footer from "./components/layout/sections/Footer";
+import ScrollIndicator from "./components/layout/snippets/header/ScrollIndicator";
 
 const theme = {
   colors: {
@@ -75,6 +76,7 @@ class App extends Component {
             })}
           </Switch>
           <Footer content={content.posts}></Footer>
+          <ScrollIndicator />
         </ThemeProvider>
       </Container>
     );

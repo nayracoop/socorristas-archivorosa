@@ -4,15 +4,16 @@ import styled from 'styled-components';
 
 const NavBar = styled.nav`
     position: sticky;
-    bottom: 2vh;
+    bottom: 12px;
     width: 95%;
     left: 0;
     right: 0;
     margin: auto;
     margin-top: 55px;
+    margin-bottom: 12px;
     @media screen and (max-width: 1221px) {
         width: 100%;
-        bottom: 4vh;
+        bottom: 12px;
         padding: 0;
     }
 `;
