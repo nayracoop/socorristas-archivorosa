@@ -5,13 +5,13 @@ import AlphaMatteImg from './graphics/AlphaMatteImg'
 import { withFloat } from './hoc/motion'
 
 const Wrapper = styled.div`
-    transition: transform 800ms ease-out;
+  transition: transform 800ms ease-out;
 `;
 
 const Image = styled(AlphaMatteImg)`
-    max-width: 437px;
-    width: 100%;
-    height: auto;
+  max-width: 437px;
+  width: 100%;
+  height: auto;
 `;
 
 const MegaphoneBalloon = (props) => {

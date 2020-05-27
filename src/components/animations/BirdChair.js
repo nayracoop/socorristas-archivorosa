@@ -4,6 +4,7 @@ import AlphaMatteImg from './graphics/AlphaMatteImg'
 import Flowers from './movieclips/Flowers'
 import Bird from './movieclips/Bird'
 import { withFlutter } from './hoc/motion'
+import { useParallax } from './hooks/parallax'
 
 const Wrapper = styled.div`
   width: 825px;
@@ -45,6 +46,7 @@ const Mate = styled(AlphaMatteImg)`
     left: 51.27%;
     width: 23.03%;
     height: auto;
+    transition: transform 800ms ease-out;
 `;
 
 const SmallFlower = styled(AlphaMatteImg)`
@@ -106,20 +108,36 @@ const SmallBird = styled(Bird)`
     transform: scaleX(-1);
 `;
 
+const ParallaxWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: transform 800ms ease-out;
+`;
+
 const BirdChair = (props) => {
+
+    const scrollY = useParallax([-0.25, 0.025, -0.05], -250, 250)
+
   return (
     <Wrapper className={props.className}>
-      <BigFlower src={require('../../assets/imgs/del-socorro-del-socorro/flower.jpg')} />
-      <Window src={require('../../assets/imgs/del-socorro-del-socorro/window.jpg')} />
-      <SmallFlower src={require('../../assets/imgs/del-socorro-del-socorro/flower.jpg')} />
-      <SmallBird />
-      <YellowFlowers src={require('../../assets/imgs/del-socorro-del-socorro/flowers.jpg')} />
-      <TableShadow src={require('../../assets/imgs/del-socorro-del-socorro/shadow.jpg')} />
-      <Table src={require('../../assets/imgs/del-socorro-del-socorro/table.jpg')} />
-      <Mate src={require('../../assets/imgs/del-socorro-del-socorro/mate.jpg')} />
-      <Smock src={require('../../assets/imgs/del-socorro-del-socorro/smock.jpg')} />
-      <Number src={require('../../assets/imgs/del-socorro-del-socorro/number.png')} />
-      <BigBird />
+      <ParallaxWrapper style={{ transform: `translate3d(0,${scrollY[1]}px,0)`}}>
+        <BigFlower src={require('../../assets/imgs/del-socorro-del-socorro/flower.jpg')} />
+        <Window src={require('../../assets/imgs/del-socorro-del-socorro/window.jpg')} />
+        <SmallFlower src={require('../../assets/imgs/del-socorro-del-socorro/flower.jpg')} />
+        <SmallBird />
+      </ParallaxWrapper>
+      <ParallaxWrapper style={{ transform: `translate3d(0,${scrollY[0]}px,0)`}}>
+        <YellowFlowers src={require('../../assets/imgs/del-socorro-del-socorro/flowers.jpg')} />
+        <TableShadow src={require('../../assets/imgs/del-socorro-del-socorro/shadow.jpg')} />
+        <Table src={require('../../assets/imgs/del-socorro-del-socorro/table.jpg')} />
+        <Mate src={require('../../assets/imgs/del-socorro-del-socorro/mate.jpg')} style={{ transform: `translate3d(0,${scrollY[2]}px,0)`}} />
+        <Smock src={require('../../assets/imgs/del-socorro-del-socorro/smock.jpg')} />
+        <Number src={require('../../assets/imgs/del-socorro-del-socorro/number.png')} />
+        <BigBird />
+      </ParallaxWrapper>
     </Wrapper>
   );
 }
