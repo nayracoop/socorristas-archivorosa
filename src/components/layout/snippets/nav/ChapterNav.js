@@ -44,10 +44,16 @@ const NavItem = styled.li`
 
 const NavImagePrev = styled.img`
     max-height: 40px;
+    @media screen and (max-width: 1221px) {
+        max-height: 30px;
+    }
 `;
 
 const NavImageNext = styled.img`
     max-height: 40px;
+    @media screen and (max-width: 1221px) {
+        max-height: 30px;
+    }
 `;
 
 const NavArrow = styled.img`
@@ -56,6 +62,9 @@ const NavArrow = styled.img`
     margin-top: 8px;
     &.prev-arrow {
         transform: rotate(-175deg)
+    }
+    @media screen and (max-width: 1221px) {
+        max-width: 30px;
     }
 `;
 

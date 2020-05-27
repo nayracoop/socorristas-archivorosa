@@ -67,7 +67,6 @@ const Post = (props) => {
       <HomeBtn
         href="/"
         btnText="Inicio"
-        class="shaded"
       />
       <Article>
         <ChapterHeader

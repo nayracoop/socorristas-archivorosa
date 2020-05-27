@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ReactComponent as Arrow } from '../../../../assets/imgs/arrow.svg';
 
 const ScrollIndicatorContainer = styled.div`
     position: absolute;
@@ -33,11 +32,11 @@ const ScrollIndicatorContainer = styled.div`
             transform: translateY(0px);
         }
         50% {
-            -ms-transform: translateY(10px);
-            -moz-transform: translateY(10px);
-            -webkit-transform: translateY(10px);
-            -o-transform: translateY(10px);
-            transform: translateY(10px);
+            -ms-transform: translateY(5px);
+            -moz-transform: translateY(5px);
+            -webkit-transform: translateY(5px);
+            -o-transform: translateY(5px);
+            transform: translateY(5px);
         }
         100% {
             -ms-transform: translateY(0px);
@@ -47,6 +46,9 @@ const ScrollIndicatorContainer = styled.div`
             transform: translateY(0px);
         }
     }
+`;
+const ArrowImage = styled.img`
+    width: 55px;
 `;
 
 const ScrollIndicator = (props) => {
@@ -60,7 +62,7 @@ const ScrollIndicator = (props) => {
 
     return (
         <ScrollIndicatorContainer onClick={scrollDown}>
-            <Arrow />
+            <ArrowImage src={require('../../../../assets/imgs/scroll-arrow.png')} />
         </ScrollIndicatorContainer>
     );
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
-import { ReactComponent as HomeBtnIcon } from '../../../../assets/imgs/back.svg';
+//import { ReactComponent as HomeBtnIcon } from '../../../../assets/imgs/back.svg';
 
 const HomeBtnContainer = styled.div.attrs(props => ({
     className: props.class,
@@ -18,20 +18,29 @@ const HomeBtnContainer = styled.div.attrs(props => ({
 const HomeBtnLink = styled(Link)`
     display: flex;
     padding: 8px 12px;
-    background-color: #D5B9D6;
     transition: all ease-in .2s;
     &:hover {
-        background: #a9727d;
         text-decoration: none;
     }
 `;
+const HomeBtnIcon = styled.img`
+    height: 38px;
+    opacity: .85;
+
+`;
+
 const HomeBtnCaption = styled.span`
     font-size: 1.125rem;
     color: #fff;
-    margin-left: 10px;
-    -webkit-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
-    -moz-box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
-    box-shadow: 2px 2px 5px rgba(176, 176, 176, 0.25);
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    margin-left: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
     @media screen and (max-width: 420px) {
         font-size: 1rem;
     }
@@ -41,7 +50,7 @@ const HomeBtn = (props) => {
     return(
         <HomeBtnContainer className={props.class}>
             <HomeBtnLink to={props.href}>
-                <HomeBtnIcon />
+                <HomeBtnIcon src={require('../../../../assets/imgs/back.png')} />
                 <HomeBtnCaption>{props.btnText}</HomeBtnCaption> 
             </HomeBtnLink>
         </HomeBtnContainer>
