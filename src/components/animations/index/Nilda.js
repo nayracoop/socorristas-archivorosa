@@ -7,10 +7,15 @@ import CollagePiece from '../graphics/CollagePiece'
 
 const Wrapper = styled(Collage)`
   position: absolute;
-  width: 35%;
+  width: 50%;
   height: 100%;
   top:50%;
   right: 0;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    width: 41.12%;
+  }
+
 `
 
 

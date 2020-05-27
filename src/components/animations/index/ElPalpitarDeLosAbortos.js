@@ -12,20 +12,28 @@ const Wrapper = styled.div`
 
 const GreenHeart = styled(Heart)`
   position: absolute;
-  bottom: 0;
-  width: 45%;
+  width: 70%;
   height: auto;
   left: -15%;
   top: -10%;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    width: 45%;
+  }
+  
 `;
 
 const Note1 = styled(NoteBeat)`
   position: absolute;
-  width: 34.51%;
+  width: 50%;
   height: auto;
   right: 10%;
   top: 0;
   transform-origin: 95% 5%;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    width: 34.51%;
+  }
 `;
 
 const Note2 = styled(AlphaMatteImg)`
@@ -40,28 +48,41 @@ const Note2 = styled(AlphaMatteImg)`
 const Chat1 = styled(AlphaMatteImg)`
   position: absolute;
   bottom: 0;
-  width: 41.12%;
+  width: 60%;
   height: auto;
   left: 0%;
-  top: 4.91%;
+  top: 20%;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    width: 41.12%;
+    top: 4.91%;
+  }
+  
 `;
 
 const Chat2 = styled(AlphaMatteImg)`
   position: absolute;
-  bottom: 0;
-  width: 43.45%;
+  width: 60%;
   height: auto;
   left: 5%;
-  bottom: 15%;
+  bottom:5%;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    width: 41.12%;
+    bottom: 15%;
+  }
 `;
 
 const Number = styled(AlphaMatteImg)`
   position: absolute;
-  bottom: 0;
-  width: 25%;
+  width: 30%;
   height: auto;
   right: 10%;
   top: 20.81%;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    width: 25%;
+  }
 `;
 
 const CloudsBench = (props) => {

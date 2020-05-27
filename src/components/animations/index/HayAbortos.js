@@ -20,19 +20,28 @@ const StyledButterfly = styled(Butterfly)`
 
 const Bike = styled.img`
     position: absolute;
-    left: -5%;
+    left: -75%;
     bottom: 0;
-    width: 96.09%;
-    height: auto;
+    width: 150%;
+
+    @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+        width: 96.09%;
+        left: -5%;
+    }
 `;
 
 const Number = styled(AlphaMatteImg)`
     display: block;
     position: absolute;
     bottom: 100px;
-    left: -10%;    
-    width: 13.66%;
+    right: 18%;    
+    width: 20%;
     height: auto;
+
+    @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+        width: 13.66%;
+        right: 4%;   
+    }
 `;
 
 const HayAbortos = (props) => {
