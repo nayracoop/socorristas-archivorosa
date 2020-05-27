@@ -40,7 +40,7 @@ const Footer = (props) => {
           <p>
             Archivo Rosa es un experimento narrativo que busca compartir
             historias y reflexiones de activistas que forman parte de{" "}
-            <a target="blank" href="http://socorristasenred.org/">
+            <a target="_blank" href="http://socorristasenred.org/">
               Socorristas en Red (feministas que abortamos).
             </a>
           </p>
@@ -59,11 +59,11 @@ const Footer = (props) => {
         <FooterText className="credits">
           <p>
             Dirección y producción:{" "}
-            <a href="/">Victoria Gagliardi y Tomás Bergero</a>
+            <a target="_blank" href="http://victoriagagliardi.com.ar/">Victoria Gagliardi</a> y <a target="_blank" href="https://tomasbergero.com/">Tomás Bergero</a>
           </p>
-          <p>Collages: <a target="blank" href="https://www.instagram.com/mulata.dcv/">María Reboredo (@mulata.cv)</a></p>
-          <p>Diseño y programación: <a target="blank" href="https://nayra.coop/">nayra.coop</a></p>
-          <p>Producción audiovisual: <a target="blank" href="/">Rodrigo Bonilla</a></p>
+          <p>Collages: <a target="_blank" href="https://www.instagram.com/mulata.dcv/">María Reboredo (@mulata.cv)</a></p>
+          <p>Diseño y programación: <a target="_blank" href="https://nayra.coop/">Romina Gómez, Ignacio Guerra y Tobías Irigoyen (nayra.coop)</a></p>
+          <p>Producción audiovisual: <a target="_blank" href="https://www.instagram.com/mandinga_motion">Rodrigo Bonilla</a></p>
         </FooterText>
       </FooterContainer>
   );

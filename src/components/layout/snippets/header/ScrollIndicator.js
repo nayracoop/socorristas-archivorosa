@@ -11,6 +11,7 @@ const ScrollIndicatorContainer = styled.div`
     max-width: 150px;
     text-align: center;
     cursor: pointer;
+    z-index: 9999;
 
     svg {
         width: 35px;
