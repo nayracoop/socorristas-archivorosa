@@ -47,7 +47,8 @@ const Line1 = styled.span`
 `
 
 const Line2 = styled.span`
-    background: ${props => props.theme.colors.background};
+        background: linear-gradient(to right , rgba(189,140,191,.5), rgba(189,140,191,.4));
+    ;
 `
 
 const IndexTitle = (props) => {

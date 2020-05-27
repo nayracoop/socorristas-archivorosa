@@ -60,10 +60,10 @@ const ImageColumn = styled.div`
 
 const Image = styled.img`
   position: absolute;
-  top: ${(props) => props.theme.top ? props.theme.top : "auto" };
-  right: ${(props) => props.theme.right ? props.theme.right : "auto" };
-  bottom: ${(props) => props.theme.bottom ? props.theme.bottom : "auto" };
-  left: ${(props) => props.theme.left ? props.theme.left : "auto" };
+  top: ${(props) => props.theme.top ? props.theme.top : "auto"};
+  right: ${(props) => props.theme.right ? props.theme.right : "auto"};
+  bottom: ${(props) => props.theme.bottom ? props.theme.bottom : "auto"};
+  left: ${(props) => props.theme.left ? props.theme.left : "auto"};
   width: 90%;
   margin-bottom: 150px;
   left: 25%;
@@ -80,7 +80,7 @@ const Image = styled.img`
     ${(props) => props.theme.responsiveSize ? `
       max-width: ${props.theme.responsiveSize.maxWidth};
       min-width: ${props.theme.responsiveSize.minWidth};
-      transform: translateX(${window.innerWidth-parseInt(props.theme.responsiveSize.minWidth) < 0 ? Math.floor((window.innerWidth-parseInt(props.theme.responsiveSize.minWidth))/2+parseInt(props.theme.responsiveSize.offsetX)) : parseInt(props.theme.responsiveSize.offsetX) }px) translateY(${props.theme.responsiveSize.offsetY});
+      transform: translateX(${window.innerWidth - parseInt(props.theme.responsiveSize.minWidth) < 0 ? Math.floor((window.innerWidth - parseInt(props.theme.responsiveSize.minWidth)) / 2 + parseInt(props.theme.responsiveSize.offsetX)) : parseInt(props.theme.responsiveSize.offsetX)}px) translateY(${props.theme.responsiveSize.offsetY});
       margin-top: ${props.theme.responsiveSize.marginVertical};
       margin-bottom: ${props.theme.responsiveSize.marginVertical};
       justify-content: ${props.theme.responsiveSize.justify};
@@ -102,7 +102,6 @@ const Image = styled.img`
     //align-items: center;
     // height: 100vh;
 
-  }
 `;
 
 const HeaderBackground = styled.div`
@@ -130,14 +129,14 @@ const HeaderBackground = styled.div`
 const IndexHeader = (props) => {
 
   const scrollY = useParallax(-0.15);
-  
+
   return (
     <IndexHeaderContainer>
-      <Header theme={{pageWidth: {...props.theme.pageWidth}}}>
-        <ImageColumn theme={ { ...props.theme, size: props.theme.content.size.substr(-1) === '%' ? (100-parseInt(props.theme.content.size)) + '%' : 'auto', pageWidth: {...props.theme.pageWidth} } }>
-          <Image src={props.image} theme={{...props.theme.imagePosition, pageWidth: {...props.theme.pageWidth}}} />
+      <Header theme={{ pageWidth: { ...props.theme.pageWidth } }}>
+        <ImageColumn theme={{ ...props.theme, size: props.theme.content.size.substr(-1) === '%' ? (100 - parseInt(props.theme.content.size)) + '%' : 'auto', pageWidth: { ...props.theme.pageWidth } }}>
+          <Image src={props.image} theme={{ ...props.theme.imagePosition, pageWidth: { ...props.theme.pageWidth } }} />
         </ImageColumn>
-        <TextColumn theme={{...props.theme.content, pageWidth: {...props.theme.pageWidth}}}>
+        <TextColumn theme={{ ...props.theme.content, pageWidth: { ...props.theme.pageWidth } }}>
           <IndexTitle
             titleSize={props.titleSize}
             titleLine1={props.titleLine1}
@@ -145,7 +144,7 @@ const IndexHeader = (props) => {
           ></IndexTitle>
         </TextColumn>
       </Header>
-      <HeaderBackground theme={ { ...props.theme, ...props.theme.background } } style={{transform: `translate3d(0,${scrollY}px,0)`}} />
+      <HeaderBackground theme={{ ...props.theme, ...props.theme.background }} style={{ transform: `translate3d(0,${scrollY}px,0)` }} />
       <ScrollIndicator />
     </IndexHeaderContainer>
   );
