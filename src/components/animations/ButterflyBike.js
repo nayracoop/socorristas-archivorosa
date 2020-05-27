@@ -34,7 +34,7 @@ const Bike = styled.img`
     transition: transform 800ms ease-out;
 `;
 
-const Number = styled.img`
+const Number = styled(AlphaMatteImg)`
     display: block;
     position: absolute;
     bottom: 12.3%;
@@ -58,9 +58,9 @@ const ButterflyBike = (props) => {
 
   return (
     <Wrapper className={props.className}>
-      <StyledButterfly style={{ transform: `translate3d(0,${scrollY[1]}px,0)`}} />
-      <Bike src={require ('../../assets/imgs/hay-abortos/bike.png')} alt="" style={{ transform: `translate3d(0,${scrollY[2]}px,0)`}} />
-      <Number src={require ('../../assets/imgs/hay-abortos/number.png')} alt="10" style={{ transform: `translate3d(0,${scrollY[0]}px,0)`}} />
+      <StyledButterfly style={{ transform: `translate3d(0,${scrollY[1]}px,0)` }} />
+      <Bike src={require('../../assets/imgs/hay-abortos/bike.png')} alt="" style={{ transform: `translate3d(0,${scrollY[2]}px,0)` }} />
+      <Number src={require('../../assets/imgs/hay-abortos/number.jpg')} alt="10" style={{ transform: `translate3d(0,${scrollY[0]}px,0)` }} />
     </Wrapper>
   );
 }

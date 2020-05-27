@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
 import Butterfly from '../movieclips/Butterfly'
+import AlphaMatteImg from '../graphics/AlphaMatteImg'
 
 
 const Wrapper = styled.div`
@@ -25,7 +26,7 @@ const Bike = styled.img`
     height: auto;
 `;
 
-const Number = styled.img`
+const Number = styled(AlphaMatteImg)`
     display: block;
     position: absolute;
     bottom: 100px;
@@ -39,7 +40,7 @@ const HayAbortos = (props) => {
         <Wrapper className={props.className}>
             <StyledButterfly />
             <Bike src={require('../../../assets/imgs/hay-abortos/bike.png')} alt="" />
-            <Number src={require('../../../assets/imgs/hay-abortos/number.png')} alt="10" />
+            <Number src={require('../../../assets/imgs/hay-abortos/number.jpg')} alt="10" />
         </Wrapper>
     );
 }

@@ -1,55 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useParallax } from '../hooks/parallax'
-import CongressDome from '../movieclips/CongressDome'
-import Flock from '../movieclips/Flock'
-import SingleFlower from '../movieclips/SingleFlower'
+import Collage from '../graphics/Collage'
 import CollagePiece from '../graphics/CollagePiece'
+import Congress from '../movieclips/Congress'
+import SingleFlower from '../movieclips/SingleFlower'
 
-const Wrapper = styled.div`
+const Wrapper = styled(Collage)`
   position: absolute;  
   height: 100%;
   width: 100%;
-  left:0;
-  top:0;
-`
-
-const Building = styled(CollagePiece)`
-  position: absolute;
-  top: 40%;
-  left: -35%;
-  z-index: 300;
-  height: 60%;
-`
-
-const Dome = styled(CongressDome)`
-  position: absolute;
-  width: 20%;
-  top:25%;
-  left:-3%;
-
-`
-const Birds = styled(Flock)`
-  position: absolute;
-  bottom: 150%;
-  left:7%;
-
-`
-const Flower1 = styled(SingleFlower)`
-  position: absolute;
-  top: 49%;
-  left: -5%;
-`
-
-const Flower2 = styled(SingleFlower)`
-  position: absolute;
-  top: 54%;
-  left: 9%;
-`
-const Flower3 = styled(SingleFlower)`
-  position: absolute;
-  top:80%;
-  left: 35%;
+  bottom: -22%;
+  left:-40%;
 `
 
 const LaBuenaNoticia = (props) => {
@@ -57,13 +19,15 @@ const LaBuenaNoticia = (props) => {
   const scrollY = useParallax([-0.2, -0.15, -0.1], -250, 250)
 
   return (
-    <Wrapper>
-      <Dome src={require('../../../assets/imgs/la-buena-noticia/dome.jpg')} />
-      <Birds width={1280} height={1280} src={require('../../../assets/imgs/la-buena-noticia/birds.jpg')} />
-      <Building src={require('../../../assets/imgs/la-buena-noticia/congress.jpg')} />
-      <Flower1 src={require('../../../assets/imgs/la-buena-noticia/big_flower.jpg')} />
-      <Flower2 src={require('../../../assets/imgs/la-buena-noticia/flower_right.jpg')} delay="-2.9s" />
-      <Flower3 src={require('../../../assets/imgs/la-buena-noticia/flower_right.jpg')} delay="-2.9s" />
+    <Wrapper width={835} height={651} className={props.className}>
+      <Collage width={835} height={651} x={0} y={0} style={{ transform: `translate3d(0,${scrollY[2]}px,0)` }}>
+        <SingleFlower src={require('../../../assets/imgs/la-buena-noticia/big_flower.jpg')} width={224} x={245} y={300} origin="85% bottom" />
+        <SingleFlower src={require('../../../assets/imgs/la-buena-noticia/flower_right.jpg')} width={186} x={426} y={320} delay="-2.9s" />
+      </Collage>
+      <Collage width={835} height={651} x={0} y={0} style={{ transform: `translate3d(0,${scrollY[0]}px,0)` }}>
+        <Congress width={779} height={423} x={17} y={228} />
+        <CollagePiece src={require('../../../assets/imgs/la-buena-noticia/flower.jpg')} width={133} x={700} y={600} />
+      </Collage>
     </Wrapper>
   );
 }

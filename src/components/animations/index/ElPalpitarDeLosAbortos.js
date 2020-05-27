@@ -8,24 +8,23 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-`
+  `
 
 const GreenHeart = styled(Heart)`
   position: absolute;
   bottom: 0;
   width: 45%;
   height: auto;
-  left: -5%;
-  top: 0;
+  left: -15%;
+  top: -10%;
 `;
 
 const Note1 = styled(NoteBeat)`
   position: absolute;
-  bottom: 0;
   width: 34.51%;
   height: auto;
   right: 10%;
-  top: 41.33%;
+  top: 0;
   transform-origin: 95% 5%;
 `;
 
@@ -35,7 +34,7 @@ const Note2 = styled(AlphaMatteImg)`
   width: 49.33%;
   height: auto;
   right: 0;
-  top: 15.03%;
+  bottom: 5%;
 `;
 
 const Chat1 = styled(AlphaMatteImg)`
@@ -52,16 +51,16 @@ const Chat2 = styled(AlphaMatteImg)`
   bottom: 0;
   width: 43.45%;
   height: auto;
-  left: 21.05%;
-  bottom: 0%;
+  left: 5%;
+  bottom: 15%;
 `;
 
 const Number = styled(AlphaMatteImg)`
   position: absolute;
   bottom: 0;
-  width: 18.97%;
+  width: 25%;
   height: auto;
-  left: 04.04%;
+  right: 10%;
   top: 20.81%;
 `;
 

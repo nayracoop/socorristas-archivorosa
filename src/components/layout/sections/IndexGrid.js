@@ -48,19 +48,43 @@ const GridContainer = styled.div`
 
 const IntroductionContainer = styled.div`
   min-height: 100vh;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
-  padding-top: 15%;
-  font-family: ${(props) => props.theme.fonts.display};
-  color: ${(props) => props.theme.colors.text};
-  font-size: 2em;
-  opacity: ${(props) => props.theme.colors.textOpacity};
+  padding-top:20%;
 
-  a {
-    font-weight: 600;
-    color: ${(props) => props.theme.colors.text}
-    opacity: ${(props) => props.theme.colors.textOpacity * 2};
+  p{
+    margin-top: 30px;
+    font-family: ${(props) => props.theme.fonts.display};
+    color: ${(props) => props.theme.colors.text};
+    font-size: 1.4em;
+    opacity: ${(props) => props.theme.colors.textOpacity};
+
+    a {
+      display: inline-block;
+      font-weight: 600;
+      color: ${(props) => props.theme.colors.text}
+      opacity: ${(props) => props.theme.colors.textOpacity * 2};
+      background: linear-gradient(to right , rgba(189,140,191,.7), rgba(189,140,191,.4));
+      background-repeat: no-repeat;
+      transition: all ease-in-out .5s;
+      background-position: -700px;   
+
+        &:hover{
+          text-decoration:none;
+          color: ${(props) => props.theme.colors.text};
+          opacity: ${(props) => props.theme.colors.textOpacity * 2};
+          background-position: 0px;
+      }
   }
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+      p{
+        font-size: 1.5em;
+      }
+      
+  }
+ }
+
 `;
 
 const IndexItemContainer = styled.div`
@@ -107,8 +131,8 @@ const indexGrid = (props) => {
                 collage={post.meta.slug}
                 borderColor={post.theme.index.borderColor}
                 imageAlign={post.theme.index.imageAlign}
-                textvalign={post.theme.index.textvalign}
-                texthalign={post.theme.index.texthalign}
+                quoteVerticalAlign={post.theme.index.quoteVerticalAlign}
+                quoteHorizontalAlign={post.theme.index.quoteHorizontalAlign}
                 background={post.theme.index.background}
                 quoteHighlight={post.theme.index.quoteHighlight}
               ></IndexItem>

@@ -10,7 +10,7 @@ import LaBuenaNoticia from "../../../../animations/index/LaBuenaNoticia"
 import LaBuenaNoticiaFlock from "../../../../animations/index/LaBuenaNoticiaFlock"
 import Nilda from "../../../../animations/index/Nilda"
 import DelSocorroDelSocorro from "../../../../animations/index/DelSocorroDelSocorro"
-
+import CuandoEstamosJuntas from "../../../../animations/index/CuandoEstamosJuntas"
 
 const IndexImageContainer = styled.div`
     position: absolute;
@@ -49,7 +49,7 @@ const Collage = (props) => {
         case 'urgencia-rosa':
             return <Image align={props.align} src={props.image} ></Image>;
         case 'cuando-estamos-juntas':
-            return <Image align={props.align} src={props.image} ></Image>;
+            return <CuandoEstamosJuntas></CuandoEstamosJuntas>
         case 'el-palpitar-de-los-abortos':
             return <ElPalpitarDeLosAbortos></ElPalpitarDeLosAbortos>;
         default:

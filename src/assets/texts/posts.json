@@ -51,8 +51,8 @@
                     "grid": "first",
                     "background": 0,
                     "borderColor": "none",
-                    "textvalign": "bottom",
-                    "texthalign": "right",
+                    "quoteVerticalAlign": "top",
+                    "quoteHorizontalAlign": "right",
                     "imageAlign": "left",
                     "quoteHighlight": "pink"
                 }
@@ -103,8 +103,8 @@
                     "grid": "second",
                     "background": 1,
                     "borderColor": "none",
-                    "textvalign": "top",
-                    "texthalign": "left",
+                    "quoteVerticalAlign": "bottom",
+                    "quoteHorizontalAlign": "right",
                     "imageAlign": "center",
                     "quoteHighlight": "paper"
                 }
@@ -155,8 +155,8 @@
                     "grid": "third",
                     "background": 0,
                     "borderColor": "black",
-                    "textvalign": "top",
-                    "texthalign": "left",
+                    "quoteVerticalAlign": "top",
+                    "quoteHorizontalAlign": "left",
                     "imageAlign": "center",
                     "quoteHighlight": "pink"
                 }
@@ -215,8 +215,8 @@
                     "background": 0,
                     "borderColor": "none",
                     "textvalign": "top",
-                    "texthalign": "left",
-                    "imageAlign": "right",
+                    "quoteVerticalAlign": "top",
+                    "quoteHorizontalAlign": "left",
                     "quoteHighlight": "pink"
                 }
             }
@@ -274,8 +274,8 @@
                     "grid": "fifth",
                     "background": 1,
                     "borderColor": "none",
-                    "textvalign": "top",
-                    "texthalign": "left",
+                    "quoteVerticalAlign": "bottom",
+                    "quoteHorizontalAlign": "right",
                     "imageAlign": "center",
                     "quoteHighlight": "paper"
                 }
@@ -329,8 +329,8 @@
                     "grid": "sixth",
                     "background": 0,
                     "borderColor": "black",
-                    "textvalign": "top",
-                    "texthalign": "left",
+                    "quoteVerticalAlign": "bottom",
+                    "quoteHorizontalAlign": "left",
                     "imageAlign": "",
                     "quoteHighlight": "pink"
                 }
@@ -387,8 +387,8 @@
                     "grid": "seventh",
                     "background": 1,
                     "borderColor": "none",
-                    "textvalign": "bottom",
-                    "texthalign": "right",
+                    "quoteVerticalAlign": "bottom",
+                    "quoteHorizontalAlign": "right",
                     "imageAlign": "",
                     "quoteHighlight": "paper"
                 }
@@ -447,8 +447,8 @@
                     "background": 0,
                     "borderColor": "none",
                     "textvalign": "top",
-                    "texthalign": "left",
-                    "imageAlign": "right",
+                    "quoteVerticalAlign": "bottom",
+                    "quoteHorizontalAlign": "left",
                     "quoteHighlight": "pink"
                 }
             }
@@ -505,8 +505,8 @@
                     "grid": "ninth",
                     "background": 1,
                     "borderColor": "none",
-                    "textvalign": "top",
-                    "texthalign": "left",
+                    "quoteVerticalAlign": "top",
+                    "quoteHorizontalAlign": "left",
                     "imageAlign": "",
                     "quoteHighlight": "paper"
                 }
@@ -564,8 +564,8 @@
                     "grid": "tenth",
                     "background": 0,
                     "borderColor": "black",
-                    "textvalign": "bottom",
-                    "texthalign": "right",
+                    "quoteVerticalAlign": "bottom",
+                    "quoteHorizontalAlign": "right",
                     "imageAlign": "top",
                     "quoteHighlight": "pink"
                 }
@@ -620,8 +620,8 @@
                     "grid": "eleventh",
                     "background": 0,
                     "borderColor": "black",
-                    "textvalign": "top",
-                    "texthalign": "left",
+                    "quoteVerticalAlign": "top",
+                    "quoteHorizontalAlign": "right",
                     "imageAlign": "bottom",
                     "quoteHighlight": "pink"
                 }
@@ -682,8 +682,8 @@
                     "grid": "twelfth",
                     "background": 0,
                     "borderColor": "none",
-                    "textvalign": "bottom",
-                    "texthalign": "right",
+                    "quoteVerticalAlign": "bottom",
+                    "quoteHorizontalAlign": "right",
                     "imageAlign": "top",
                     "quoteHighlight": "pink"
                 }

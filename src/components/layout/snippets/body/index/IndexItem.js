@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components";
 import IndexImage from "./IndexImage";
 
-const paperBackground = require('../../../../../assets/imgs/background.png');
 
 const ItemContainer = styled.div`
   width:100%;
@@ -13,28 +12,34 @@ const ItemContainer = styled.div`
 
 const QuoteContainer = styled.div`
   position: absolute;
-  width: 80%;
-  height: 80%;
-  left:10%;
-  top:10%;
-  padding: 10%;
+  width: 90%;
+  height: 90%;
+  left:5%;
+  top:5%;
   border: ${(props) => props.borderColor !== "none" ? "1px solid " + props.theme.colors.text : "none"}
   border-radius: 10px;
-  
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    width: 80%;
+    height: 80%;
+    left:10%;
+    top:10%;
+  }
 `;
 const Quote = styled(Link)`
   position: absolute;
-  left:${(props) => (props.texthalign === "left" ? "100px" : "")};
-  right:${(props) => (props.texthalign === "right" ? "100px" : "")};
-  top:${(props) => (props.textvalign === "top" ? "100px" : "")};
-  bottom:${(props) => (props.textvalign === "bottom" ? "100px" : "")};
+  width: 100%;
+  filter: drop-shadow(1px 1px 3px rgba(255,255,255,.7));
+  left:${(props) => (props.quoteHorizontalAlign === "left" ? "30%" : "")};
+  right:${(props) => (props.quoteHorizontalAlign === "right" ? "10%" : "")};
+  top:30%;
+  bottom:0;
+
   font-family: ${(props) => props.theme.fonts.display};
-  font-size: 2em;
-  line-height: 1.3em;
   color: ${(props) => props.theme.colors.text};
   opacity: ${(props) => props.theme.colors.textOpacity};
+
   cursor:pointer;
-  padding: 20px; 
   z-index: 10000;
 
   span{
@@ -48,27 +53,27 @@ const Quote = styled(Link)`
 
     &.line0{
       margin-left: -50px; 
-      font-size: 1em;
+      font-size: 2em;
       line-height: 1em;         
     }
     &.line1{
       margin-left: 10px;
-      font-size: 1.2em;  
+      font-size: .9em;  
       line-height: 1em; 
     }
     &.line2{
       margin-left:-30px;
-      font-size: 1em;  
+      font-size: .7em;  
       line-height: 1em; 
     }
     &.line3{
       margin-left: -5px;
-      font-size: 1.5em;  
+      font-size: 1em;  
       line-height: 1em; 
     }
     &.line4{
       margin-left: 20px;
-      font-size: 1em;  
+      font-size: .7em;  
       line-height: 1em; 
     }
   }
@@ -95,6 +100,45 @@ const Quote = styled(Link)`
         }  
       }  
     }
+
+    @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+      max-width: 70%;
+      padding: 40px 70px;
+      
+        left:${(props) => (props.quoteHorizontalAlign === "left" ? "5%" : "")};
+        right:${(props) => (props.quoteHorizontalAlign === "right" ? "5%" : "")};
+        top:${(props) => (props.quoteVerticalAlign === "top" ? "10%;" : "")};
+        bottom:${(props) => (props.quoteVerticalAlign === "bottom" ? "12%" : "")};
+
+      span{
+
+        &.line0{
+          margin-left: -50px; 
+          font-size: 2.2em;
+          line-height: 1em;         
+        }
+        &.line1{
+          margin-left: 10px;
+          font-size: 1.5em;  
+          line-height: 1em; 
+        }
+        &.line2{
+          margin-left:-30px;
+          font-size: 1.2em;  
+          line-height: 1em; 
+        }
+        &.line3{
+          margin-left: -5px;
+          font-size: 1.7em;  
+          line-height: 1em; 
+        }
+        &.line4{
+          margin-left: 20px;
+          font-size: 1em;  
+          line-height: 1em; 
+        }
+      }
+    }
   }
 `;
 
@@ -115,13 +159,13 @@ const indexItem = (props) => {
       <QuoteContainer borderColor={props.borderColor}>
         <Quote
           to={props.href}
-          textvalign={props.textvalign}
-          texthalign={props.texthalign}>
+          quoteVerticalAlign={props.quoteVerticalAlign}
+          quoteHorizontalAlign={props.quoteHorizontalAlign}>
           {
             props.content.map(
               (excerpt, i) => {
                 return (
-                  <span style={{ width: 200 + excerpt.line.length * 10 + 'px' }} className={"line" + i} key={i} >
+                  <span className={"line" + i} key={i} >
                     {excerpt.line}
                   </span>
                 )
