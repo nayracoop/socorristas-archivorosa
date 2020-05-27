@@ -32,7 +32,7 @@ const Quote = styled.div`
 
   left:${(props) => (props.quoteHorizontalAlign === "left" ? "5%" : "")};
   right:${(props) => (props.quoteHorizontalAlign === "right" ? "5%" : "")};
-  top:${(props) => (props.quoteVerticalAlign === "top" ? "20%;" : "")};
+  top:${(props) => (props.quoteVerticalAlign === "top" ? "25%;" : "")};
   bottom:${(props) => (props.quoteVerticalAlign === "bottom" ? "15%" : "")};
   filter: drop-shadow(1px 1px 3px rgba(255,255,255,.7));
 

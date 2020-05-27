@@ -5,9 +5,16 @@ import { withFloat } from '../hoc/motion'
 
 const Image = styled(AlphaMatteImg)`
   position: absolute;  
-  height: 90%;
-  bottom: -5%;
-  right:-20%;
+  height: 60%;
+  bottom: 5%;
+  right:-10%;
+  
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    height: 90%;
+    bottom: -5%;
+    right:-20%;
+  }
 `;
 
 const ElAbortoComoLugarParaConmoverme = (props) => {
