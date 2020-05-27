@@ -118,6 +118,7 @@ const indexGrid = (props) => {
           const image = require("../../../assets/imgs/index-" +
             post.meta.slug +
             ".png");
+          const href = (post.meta.slug.endsWith('-')) ? post.meta.slug.slice(0, -1) : post.meta.slug
 
           return (
             <IndexItemContainer
@@ -126,7 +127,7 @@ const indexGrid = (props) => {
             >
               <IndexItem
                 content={post.excerpt}
-                href={"/" + post.meta.slug}
+                href={"/" + href}
                 image={image}
                 collage={post.meta.slug}
                 borderColor={post.theme.index.borderColor}
