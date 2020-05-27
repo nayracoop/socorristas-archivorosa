@@ -11,6 +11,7 @@ import MelonChat from '../../../animations/MelonChat';
 import SuitcasePlant from '../../../animations/SuitcasePlant';
 import CongressBirds from '../../../animations/CongressBirds';
 import LamppostDoor from '../../../animations/LamppostDoor';
+import PhoneFlowers from '../../../animations/PhoneFlowers';
 
 const Image = styled.img`
     // margin-top:1%;
@@ -60,7 +61,7 @@ const ChapterHeaderImage = (props) => {
                     <BirdChair className="chapter-header-image"/>
                 </Route>
                 <Route path="/urgencia-rosa" exact>
-                    <Image src={require('../../../../assets/imgs/urgencia-rosa/completo.png')} />
+                    <PhoneFlowers />
                 </Route>
                 <Route path="/cuando-estamos-juntas" exact>
                     <LamppostDoor />
