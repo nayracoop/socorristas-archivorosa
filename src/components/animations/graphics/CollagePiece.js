@@ -20,6 +20,15 @@ const SpritePiece = styled(AlphaMatteSprite)`
   transition: transform 800ms ease-out;
 `;
 
+const SimplePiece = styled.img`
+  position: absolute;
+  width: ${props => props.theme.width};
+  left: ${props => props.theme.left};
+  top: ${props => props.theme.top};
+  transition: transform 800ms ease-out;
+  display: block;
+`;
+
 const CollagePiece = (props) => {
   const { x = 0, y = 0 } = props
   const proportionalX = props.containerWidth ? (100 * x / props.containerWidth) + '%' : x + 'px'
@@ -28,6 +37,7 @@ const CollagePiece = (props) => {
   const proportionalHeight = props.height && props.width ? (100 * props.height / props.width) + '%' : ''
   
   if(props.sprite === true) return (<SpritePiece {...props} theme={ { width: proportionalWidth, top: proportionalY, left: proportionalX } } />)
+  else if(props.opaque === true) return (<SimplePiece {...props} theme={ { width: proportionalWidth, top: proportionalY, left: proportionalX } } />)
   else return (<Piece {...props} theme={ { width: proportionalWidth, top: proportionalY, left: proportionalX } } />)
 
 }
