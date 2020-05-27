@@ -27,6 +27,21 @@ const Content = styled.article`
     // }    
   p {
     margin-top: 1.5em;
+
+    strong {
+      background: linear-gradient(to right , rgba(189,140,191,.7), rgba(189,140,191,.4));
+      background-repeat: no-repeat;
+      padding: 5px;
+      transition: all ease-in-out 1s;  
+      background-position: -1500px;
+
+      &:hover{
+      background-position: 0px;
+      text-decoration:none;
+      color: ${(props) => props.theme.colors.text};
+      opacity: ${(props) => props.theme.colors.textOpacity * 2};
+      
+    }
   }
     
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
@@ -44,9 +59,9 @@ const Post = (props) => {
   return (
     <Wrapper>
       <HomeBtn
-      href="/"
-      btnText="Inicio"
-      class="shaded"
+        href="/"
+        btnText="Inicio"
+        class="shaded"
       />
       <ChapterHeader
         theme={{ ...props.theme, ...props.data.theme.header }}
@@ -57,13 +72,13 @@ const Post = (props) => {
         titleSize="48"
         image={props.headerImage}
         scrollText="Scrolleá hacia abajo para conocer los relatos"
-        >
+      >
       </ChapterHeader>
       <ContentWrapper>
         <Content className="container">
-          <ReactMarkdown source={props.data.content} /> 
+          <ReactMarkdown source={props.data.content} />
         </Content>
-        <ChapterNav prev={props.prev} next={props.next}/>
+        <ChapterNav prev={props.prev} next={props.next} />
       </ContentWrapper>
     </Wrapper>
   );
