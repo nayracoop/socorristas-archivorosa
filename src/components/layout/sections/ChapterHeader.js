@@ -27,7 +27,7 @@ const Header = styled.div`
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
     flex-flow: column-reverse nowrap;
     width: 100vw;
-    overflow: hidden;
+    // overflow: hidden;
   }
 `;
 

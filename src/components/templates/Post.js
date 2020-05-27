@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   }    
 `;
 
-const Content = styled.article`
+const Content = styled.div`
   max-width: ${(props) => props.theme.articleMaxWidth}px;
   margin: 10em auto 3em;
   font-size: 1.3125em;
@@ -55,6 +55,12 @@ const ContentWrapper = styled.div`
   width: 100%;
 `;
 
+const Article = styled.article`
+  @media (max-width: ${props => props.theme.pageWidth.xl}px) {
+    overflow: hidden;
+  } 
+`;
+ 
 const Post = (props) => {
   return (
     <Wrapper>
@@ -63,23 +69,25 @@ const Post = (props) => {
         btnText="Inicio"
         class="shaded"
       />
-      <ChapterHeader
-        theme={{ ...props.theme, ...props.data.theme.header }}
-        title={props.data.title}
-        author={props.data.meta.author}
-        info={props.data.meta.group}
-        date={props.data.date}
-        titleSize="48"
-        image={props.headerImage}
-        scrollText="Scrolleá hacia abajo para conocer los relatos"
-      >
-      </ChapterHeader>
-      <ContentWrapper>
-        <Content className="container">
-          <ReactMarkdown source={props.data.content} />
-        </Content>
-        <ChapterNav prev={props.prev} next={props.next} />
-      </ContentWrapper>
+      <Article>
+        <ChapterHeader
+          theme={{ ...props.theme, ...props.data.theme.header }}
+          title={props.data.title}
+          author={props.data.meta.author}
+          info={props.data.meta.group}
+          date={props.data.date}
+          titleSize="48"
+          image={props.headerImage}
+          scrollText="Scrolleá hacia abajo para conocer los relatos"
+        >
+        </ChapterHeader>
+        <ContentWrapper>
+          <Content className="container">
+            <ReactMarkdown source={props.data.content} />
+          </Content>
+        </ContentWrapper>
+      </Article>
+      <ChapterNav prev={props.prev} next={props.next} />
     </Wrapper>
   );
 };
