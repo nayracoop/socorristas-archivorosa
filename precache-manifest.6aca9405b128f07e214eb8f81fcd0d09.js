@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9f45b3a8f8843524babccbccb450ecad",
+    "revision": "4e7af8873243b9dde75a00e51b7ed305",
     "url": "/socorristas-archivorosa/index.html"
   },
   {
-    "revision": "2cf6f31113ebddf4a9f3",
+    "revision": "f292e419caf898519348",
     "url": "/socorristas-archivorosa/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "4abf891cca96367d449b",
+    "revision": "005aaad62a009a31c936",
     "url": "/socorristas-archivorosa/static/css/main.eaa37abf.chunk.css"
   },
   {
-    "revision": "2cf6f31113ebddf4a9f3",
-    "url": "/socorristas-archivorosa/static/js/2.9a94c244.chunk.js"
+    "revision": "f292e419caf898519348",
+    "url": "/socorristas-archivorosa/static/js/2.61ebe3a6.chunk.js"
   },
   {
-    "revision": "4abf891cca96367d449b",
-    "url": "/socorristas-archivorosa/static/js/main.0c5079c6.chunk.js"
+    "revision": "005aaad62a009a31c936",
+    "url": "/socorristas-archivorosa/static/js/main.f4ef3e3b.chunk.js"
   },
   {
     "revision": "3b2ef7adffaf47a9e9f0",
@@ -112,6 +112,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/socorristas-archivorosa/static/media/blanket.9db1772e.jpg"
   },
   {
+    "revision": "3604c296e8e5f5880bd6ea355dfba3a4",
+    "url": "/socorristas-archivorosa/static/media/blue_phone_body.3604c296.jpg"
+  },
+  {
+    "revision": "639415447472cbe3c10ef2395bbc3307",
+    "url": "/socorristas-archivorosa/static/media/blue_phone_cable.63941544.jpg"
+  },
+  {
     "revision": "3d8c43449243f2bf2eb08a2fe7973b2a",
     "url": "/socorristas-archivorosa/static/media/branch.3d8c4344.jpg"
   },
@@ -136,16 +144,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/socorristas-archivorosa/static/media/cloud.2c0146c3.jpg"
   },
   {
-    "revision": "11a34c904f50995a1036ac2efd09aed6",
-    "url": "/socorristas-archivorosa/static/media/completo.11a34c90.png"
-  },
-  {
-    "revision": "d54f773da73ff651eb754c7d17d9b338",
-    "url": "/socorristas-archivorosa/static/media/completo.d54f773d.png"
-  },
-  {
     "revision": "7cbd1d68dcf7fb107d88e910aef858d0",
     "url": "/socorristas-archivorosa/static/media/congress.7cbd1d68.jpg"
+  },
+  {
+    "revision": "a52c305c4d3eedfc0084a6aea343e436",
+    "url": "/socorristas-archivorosa/static/media/door.a52c305c.jpg"
   },
   {
     "revision": "1d6e903316aec60721470ba9f430669e",
@@ -170,6 +174,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5ad0768dec0bc4f657ecba6e8941faba",
     "url": "/socorristas-archivorosa/static/media/flowers.5ad0768d.jpg"
+  },
+  {
+    "revision": "e298e07e2a8b6f1333f937a11f3dda78",
+    "url": "/socorristas-archivorosa/static/media/flowers.e298e07e.jpg"
+  },
+  {
+    "revision": "aee1dd0b0763d3293fea5f3883ca4cd0",
+    "url": "/socorristas-archivorosa/static/media/flowers_1.aee1dd0b.jpg"
   },
   {
     "revision": "eeaf1c174d8a462e21697480b1cd52f4",
@@ -284,6 +296,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/socorristas-archivorosa/static/media/index-viento-en-venecia.9d2ba8d8.png"
   },
   {
+    "revision": "9e73c8f64b4dd69be69c458812ef79e4",
+    "url": "/socorristas-archivorosa/static/media/lamppost.9e73c8f6.jpg"
+  },
+  {
+    "revision": "1e600ee083af4ea52cff854304890264",
+    "url": "/socorristas-archivorosa/static/media/leaves.1e600ee0.jpg"
+  },
+  {
     "revision": "e9d86578b60ec08b469634e5bf6e0f43",
     "url": "/socorristas-archivorosa/static/media/note-1.e9d86578.jpg"
   },
@@ -298,6 +318,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6b6b1ff262aa844bbc76898e9ddb0362",
     "url": "/socorristas-archivorosa/static/media/plantpot.6b6b1ff2.jpg"
+  },
+  {
+    "revision": "077c4bc85e271e7c2ccc1f3502df551c",
+    "url": "/socorristas-archivorosa/static/media/red_phone_body.077c4bc8.jpg"
+  },
+  {
+    "revision": "84784033027dfef0fde69b27b453dbf1",
+    "url": "/socorristas-archivorosa/static/media/red_phone_cable_2.84784033.jpg"
   },
   {
     "revision": "3490d346e12d7ed411572e0f055a7ae6",
