@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled, { withTheme } from "styled-components";
 import IndexImage from "./IndexImage";
+import { useScrollPosition } from "../../../../animations/hooks/parallax";
 
 
 const ItemContainer = styled.div`
@@ -183,8 +184,23 @@ const IndexItemBackground = styled.div`
 `;
 
 const indexItem = (props) => {
+
+  // const [ offsetY, setOffsetY ] = useState(0)
+  // const scrollPosition = useScrollPosition()
+  // const element = useRef(null)
+
+  // useEffect(() => {
+
+  //   const rect = element.current.getBoundingClientRect()
+  //   if(rect.top < window.innerHeight && rect.bottom > 0) {
+  //     const y = (window.innerHeight - rect.top)/window.innerHeight*100
+  //     setOffsetY(y)
+  //   }
+
+  // }, [scrollPosition])
+
   return (
-    <ItemContainer>
+    <ItemContainer> {/*ref={element} style={{ transform: `translate3d(0,${offsetY}px,0)`}}>*/}
       <QuoteContainer borderColor={props.borderColor}>
         <Quote
           quoteVerticalAlign={props.quoteVerticalAlign}
