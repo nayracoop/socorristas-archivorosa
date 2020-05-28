@@ -26,7 +26,7 @@ const HomeBtnLink = styled(Link)`
         text-decoration: none;
     }
     @media (max-width: ${(props) => props.theme.pageWidth.l}px) {
-        background: #ecebeb;
+        background: #e7e3e1;
         box-shadow: 0px 0px 5px rgb(176,176,176);
     }
 `;

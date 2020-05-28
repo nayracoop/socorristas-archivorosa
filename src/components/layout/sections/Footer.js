@@ -27,11 +27,19 @@ const FooterText = styled.div`
     padding-top: 50px;
     max-width: 450px;
     margin: 0 auto;
+    @media (max-width: ${(props) => props.theme.pageWidth.l}px) {
+      p {
+        margin: 12px auto;
+      }
+    }
   }
 `;
 
 const FooterLink = styled.li`
   display: block;
+  @media (max-width: ${(props) => props.theme.pageWidth.l}px) {
+    margin: 12px auto;
+  }
 `;
 
 const Footer = (props) => {
