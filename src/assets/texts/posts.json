@@ -680,7 +680,7 @@
                     "grid": "twelfth",
                     "background": 0,
                     "borderColor": "none",
-                    "quoteVerticalAlign": "bottom",
+                    "quoteVerticalAlign": "palpitar",
                     "quoteHorizontalAlign": "right",
                     "imageAlign": "top",
                     "quoteHighlight": "pink"
