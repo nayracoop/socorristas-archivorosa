@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b7854b3dbb3db324dec67bd68eaf4b57",
+    "revision": "aeecb89127f3e1d40785e61283d4c56a",
     "url": "/socorristas-archivorosa/index.html"
   },
   {
-    "revision": "af2ebb03c59733f88ddb",
+    "revision": "6cc4491c7d567abe170a",
     "url": "/socorristas-archivorosa/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "922e928a49fb5846a8d9",
+    "revision": "ed21886343b27c5a5cdd",
     "url": "/socorristas-archivorosa/static/css/main.eaa37abf.chunk.css"
   },
   {
-    "revision": "af2ebb03c59733f88ddb",
-    "url": "/socorristas-archivorosa/static/js/2.8b8da6a1.chunk.js"
+    "revision": "6cc4491c7d567abe170a",
+    "url": "/socorristas-archivorosa/static/js/2.c39492d6.chunk.js"
   },
   {
-    "revision": "922e928a49fb5846a8d9",
-    "url": "/socorristas-archivorosa/static/js/main.8f4fd871.chunk.js"
+    "revision": "ed21886343b27c5a5cdd",
+    "url": "/socorristas-archivorosa/static/js/main.2ffbffc1.chunk.js"
   },
   {
     "revision": "3b2ef7adffaf47a9e9f0",
@@ -66,10 +66,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7626749f0340b693ec523e84cb991ae8",
     "url": "/socorristas-archivorosa/static/media/arrow.7626749f.png"
-  },
-  {
-    "revision": "a9191d12c560ac43ec0cf9400622a893",
-    "url": "/socorristas-archivorosa/static/media/back.a9191d12.png"
   },
   {
     "revision": "9091584c35c8e6c9a0dc30c85d96d88a",
@@ -352,8 +348,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/socorristas-archivorosa/static/media/red_phone_cable_2.84784033.jpg"
   },
   {
-    "revision": "02bed4f2b7503eb9cd9598a5d8ffd3cf",
-    "url": "/socorristas-archivorosa/static/media/scroll-arrow.02bed4f2.png"
+    "revision": "8e3df60a30fc6d1d8472d130ea0b9722",
+    "url": "/socorristas-archivorosa/static/media/scroll-arrow.8e3df60a.png"
   },
   {
     "revision": "3490d346e12d7ed411572e0f055a7ae6",
