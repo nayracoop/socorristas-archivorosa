@@ -15,7 +15,7 @@ const QuoteContainer = styled.div`
   height: 90%;
   left:5%;
   top:5%;
-  border: ${(props) => props.borderColor !== "none" ? "1px solid " + props.theme.colors.text : "none"}
+  border: ${(props) => props.borderColor !== "none" ? "1.5px dashed #b1b1b1" : "none"}
   border-radius: 10px;
 
   @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
