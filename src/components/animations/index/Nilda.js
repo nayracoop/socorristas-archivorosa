@@ -15,13 +15,12 @@ const Wrapper = styled(Collage)`
   @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
     width: 41.12%;
     top:40%;
-    right: 0;
+    left: 60%;
   }
 `
 const Shadow = styled(CollagePiece)`
 
 `
-
 
 const Nilda = (props) => {
 
