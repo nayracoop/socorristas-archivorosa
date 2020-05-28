@@ -32,6 +32,7 @@ const Canvas = styled.canvas`
 
 const Flock = (props) => {
 
+  const { quantity = 30 } = props
   const canvas = useRef()
   const canvasSprite = document.createElement('canvas')
   const img = document.createElement('img')
@@ -127,21 +128,21 @@ const Flock = (props) => {
   const getBird = (i) => {
     return {
       x: Math.random()*60,
-      y: canvas.current.height + Math.random()*30,
+      y: canvas.current.height + Math.random()*quantity,
       vx: 0.75 + Math.random()* 0.5,
       cvx: 0,
       vy: -2 - Math.random()*2,
       finalY: 5 + i + Math.random() * 150,
       currentFrame: Math.floor(Math.random()*3),
       timeRef: new Date().getTime() + 10*i + Math.random()*10,
-      delay: 1800 + 350 * i + Math.random()*100
+      delay: 1800 + (10500/quantity) * i + Math.random()*100
     }
   }
 
   useEffect(() => {
     if (!birds) {
       let initialBirds = []
-      for(let i = 0; i < 30; i++) {
+      for(let i = 0; i < quantity; i++) {
         initialBirds[i] = getBird(i)
       }
       setBirds(initialBirds)
