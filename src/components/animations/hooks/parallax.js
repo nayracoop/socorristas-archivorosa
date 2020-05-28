@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export const useScrollPosition = () => {
 
-  const [scrollInfo, setScrollInfo] = useState(window.pageYOffset)
+  const [scrollInfo, setScrollInfo] = useState(0)
 
   function onScroll() {  
     setScrollInfo(window.pageYOffset); 
@@ -40,12 +40,12 @@ export const useParallax = (offsets = -0.5, min = -99999, max = 99999) => {
 
 export const useScrollDirection = () => {
 
-  const [direction, setDirection] = useState('')
+  const [direction, setDirection] = useState( { lastPosition: 0, stringValue: 'down' } )
   const y = useScrollPosition()
 
   useEffect(() => {    
     const difference = y - direction.lastPosition
-    const currentDirection = { lastPosition: y, stringValue: difference > 0 ? 'down' : 'up' } 
+    const currentDirection = { lastPosition: y, stringValue: difference >= 0 ? 'down' : 'up' } 
     setDirection(currentDirection)
   }, [y])
   
