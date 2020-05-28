@@ -74,13 +74,24 @@ const Quote = styled.div`
         font-size: 1em;  
         line-height: 1em; 
       }
-      span {
-        display: inline;
-        background: linear-gradient(to right , rgba(189,140,191,.7), rgba(189,140,191,.2));
-        background-repeat: no-repeat;
-        transition: all ease-in-out .5s;
-        background-position: -700px;    
-      }
+      // span {
+      //   position: relative;
+      //   display: inline;
+      //   &::after {
+      //     display: inline;
+      //     position: absolute;
+      //     left: 0;
+      //     top: 0;
+      //     padding: 5px 30px 8px 10px;
+      //     color: transparent;
+      //     z-index: -1;
+      //     content: attr(data-content);
+          background: linear-gradient(to right , rgba(189,140,191,.7), rgba(189,140,191,.2));
+          background-repeat: no-repeat;
+          transition: all ease-in-out .5s;
+          background-position: -700px;    
+      //   }
+      // }
     }
 
 
@@ -90,10 +101,10 @@ const Quote = styled.div`
       opacity: ${(props) => props.theme.colors.textOpacity * 2};
       
       span {
-        span {
+        // span, span::after {
           background-position: 0px;
-          transition-delay: inherit;
-        }
+        //   transition-delay: inherit;
+        // }
         &.line1{
           transition-delay: .2s
         }
@@ -184,7 +195,7 @@ const indexItem = (props) => {
                 (excerpt, i) => {
                   return (
                     <span className={"line" + i} key={i} >
-                      <span>{excerpt.line}</span>
+                      {excerpt.line}
                     </span>
                   )
                 }
