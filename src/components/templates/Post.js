@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import styled, { withTheme } from "styled-components";
 import HomeBtn from "../layout/snippets/header/HomeBtn";
 import ChapterHeader from "../layout/sections/ChapterHeader";
 import ChapterNav from "../layout/snippets/nav/ChapterNav";
+import { useScrollPosition } from "../animations/hooks/parallax";
 
 const Wrapper = styled.div`
   display: flex;
@@ -29,19 +30,24 @@ const Content = styled.div`
     margin-top: 1.5em;
 
     strong {
-      background: linear-gradient(to right , rgba(189,140,191,.7), rgba(189,140,191,.4));
-      background-repeat: no-repeat;
+      &.ready {
+        background: linear-gradient(to right , rgba(189,140,191,.7), rgba(189,140,191,.4));
+        background-repeat: no-repeat;
+        // background-position: -1500px;
+      }
       padding: 5px;
-      transition: all ease-in-out 1s;  
-      background-position: -1500px;
-
-      &:hover{
-      background-position: 0px;
-      text-decoration:none;
-      color: ${(props) => props.theme.colors.text};
-      opacity: ${(props) => props.theme.colors.textOpacity * 2};
+      transition: none;
       
-    }
+      &:hover, &.active {
+        background-position: 0 !important;
+        text-decoration:none;
+        // transition: background ease-out 1s;  
+        transition-property: background;
+        transition-timing-function: ease-out;
+        color: ${(props) => props.theme.colors.text};
+        opacity: ${(props) => props.theme.colors.textOpacity * 2};
+      }
+      
   }
     
   @media (max-width: ${props => props.theme.pageWidth.xl}px) {
@@ -62,6 +68,38 @@ const Article = styled.article`
 `;
  
 const Post = (props) => {
+
+  const [ strongTexts, setStrongTexts ] = useState([])
+  const scrollPosition = useScrollPosition()
+  let text = useRef(null)
+
+  useEffect(() => {
+    if(strongTexts.length == 0) {
+      let strongs = text.current ? text.current.querySelectorAll('strong') : []
+      for(let i = 0; i < strongs.length; i++) {
+        strongs[i].style.backgroundPosition = (-12 * strongs[i].textContent.length) + 'px'
+        strongs[i].style.transitionDuration = (400 + 10 * strongs[i].textContent.length) + 'ms'
+        strongs[i].classList.add('ready')
+      }
+      setStrongTexts(strongs)
+    }
+
+    for(let i = 0; i < strongTexts.length; i++) {
+      if(!strongTexts[i].classList.contains('active')) {
+        let rect = strongTexts[i].getBoundingClientRect()
+        if(rect.top < window.innerHeight*0.75 && rect.bottom > window.innerHeight*0.25) {
+          strongTexts[i].classList.add('active')
+          // strongTexts[i].style.backgroundPosition = '0'
+        } else if(rect.top > window.innerHeight) {
+          break;
+        }
+        // else {
+        //   strongTexts[i].classList.remove('active')
+        // }
+      }
+    }
+  }, [scrollPosition])
+
   return (
     <Wrapper>
       <HomeBtn
@@ -81,7 +119,7 @@ const Post = (props) => {
         >
         </ChapterHeader>
         <ContentWrapper>
-          <Content className="container">
+          <Content ref={text} className="container">
             <ReactMarkdown source={props.data.content} />
           </Content>
         </ContentWrapper>

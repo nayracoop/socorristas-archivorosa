@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
+import { Link } from "react-router-dom";
 
 const FooterContainer = styled.footer`
   // max-width: ${(props) => props.theme.maxWidth}px;
@@ -40,18 +41,22 @@ const Footer = (props) => {
           <p>
           Archivo Rosa es un experimento narrativo que reúne historias y reflexiones de activistas que forman parte de{" "}
             <a target="_blank" href="http://socorristasenred.org/">
-              Socorristas en Red (feministas que abortamos).
-            </a>
+              Socorristas en Red (feministas que abortamos)
+            </a>.
           </p>
         </FooterText>
         <FooterText>
           <ul>
             {props.content.map((post, i) => {
-              return (
-                <FooterLink key={i}>
-                  <a href={"/" + post.meta.slug}>{post.title} . </a>
-                </FooterLink>
-              );
+              if(i > 0) {
+                const slug = (post.meta.slug.endsWith('-')) ? post.meta.slug.slice(0, -1) : post.meta.slug
+                return (
+                  <FooterLink key={i}>
+                    <Link to={"/" + slug}>{post.title}</Link>
+                    {/* <a href={"/" + post.meta.slug}>{post.title}</a> */}
+                  </FooterLink>
+                );
+              }
             })}
           </ul>
         </FooterText>

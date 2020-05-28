@@ -44,13 +44,6 @@ const ArrowImage = styled.img`
 const ScrollIndicator = (props) => {
 
     const scrollPosition = useScrollPosition()
-    const [ visibility, setVisibility ] = useState(true)
-
-    useEffect(() => {    
-        if(scrollPosition > 30) {
-            if(visibility) setVisibility(false)
-        } else if(!visibility) setVisibility(true)
-    }, [scrollPosition])
 
     function scrollDown() {
         window.scrollTo({
@@ -60,8 +53,8 @@ const ScrollIndicator = (props) => {
     }
 
     return (
-        <ScrollIndicatorContainer onClick={scrollDown} visible={visibility}>
-            <ArrowImage visible={visibility} src={require('../../../../assets/imgs/scroll-arrow.png')} />
+        <ScrollIndicatorContainer onClick={scrollDown} visible={scrollPosition < 30}>
+            <ArrowImage visible={scrollPosition < 30} src={require('../../../../assets/imgs/scroll-arrow.png')} />
         </ScrollIndicatorContainer>
     );
 }
