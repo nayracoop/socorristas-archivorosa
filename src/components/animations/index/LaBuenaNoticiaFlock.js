@@ -41,7 +41,7 @@ const LaBuenaNoticia = (props) => {
   return (
     <Wrapper>
       <BigCloud src={require('../../../assets/imgs/lina/cloud.jpg')} />
-      <Birds width={600} height={600} src={require('../../../assets/imgs/la-buena-noticia/birds.jpg')} />
+      <Birds width={600} height={600} src={require('../../../assets/imgs/la-buena-noticia/birds.jpg')} quantity={10} />
     </Wrapper>
   );
 }

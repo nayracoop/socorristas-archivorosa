@@ -80,12 +80,12 @@ const LaBuenaNoticia = (props) => {
 
   return (
     <Wrapper className={props.className}>
+{/* 
       <Flowers width={600} height={400} x={0} y={0} style={{ transform: `translate3d(0,${scrollY[2]}px,0)` }}>
         <SingleFlower src={require('../../../assets/imgs/la-buena-noticia/big_flower.jpg')} width={224} x={245} origin="85% bottom" />
         <SingleFlower src={require('../../../assets/imgs/la-buena-noticia/flower_right.jpg')} width={186} x={426} delay="-2.9s" />
-      </Flowers>
-
-      <CongressWrapper><StyledCongress width={779} height={423} birds={10} /></CongressWrapper>
+      </Flowers> */}
+      <CongressWrapper><StyledCongress width={779} height={423} birds={10} withFlowers="true" /></CongressWrapper>
       {/* <Congress>
         <Building src={require('../../../assets/imgs/la-buena-noticia/congress.jpg')} x={0} y={73} width={779} />
         <Dome src={require('../../../assets/imgs/la-buena-noticia/dome.jpg')} x={292} y={0} width={158} />

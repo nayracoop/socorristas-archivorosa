@@ -1,9 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
 import { useParallax } from './hooks/parallax'
 import Collage from './graphics/Collage'
 import CollagePiece from './graphics/CollagePiece'
 import Congress from './movieclips/Congress'
 import SingleFlower from './movieclips/SingleFlower'
+
+const FrontFlower = styled(CollagePiece)`
+  z-index: 3;
+`
 
 const CongressBirds = (props) => {
 
@@ -21,7 +26,7 @@ const CongressBirds = (props) => {
       </Collage>
       <Collage width={835} height={651} x={0} y={0} style={{ transform: `translate3d(0,${scrollY[0]}px,0)`}}>
         <Congress width={779} height={423} x={17} y={228} />
-        <CollagePiece src={require('../../assets/imgs/la-buena-noticia/flower.jpg')} width={133} x={663} y={348} />
+        <FrontFlower src={require('../../assets/imgs/la-buena-noticia/flower.jpg')} width={133} x={663} y={348} />
       </Collage>
     </Collage>
   );
