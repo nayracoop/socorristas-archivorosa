@@ -102,7 +102,7 @@ const Quote = styled.div`
     }
 
     &:visited{
-      opacity: ${(props) => props.theme.colors.textOpacity * 2};
+      opacity: ${(props) => props.theme.colors.textOpacity};
       
       span{         
         background-position: 0px;

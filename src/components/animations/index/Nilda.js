@@ -7,15 +7,18 @@ import CollagePiece from '../graphics/CollagePiece'
 
 const Wrapper = styled(Collage)`
   position: absolute;
-  width: 90%;
+  width: 80%;
   height: 100%;
-  top:20%;
+  top:25%;
+  left: 10%;
 
   @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
     width: 41.12%;
     top:40%;
     right: 0;
   }
+`
+const Shadow = styled(CollagePiece)`
 
 `
 
@@ -26,8 +29,7 @@ const Nilda = (props) => {
 
   return (
     <Wrapper width={634} height={584} className={props.className}>
-      <CollagePiece src={require('../../../assets/imgs/nilda/tickets.jpg')} x={168} y={89} width={93} style={{ transform: `translate3d(0,${scrollY[2]}px,0)` }} />
-      <CollagePiece src={require('../../../assets/imgs/nilda/shadow.jpg')} x={23} y={150} width={611} style={{ transform: `translate3d(0,${scrollY[3]}px,0)` }} />
+      <Shadow src={require('../../../assets/imgs/nilda/shadow.jpg')} x={23} y={170} width={611} style={{ transform: `translate3d(0,${scrollY[3]}px,0)` }} />
       <CollagePiece src={require('../../../assets/imgs/nilda/suitcases.jpg')} x={7} y={185} width={611} style={{ transform: `translate3d(0,${scrollY[0]}px,0)` }} />
       <CollagePiece src={require('../../../assets/imgs/nilda/plantpot.jpg')} x={-100} y={0} width={191} style={{ transform: `translate3d(${scrollY[1]}px,${scrollY[0]}px,0)` }} />
       <CollagePiece src={require('../../../assets/imgs/nilda/number.jpg')} x={0} y={90} width={66} style={{ transform: `translate3d(${scrollY[4]}px,${scrollY[0]}px,0)` }} />
