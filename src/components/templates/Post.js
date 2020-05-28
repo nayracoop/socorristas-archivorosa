@@ -78,7 +78,7 @@ const Post = (props) => {
       let strongs = text.current ? text.current.querySelectorAll('strong') : []
       for(let i = 0; i < strongs.length; i++) {
         strongs[i].style.backgroundPosition = (-12 * strongs[i].textContent.length) + 'px'
-        strongs[i].style.transitionDuration = (20 * strongs[i].textContent.length) + 'ms'
+        strongs[i].style.transitionDuration = (400 + 10 * strongs[i].textContent.length) + 'ms'
         strongs[i].classList.add('ready')
       }
       setStrongTexts(strongs)
