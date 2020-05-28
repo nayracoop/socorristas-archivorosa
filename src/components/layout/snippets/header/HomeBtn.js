@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
+import { useScrollDirection } from '../../../animations/hooks/parallax';
 //import { ReactComponent as HomeBtnIcon } from '../../../../assets/imgs/back.svg';
 
-const HomeBtnContainer = styled.div.attrs(props => ({
-    className: props.class,
-}))`
+const HomeBtnContainer = styled.div`
     position: fixed;
     left: 15px;
     top: 15px;
@@ -14,6 +13,8 @@ const HomeBtnContainer = styled.div.attrs(props => ({
     svg {
         width: 16px;
     }
+    transition: all 400ms ease-in-out;
+    ${props => props.visible === 'down' ? 'pointer-events: none; transform: translateY(-100px); transition-duration: 200ms;' : '' }
 `;
 const HomeBtnLink = styled(Link)`
     display: flex;
@@ -51,8 +52,11 @@ const HomeBtnCaption = styled.span`
 `;
 
 const HomeBtn = (props) => {  
+
+    const scrollDirection = useScrollDirection()
+
     return(
-        <HomeBtnContainer className={props.class}>
+        <HomeBtnContainer className={props.class} visible={scrollDirection}>
             <HomeBtnLink to={props.href}>
                 <HomeBtnIcon src={require('../../../../assets/imgs/back.png')} />
                 <HomeBtnCaption>{props.btnText}</HomeBtnCaption> 
