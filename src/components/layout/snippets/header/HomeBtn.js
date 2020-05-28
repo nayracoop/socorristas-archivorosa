@@ -25,6 +25,10 @@ const HomeBtnLink = styled(Link)`
     &:hover {
         text-decoration: none;
     }
+    @media (max-width: ${(props) => props.theme.pageWidth.l}px) {
+        background: #ecebeb;
+        box-shadow: 0px 0px 5px rgb(176,176,176);
+    }
 `;
 const HomeBtnIcon = styled.img`
     height: 18px;
