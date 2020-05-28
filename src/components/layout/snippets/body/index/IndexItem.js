@@ -33,7 +33,7 @@ const Quote = styled.div`
   left:${(props) => (props.quoteHorizontalAlign === "left" ? "5%" : "")};
   right:${(props) => (props.quoteHorizontalAlign === "right" ? "5%" : "")};
   top:${(props) => (props.quoteVerticalAlign === "top" ? "25%;" : "")};
-  bottom:${(props) => (props.quoteVerticalAlign === "bottom" ? "15%" : "")};
+  bottom:${(props) => (props.quoteVerticalAlign === "bottom" ? "15%" : props.quoteVerticalAlign === "center" ? "45%" : "")};
   filter: drop-shadow(1px 1px 3px rgba(255,255,255,.7));
 
   cursor:pointer;
@@ -100,6 +100,14 @@ const Quote = styled.div`
         }
       }  
     }
+
+    &:visited{
+      opacity: ${(props) => props.theme.colors.textOpacity * 2};
+      
+      span{         
+        background-position: 0px;
+      }  
+    }
   }
 
   @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
@@ -109,7 +117,7 @@ const Quote = styled.div`
     left:${(props) => (props.quoteHorizontalAlign === "left" ? "5%" : "")};
     right:${(props) => (props.quoteHorizontalAlign === "right" ? "5%" : "")};
     top:${(props) => (props.quoteVerticalAlign === "top" ? "20%;" : "")};
-    bottom:${(props) => (props.quoteVerticalAlign === "bottom" ? "30%" : "")};
+    bottom:${(props) => (props.quoteVerticalAlign === "bottom" ? "5%" : props.quoteVerticalAlign === "center" ? "30%" : "")};
 
     a{
       span{

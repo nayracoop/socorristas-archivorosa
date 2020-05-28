@@ -7,12 +7,36 @@ import Congress from '../movieclips/Congress'
 import SingleFlower from '../movieclips/SingleFlower'
 
 const Wrapper = styled(Collage)`
-  position: absolute;  
-  height: 100%;
-  width: 100%;
-  bottom: -22%;
-  left:-40%;
+  position: absolute;
+  bottom: 0;
+
+   @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+      position: absolute;
+      bottom: -2%;
+      left: -12%;
+      width: 35.75%;
+      height: auto;
+    }    
 `
+
+const Flowers = styled(Collage)`
+  position: absolute;
+  bottom: -100%;
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+
+  }     
+`
+
+const Building = styled(Congress)`
+  position: absolute;
+  width: 70%;
+  left: -90%;
+  bottom: 40%;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+  }     
+`
+
 
 const LaBuenaNoticia = (props) => {
 
@@ -20,14 +44,12 @@ const LaBuenaNoticia = (props) => {
 
   return (
     <Wrapper width={835} height={651} className={props.className}>
-      <Collage width={835} height={651} x={0} y={0} style={{ transform: `translate3d(0,${scrollY[2]}px,0)` }}>
-        <SingleFlower src={require('../../../assets/imgs/la-buena-noticia/big_flower.jpg')} width={224} x={245} y={300} origin="85% bottom" />
-        <SingleFlower src={require('../../../assets/imgs/la-buena-noticia/flower_right.jpg')} width={186} x={426} y={320} delay="-2.9s" />
-      </Collage>
-      <Collage width={835} height={651} x={0} y={0} style={{ transform: `translate3d(0,${scrollY[0]}px,0)` }}>
-        <Congress width={779} height={423} x={17} y={228} />
-        <CollagePiece src={require('../../../assets/imgs/la-buena-noticia/flower.jpg')} width={133} x={700} y={600} />
-      </Collage>
+      <Flowers width={835} height={651} x={0} y={0} style={{ transform: `translate3d(0,${scrollY[2]}px,0)` }}>
+        <SingleFlower src={require('../../../assets/imgs/la-buena-noticia/big_flower.jpg')} width={224} x={245} origin="85% bottom" />
+        <SingleFlower src={require('../../../assets/imgs/la-buena-noticia/flower_right.jpg')} width={186} x={426} delay="-2.9s" />
+      </Flowers>
+      <Building width={300} height={500} />
+      <CollagePiece src={require('../../../assets/imgs/la-buena-noticia/flower.jpg')} width={133} x={700} y={600} />
     </Wrapper>
   );
 }

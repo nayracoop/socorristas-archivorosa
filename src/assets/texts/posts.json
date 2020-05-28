@@ -103,7 +103,7 @@
                     "grid": "second",
                     "background": 1,
                     "borderColor": "none",
-                    "quoteVerticalAlign": "top",
+                    "quoteVerticalAlign": "center",
                     "quoteHorizontalAlign": "right",
                     "imageAlign": "center",
                     "quoteHighlight": "paper"
@@ -327,7 +327,7 @@
                     "grid": "sixth",
                     "background": 0,
                     "borderColor": "black",
-                    "quoteVerticalAlign": "bottom",
+                    "quoteVerticalAlign": "center",
                     "quoteHorizontalAlign": "left",
                     "imageAlign": "",
                     "quoteHighlight": "pink"
@@ -385,7 +385,7 @@
                     "grid": "seventh",
                     "background": 1,
                     "borderColor": "none",
-                    "quoteVerticalAlign": "bottom",
+                    "quoteVerticalAlign": "top",
                     "quoteHorizontalAlign": "right",
                     "imageAlign": "",
                     "quoteHighlight": "paper"

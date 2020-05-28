@@ -14,7 +14,7 @@ const Number = styled(AlphaMatteImg)`
   position: absolute;
   width: 30%;
   height: auto;
-  right: 25%;
+  right: 1%;
   top: 18%;
 
   @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
@@ -24,12 +24,11 @@ const Number = styled(AlphaMatteImg)`
     top: 15%;
     right: 15%;
   }
-
 `;
 
 const Train = styled(Cloud)`
   position: absolute;
-  top:15%;
+  bottom:-10%;
   width: 250%;
   right: -20%;
 
@@ -67,7 +66,7 @@ const Flowers2 = styled(Flowers)`
   width: 25%;
   height: auto;
   left: -2%;
-  top: 2%;
+  bottom: 25%;
   animation-delay: -0.75s;
 
   @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
