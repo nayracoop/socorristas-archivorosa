@@ -74,6 +74,22 @@ const Birds = styled(Flock)`
 //   top: -60%;
 // `
 
+const FrontFlower = styled(CollagePiece)`
+  z-index: 3;
+
+  max-width: none;
+  position: absolute;
+  display: none;
+
+  @media (min-width: ${(props) => props.theme.pageWidth.l}px) {
+    display: block;
+    top: 100%;
+    left: 50%;
+    width: 17%;
+    transform: translate(-45%,-65%);
+  }  
+`
+
 const LaBuenaNoticia = (props) => {
 
   const scrollY = useParallax([-0.2, -0.15, -0.1], -250, 250)
@@ -86,6 +102,7 @@ const LaBuenaNoticia = (props) => {
         <SingleFlower src={require('../../../assets/imgs/la-buena-noticia/flower_right.jpg')} width={186} x={426} delay="-2.9s" />
       </Flowers> */}
       <CongressWrapper><StyledCongress width={779} height={423} birds={10} withFlowers="true" /></CongressWrapper>
+      <FrontFlower src={require('../../../assets/imgs/la-buena-noticia/flower.jpg')} width={133} x={646} y={120} />
       {/* <Congress>
         <Building src={require('../../../assets/imgs/la-buena-noticia/congress.jpg')} x={0} y={73} width={779} />
         <Dome src={require('../../../assets/imgs/la-buena-noticia/dome.jpg')} x={292} y={0} width={158} />
