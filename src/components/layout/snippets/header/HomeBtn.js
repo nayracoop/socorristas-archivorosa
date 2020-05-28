@@ -1,44 +1,42 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
-import { useScrollDirection } from '../../../animations/hooks/parallax';
 //import { ReactComponent as HomeBtnIcon } from '../../../../assets/imgs/back.svg';
 
-const HomeBtnContainer = styled.div`
+const HomeBtnContainer = styled.div.attrs(props => ({
+    className: props.class,
+}))`
     position: fixed;
-    left: 30px;
+    left: 15px;
     top: 15px;
     z-index: 9999;
-    transform-origin: -15px 15px;
-    transform: rotate(-2deg);
-    
-    transition: all 400ms ease-in-out;
-    ${props => props.visible === 'down' ? 'pointer-events: none; transform: translateY(-50px); transition-duration: 200ms;' : '' }
-
-    &:hover, &:active {
-        filter: brightness(.85);
-    }
-
-    @media (max-width: ${props => props.theme.pageWidth.s}px) {
-        left: 5px;
+    max-width: 150px;
+    svg {
+        width: 16px;
     }
 `;
 const HomeBtnLink = styled(Link)`
     display: flex;
+    padding: 8px 12px;
+    transition: all ease-in .2s;
+    display: flex;
+    align-items: center;
     &:hover {
         text-decoration: none;
     }
 `;
 const HomeBtnIcon = styled.img`
-    height: 32px;
-    filter: grayscale(.35);
-    
+    height: 18px;
+//    opacity: .85;
+
 `;
 
 const HomeBtnCaption = styled.span`
-    font-size: 1.125rem;
-    color: #fff;
-    width: 1px;
+    font-size: 1.7rem;
+    color: #04090d;
+	font-family: 'Caveat', 'Roboto Slab', serif;
+	font-weight: 400;
+    /*width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
@@ -46,28 +44,17 @@ const HomeBtnCaption = styled.span`
     overflow: hidden;
     clip: rect(0,0,0,0);
     white-space: nowrap;
-    border: 0;
+    border: 0;*/
     @media screen and (max-width: 420px) {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 `;
 
 const HomeBtn = (props) => {  
-    
-    // const [ visibility, setVisibility ] = useState(false)
-    const scrollDirection = useScrollDirection()
-
-    // useEffect(() => {    
-    //     console.log(visibility)
-    //     if(scrollDirection === 'up') {
-    //         if(!visibility) setVisibility(true)
-    //     } else if(visibility) setVisibility(false)
-    // }, [scrollDirection])
-
     return(
-        <HomeBtnContainer className={props.class} visible={scrollDirection}>
-            <HomeBtnLink to={props.href} visible={scrollDirection}>
-                <HomeBtnIcon src={require('../../../../assets/imgs/back.png')} alt="" />
+        <HomeBtnContainer className={props.class}>
+            <HomeBtnLink to={props.href}>
+                <HomeBtnIcon src={require('../../../../assets/imgs/back.png')} />
                 <HomeBtnCaption>{props.btnText}</HomeBtnCaption> 
             </HomeBtnLink>
         </HomeBtnContainer>
